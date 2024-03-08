@@ -17,7 +17,7 @@ public interface Service {
 	 * 
 	 */
 	
-	//디폴트 메소
+	//디폴트 메소드
 	default void defaultMethod1() {
 		System.out.println("예시 중복코드");
 		defaultCommon();
