@@ -38,7 +38,8 @@ public class Main {
 		
 //////////////////////////////////////////////////////////////////////
 		
-		Button bt = new Button();
+		
+		Button exitBt = new Button();
 		
 		class exitButton implements Button.ClickListener{
 			@Override
@@ -46,13 +47,10 @@ public class Main {
 				System.out.println("시스템 종료");
 				
 			}
-			
 		}
-		bt.setClickListener(new exitButton());
-		bt.click();
 		
-		
-		
+		exitBt.setClickListener(new exitButton());
+		exitBt.click();
 	}
 
 }
