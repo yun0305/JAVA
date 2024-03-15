@@ -16,7 +16,7 @@ package ch12.resource_path;
 	 * 이 두 메소드는 클래스 객체가 가지고 있다 클래스 객체는 클래스를 기준으로 해서 상대경로로 리소스 파일의 경로를 알아내는 기능도 있다
 	 * 
 	 * URL getResource(String name)는 경로의 대한 정보만 리턴한다
-	 * inputStream getResourceAsStream(String name)는 하당 경로에 있는 파일을 오픈해서 안에 있는 데이터를 읽어 들일수 있는 inputStream 갹체를 리턴한다.
+	 * inputStream getResourceAsStream(String name)는 해당 경로에 있는 파일을 오픈해서 안에 있는 데이터를 읽어 들일수 있는 inputStream 갹체를 리턴한다.
 	 * 
 	 * String photo1Path = clazz.getResource("photo1.jpg").getPath(); (클래스 기준 경로)
 	 *	 
@@ -44,7 +44,7 @@ public class GetResourceExample {
 }
 /*
  * 자바도 윈도우 프로그램읆 만들수 있다. 자바 스윙이나 자바fx로 윈도우 프로그램을 만들때 고정적인 이미지나
- * 바뀌지 안는 이미지 같은경우 바이트 코드와 같이 저장을 한다. 그래서 특정 클래스를 기준으로 어디있는지 상대결로로 표현을 해주면
+ * 바뀌지 안는 이미지 같은경우 바이트 코드와 같이 저장을 한다. 그래서 특정 클래스를 기준으로 어디있는지 상대경로로 표현을 해주면
  * 운영체제의 전체경로가 나온다 전체경로는 파일안에 있는 데이터를 읽을떄 사용된다.
  * 
  */
