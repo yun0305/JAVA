@@ -33,17 +33,18 @@ public class Main {
 		
 	
 		Button bt = new Button();
-		
+			
 		bt.setClickListener(new Button.ClickListener() {
 			
 			@Override
 			public void onClick() {
-				System.out.println("시스템 종료");
+				System.out.println("시스템을 종료합니다.");
 				
 			}
 		});
 		
 		bt.click();
-	}
+		
 
+	}
 }

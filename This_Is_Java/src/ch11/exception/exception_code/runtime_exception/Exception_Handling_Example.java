@@ -12,7 +12,7 @@ public class Exception_Handling_Example {
 	}catch(NullPointerException e) {//자바는 예외가 발생하면 해당 예외클래스를 가지고 객체를 만든다.
 		//NullPointerException e 발생된 예외의 위치정보를 e 변수에다 넣는다.
 		
-		System.out.println(e.getMessage());//예외 객체 e로 가서 예외객체가 가지고 있는 getMessage()메소드를 호출하면 왜에러가 뜨는지 내용을 얻을수 있다.
+		System.out.println(e.getMessage());//예외객체 e로 가서 예외객체가 가지고 있는 getMessage()메소드를 호출하면 왜에러가 뜨는지 내용을 얻을수 있다.
 		System.out.println(e.toString());// toString();(예외의 종류와 사유도 리턴해줌)
 		e.printStackTrace();//e 객체를 통해 printStackTrace()호출해서 예외가 어디서 발생했는지 추적한다.
 		

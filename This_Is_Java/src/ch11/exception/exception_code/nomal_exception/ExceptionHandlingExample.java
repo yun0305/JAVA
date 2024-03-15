@@ -20,7 +20,7 @@ public class ExceptionHandlingExample {
 			}catch(ClassNotFoundException e) {// 여기서 e라고 하는 변수에 객체를 참조 시킨다. 
 											  //e를 통해 예외객체의 정보를 불러온다
 				System.out.println("주어진 클래스는 없습니다");
-				e.printStackTrace();;
+				e.printStackTrace();
 			}
 		
 		/*//ClassNotFoundException예외처리를 하지 않았다라는 오류가 뜬다
