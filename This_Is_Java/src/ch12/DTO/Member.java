@@ -49,12 +49,12 @@ import lombok.Setter;
  */
 
 
-
-@RequiredArgsConstructor
-public class Member {
-	private final String id;
-	@NonNull private String name;
-	private int age;
+//
+//@RequiredArgsConstructor
+//public class Member {
+//	private final String id;
+//	@NonNull private String name;
+//	private int age;
 	
 	
-}
+//}
