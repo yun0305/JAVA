@@ -90,6 +90,17 @@ public class Box<T> {
 
 	public T content;// 타입 파라미터로 T사용
 	
+	/*
+	 * 타입 파라미터는 기본적으로 Object타입으로 간주되므로 Object가 가지고 있는 메소드를 호출할 수 있다.
+	 * 다음 예제는Box의 내용물을 비교하기 위해 파라미터로 Object의 equals() 메소드를 호출한다.
+	 */
+	//Box의 내용물이 같은지 확인
+	public boolean compare(Box<T> other) {
+		
+		boolean result = content.equals(other.content);
+		
+		return result;
+	}
 }
 
 //GenericExample 클래스를 다음과 같이 작성하고 실행해보자.

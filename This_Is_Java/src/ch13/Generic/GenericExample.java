@@ -21,5 +21,20 @@ public class GenericExample {
 		 * 
 		 */
 		
+		Box box3 = new Box();
+		box3.content = "100";
+		
+		Box box4 = new Box();
+		box4.content = "100";
+		
+		Box box5 = new Box();
+		box5.content = 100;
+		
+		boolean result = box3.compare(box4);
+		System.out.println(result);
+		
+		result = box3.compare(box5);
+		System.out.println(result);
+		
 	}
 }
