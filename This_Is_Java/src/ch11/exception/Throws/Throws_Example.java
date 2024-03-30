@@ -12,7 +12,7 @@ public class Throws_Example {
 	 *  
 	 *  }
 	 *  
-	 *  throws 키워드가 붙어 있는 메소드에서 해당 에외를 처리하지 않고 떠넘겼기 때문에 이 메소드를 호출하는 곳에서
+	 *  throws 키워드가 붙어 있는 메소드에서 해당 예외를 처리하지 않고 떠넘겼기 때문에 이 메소드를 호출하는 곳에서
 	 *  예외를 받아 처리해야 한다. 예를 들어 다음 코드는 ClassNotFoundException을 throws하는 method2()의
 	 *  예외를 method1()에서 호출할때 처리하고 있다.
 	 *  

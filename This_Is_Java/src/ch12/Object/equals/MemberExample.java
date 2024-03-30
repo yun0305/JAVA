@@ -21,7 +21,7 @@ public class MemberExample {
 		
 		/*
 		 * obj1과 obj2는 Member 클래스의 객체인데 Member 클래스는 equals() 라는 메소드를 가지고
-		 * 있지 않다 그런데 사용할수 있는 이유는  기본적으로 extends Object 를 받고 있기 때문이다
+		 * 있지 않다 그런데 사용할수 있는 이유는 기본적으로 extends Object 를 받고 있기 때문이다
 		 * 생략되어 우리눈에 보이지 않을뿐 가지고 있다.
 		 * 
 		 */

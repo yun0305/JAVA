@@ -8,7 +8,7 @@ package ch13.Generic.Generic_Method;
 
 public class GenericExample {
 
-	public static <T> Box<T> boxing(T t){
+	public static <T> Box<T> boxing(T t){// 메소드가 타입 파라미터를 추론하는 방법은 매개변수로 추론한다.
 		Box<T> box = new Box<T>();
 		box.set(t);
 		return box;

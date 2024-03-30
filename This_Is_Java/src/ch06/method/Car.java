@@ -20,6 +20,7 @@ public class Car {
 			}
 
 		}
+		
 		void run(){
 			while(true) {
 			if(gas > 0) {
