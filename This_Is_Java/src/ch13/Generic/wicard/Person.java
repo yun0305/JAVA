@@ -26,7 +26,8 @@ package ch13.Generic.wicard;
 	 * 리턴타입 메소드명(<?> 변수){}
 	 * 
 	 * 다음 예제에서 Course 클래스의 메소드 registerCourse1() 은 모든 사람이 들을 수 있는 과정을 등록하고,
-	 * 
+	 * registerCourse2()는 학생만 들을 수 있는 과정을 등록한다. 그리고 registerCourse3()은 직장인과 일반인만
+	 * 들을 수 있는 과정을 등록한다.
 	 */
 
 
