@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /*
- * <math class>
+ * <Math class>
  * Math 클래스는 수학 계산에 사용할 수 있는 메소드를 제공한다. Math 클래스가 제공하는 메소드는 모두
  * 정적 이므로 Math클래스로 바로 접근할 수 있다. 다음은 Math 클래스가 제공해주는 주요 메소드이다.
  * 
@@ -30,7 +30,7 @@ import java.util.Random;
  * 시작하는 n 개의 정수 (start<=..<(start+n)) 중 하나의 정수를 얻기 위한 공식을 만들면 다음과 같다
  * 예제와 공식 설명은 4.2절을 참고하자
  * 
- * int num = (int)(MAth.random()*n)+start;
+ * int num = (int)(Math.random()*n)+start;
  * 
  * 난수를 얻는 떠 다른 방법으로 java.util.Random 클래스를 이용할 수 있다. 이 클래스를 이용하면 boolean,
  * int, double 난수를 얻을 수 있다. 다음은 Random 객체를 생성하기 위한 생성자이다

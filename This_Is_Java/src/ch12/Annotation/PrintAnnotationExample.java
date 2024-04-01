@@ -14,7 +14,7 @@ public class PrintAnnotationExample {
 			PrintAnnotation printAnnotation = method.getAnnotation(PrintAnnotation.class);
 			/* method.getAnnotation(PrintAnnotation.class);
 			 * Service 메소드의 객체로 getAnnotation()을 접근해서 PrintAnnotation이 메소드에 적용되어 있다면
-			 *  메소드 객체의 적용된 PrintAnnotation 객체를 리턴하고 없다면 null을 리턴받는다.
+			 * 메소드 객체의 적용된 PrintAnnotation 객체를 리턴하고 없다면 null을 리턴받는다.
 			 * 
 			 */
 		printLine(printAnnotation);

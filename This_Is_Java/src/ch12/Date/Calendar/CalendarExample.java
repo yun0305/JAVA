@@ -6,8 +6,8 @@ import java.util.*;
  * Calendar 클래스는 달력을 표현하는 추상 클래스이다. 날짜와 시간을 계산하는 방법은 지역과 문화
  * 에 따라 다리기 때문에 특정 연법에 따르는 달력은 자식 클래스에서 구현하도록 되어 있다.
  * 
- * 특별한 역법을 사용하는 경우가 아니라면 직접 하위 클래스를 만들 필요는 없고 Calendar클래스의 정적 멧드인 getInstance()
- * 메소드를 이용하면 컴퓨터에 설정되어 있는 시간대를 시준으로 Calendar 하위 객체를 얻을 수 있다.
+ * 특별한 역법을 사용하는 경우가 아니라면 직접 하위 클래스를 만들 필요는 없고 Calendar클래스의 정적 메소드인 getInstance()
+ * 메소드를 이용하면 컴퓨터에 설정되어 있는 시간대를 기준으로 Calendar 하위 객체를 얻을 수 있다.
  * 
  * Calendar now = Calendar.getInstance();
  * Calendar 가 제공하는 날짜와 시간에 대한 정보를 얻기 위해서는
@@ -39,12 +39,18 @@ public class CalendarExample {
 		String strWeek = null;
 		
 		switch(week) {
-		case Calendar.MONDAY:	strWeek = "월"; break;
-		case Calendar.TUESDAY: strWeek = "화"; break;
-		case Calendar.WEDNESDAY: strWeek = "수"; break;
-		case Calendar.THURSDAY: strWeek = "목"; break;
-		case Calendar.FRIDAY: strWeek = "금"; break;
-		case Calendar.SATURDAY: strWeek = "토"; break;
+		case Calendar.MONDAY:	
+			strWeek = "월"; break;
+		case Calendar.TUESDAY: 
+			strWeek = "화"; break;
+		case Calendar.WEDNESDAY: 
+			strWeek = "수"; break;
+		case Calendar.THURSDAY: 
+			strWeek = "목"; break;
+		case Calendar.FRIDAY: 
+			strWeek = "금"; break;
+		case Calendar.SATURDAY: 
+			strWeek = "토"; break;
 		default : strWeek = "일";
 		}
 		

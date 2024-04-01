@@ -21,7 +21,8 @@ public class LosAngelesExample {
 	public static void main(String[] args) {
 		
 		TimeZone timeZone = TimeZone.getTimeZone("America/Los_Angeles");
-		Calendar now = Calendar.getInstance(timeZone);
+		//타임존 클래스로 원하는 지역을 가져옴
+		Calendar now = Calendar.getInstance(timeZone);//대입
 		
 		int amPm = now.get(Calendar.AM_PM);
 		String strAmPm = null;

@@ -7,14 +7,14 @@ import java.lang.annotation.Target;
 
 /*
  * <어노테이션>
- * 코드에서 @으로 작성되는 요소를 어노테이션이라고 한다. 어노테이션은 클래스 또는 인터페이스를 컴파일 하서나
+ * 코드에서 @으로 작성되는 요소를 어노테이션이라고 한다. 어노테이션은 클래스 또는 인터페이스를 컴파일 하거나
  * 실행할 때 어떻게 처리해야 할 것인지를 알려주는 설정 정보이다. 어노테이션은 다음 세 가지 용도로 사용된다
  * 
  * 1. 컴파일 시 사용하는 정보 전달
  * 2. 빌드 툴이 코드를 자동으로 생성할 때 사용하는 정보 전달
- * 3.실행 시 특정 기능을 처리할 때 사용하는 정보 전달
+ * 3. 실행 시 특정 기능을 처리할 때 사용하는 정보 전달
  * 
- * 컴파일 시 사용하는 정보 전달의 대표적인 예는 @Override 어노테이션이다. @Override는 컴파일러사 메소드
+ * 컴파일 시 사용하는 정보 전달의 대표적인 예는 @Override 어노테이션이다. @Override는 컴파일러가 메소드
  * 재정의 검사를 하도록 설정한다. 정확히는 재정의가되지 않았다면 컴파일러는 에러를 발생 시킨다.
  * 
  * 어노테이션은 자바 프로그램을 개발할 때 필수 요소가 되었다. 웹 개발에 많이 사용되는 Spring 프레임워크 또는 Spring Boot는
@@ -35,7 +35,8 @@ import java.lang.annotation.Target;
  * ex)
  * @Annotation
  * 
- * 어노테이션은 속성을 가질 수 있다. 속성은 타입과 이름으로 구성되며, 이름 뒤에 괄로를 붙인다. 속성의 기본값은 default 키워드로
+ * 어노테이션은 속성을 가질 수 있다. 속성은 타입과 이름으로 구성되며, 이름 뒤에 괄로를 붙인다. 
+ * 속성의 기본값은 default 키워드로
  * 지정할 수 있다. 예를 들어 String 타입의 prop1과 int 타입의 prop2 속성은 다음과 같이 선언할 수 있다.
  * 
  * ex)
@@ -51,7 +52,7 @@ import java.lang.annotation.Target;
  * @AnnotationName(prop1 = "값"); //prop2 생략가능
  * @AnnotationName(prop1 = "값", prop2 = 3);
  * 
- * 어노테이션은 기본 속성인 Value를 다름과 같이 가질 수 있다.
+ * 어노테이션은 기본 속성인 Value를 다음과 같이 가질 수 있다.
  * 
  * ex)
  * public @interface AnnotationName{
@@ -75,7 +76,7 @@ import java.lang.annotation.Target;
  */
 
 /*<어노테이션 적용 대상>
- * 자바에서 어노테이션은 성정 정보라고 했다, 그렇다면 어떤 대상에 설정 정보를 적용할 것인지, 즉 클래스에 적용할 것인지,
+ * 자바에서 어노테이션은 설정 정보라고 했다, 그렇다면 어떤 대상에 설정 정보를 적용할 것인지, 즉 클래스에 적용할 것인지,
  * 메소드에 적용할 것인지 명시해야 한다, 적용할 수 있는 대상의 종류는 ElementType 열거 상수로 정의되어 있다.
  * 
  * ElementType 열거 상수			적용 요소
@@ -120,10 +121,10 @@ import java.lang.annotation.Target;
  * 어노테이션을 정의할 때 한가지 더 추가할 내용은 @AnnotationName을 언제까지 유지할 것인지를 정의하는 것이다.
  * 어노테이션 유지 정책은 RetentionPolicy 열거 상수로 다음과 같이 정의되어 있다.
  * 
- * RetentionPolicy 열거 상수		어노테이션 적용시정			어노테이션 제거 시점
+ * RetentionPolicy 열거 상수		어노테이션 적용시점			어노테이션 제거시점
  * 
  * SOURCE						컴파일할 때 적용			컴파일된 후에 제거됨
- * CLASS						메모리로 로딩할 때 작용		메모리로 로딩된 후에 제거됨
+ * CLASS						메모리로 로딩할 때 적용		메모리로 로딩된 후에 제거됨
  * RUNTIME						실행할 때 적용				계속 유지됨
  * 
  * 유지 정책을 지정할 때에는 @Retention 어노테이선을 사용한다. @Retention의 기본 속성인 value()는
@@ -153,7 +154,7 @@ import java.lang.annotation.Target;
  * 
  * Annotation[]	getDeclaredAnnotations()					적용된 모든 어노테이션을 리턴
  * 
- * 다음 예제는 적용 대상을 METHOD, 유지 정책을 RUNTIME으로 하고 구분선에 대한 설정 정보를 속석으로 가지고 있는
+ * 다음 예제는 적용 대상을 METHOD, 유지 정책을 RUNTIME으로 하고 구분선에 대한 설정 정보를 속성으로 가지고 있는
  * @printAnnotation을 정의한다.
  * 
  */

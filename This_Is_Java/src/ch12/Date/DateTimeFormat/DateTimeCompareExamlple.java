@@ -26,10 +26,10 @@ public class DateTimeCompareExamlple {
 
 	public static void main(String[] args) {
 		
+	
+		LocalDateTime startDateTime = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd a hh:mm:ss");
 		
-		
-		LocalDateTime startDateTime = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
 		//now 말고도 of로 현재 말고 내가 날짜를 지정해서 받아올수도 있다.
 		System.out.println("시작일 : " + startDateTime.format(dtf));
 		

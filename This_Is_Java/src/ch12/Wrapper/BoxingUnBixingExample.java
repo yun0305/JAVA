@@ -3,7 +3,7 @@ package ch12.Wrapper;
 /*
  * <포장 클래스>
  * 자바는 기본 타입 (byte, char, short, int, long, float, double, boolean) 의 값을 갖는 객체를
- * 생성할 수 있다. 일런 객체를 Wrapper 객체라고 한다, 값을 포장학 있다고 해서 붙어진 이름이다.
+ * 생성할 수 있다. 이런 객체를 Wrapper 객체라고 한다, 값을 포장하고 있다고 해서 붙어진 이름이다.
  * 
  * 포장 객체를 생성하기 위한 클래스는 java.lang 패키지에 포함되어 있는데, char 타입과 int 타입이 각각
  * Character와 Integer 인것만 제외하고는 기본 타입의 척 문자를 대문자로 바꾼 이름을 가지고 있다
@@ -22,7 +22,7 @@ package ch12.Wrapper;
  * Integer obj = 100; //박싱 (new Integer(100); 도 된다)
  * int value = obj;   // 언박싱 (obj.intValue(); 도 된다)
  * 
- * 언박싱은 다음과 같이 연산 과정에서도 발생한다. obj는 50과 연상되기 전에 언박싱 된다.
+ * 언박싱은 다음과 같이 연산 과정에서도 발생한다. obj는 100과 연산되기 전에 언박싱 된다.
  */
 
 public class BoxingUnBixingExample {
@@ -39,7 +39,7 @@ public class BoxingUnBixingExample {
 		System.out.println("vlaue " + value);
 		
 		//연산 시 Unboxing
-		int result = obj + 100;
+		int result = obj.intValue() + 100;
 		System.out.println("result "+ result);
 		
 

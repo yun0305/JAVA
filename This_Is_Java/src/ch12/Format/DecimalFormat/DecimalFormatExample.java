@@ -3,7 +3,7 @@ package ch12.Format.DecimalFormat;
 import java.text.DecimalFormat;
 
 /*
-	 * Format(형식) 클래스는 숫자 꼬는 날짜를 원하는 형태의 문자열로 변환해주는 기능을 제공한다.
+	 * Format(형식) 클래스는 숫자 또는 날짜를 원하는 형태의 문자열로 변환해주는 기능을 제공한다.
 	 * Format 클래스는 java.text 패키지에 포함되어 있는데, 주요 Format 클래스는 다음과 같다.
 	 * 
 	 * Format 클래스				설명
