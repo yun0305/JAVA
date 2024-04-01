@@ -1,4 +1,4 @@
-package ch13.Generic.wicard;
+package ch13.Generic.wildcard;
 
 public class Course {
 
@@ -13,7 +13,6 @@ public class Course {
 	}
 	
 	//직장인 및 일반인만 등록 가능
-	
 	public static void registerCourse3(Applicant<? super Worker> applicant) {
 		System.out.println(applicant.kind.getClass().getSimpleName()+"이 Course3을 등록함");
 	}

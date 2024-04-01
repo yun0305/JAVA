@@ -1,4 +1,4 @@
-package ch13.Generic.wicard;
+package ch13.Generic.wildcard;
 
 	/*
 	 * <와일드 카드 타입 파라미터>

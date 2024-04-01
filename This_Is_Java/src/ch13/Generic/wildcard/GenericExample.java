@@ -1,4 +1,4 @@
-package ch13.Generic.wicard;
+package ch13.Generic.wildcard;
 
 public class GenericExample {
 	
