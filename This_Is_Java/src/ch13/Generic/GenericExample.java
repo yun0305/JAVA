@@ -31,6 +31,14 @@ public class GenericExample {
 		box5.content = 100;
 		
 		boolean result = box3.compare(box4);
+		//바보 처럼 까먹었기 때문에 다시 적는다 
+		/*
+		 * box3 부터 5는 기본이 오브젝트 타입이다 거기에 문자열 100을 넣어줬고 그럼 오브젝트 부모에 String 자식이 들어간거다.
+		 * 그럼 String이 사용할수 있는건 부모타입인 오브젝트의 필드와 메소드 그리고 자식인 String의 재정의 메소드 뿐이다, 
+		 * 그렇기 때문에 equals는 String이 재정의 하고 있으므로 재정의한 String의 equals 메소드를 호출하는것이다.
+		 * 
+		 * 복습할 양이 많아서 헷갈리나보다..
+		 */
 		System.out.println(result);
 		
 		result = box3.compare(box5);
