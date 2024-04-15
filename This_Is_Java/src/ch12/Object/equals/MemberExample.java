@@ -26,6 +26,13 @@ public class MemberExample {
 		 * 
 		 */
 		
+		TakeNotes tns = new TakeNotes("testId"); 
+		TakeNotes tns2 = new TakeNotes("testI");
+		
+		System.out.println(tns.equals(tns2));
+		
+		
+		
 	}
 
 }

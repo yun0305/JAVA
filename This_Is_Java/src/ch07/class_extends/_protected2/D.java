@@ -4,7 +4,7 @@ import ch07.class_extends._protected1.A;
 
 public class D extends A {
 	
-	//다른 패키지 에서 상속 받을때
+	//다른 패키지에서 상속 받을때
 	/*
 	 * protedted는 다른 패키지에서 상속 시킬수 있다 자식 클래스를 한에서 사용할수 있다
 	 * 단 객체를 생성해서는 사용할수 없다 왜냐면 자식 클래스 한에서 라는 말은 상속 관련이 된다는 뜻인데

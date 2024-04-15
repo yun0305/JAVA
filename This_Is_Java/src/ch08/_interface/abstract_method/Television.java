@@ -20,7 +20,7 @@ public class Television implements RemoteControl{
 	}
 		@Override
 	public void turnOff() {
-			System.out.println("TV를 켭니다");
+			System.out.println("TV를 끕니다");
 		
 	}
 		
@@ -38,7 +38,7 @@ public class Television implements RemoteControl{
 		if(volume > RemoteControl.MAX_VOLUME) {
 			this.volume = RemoteControl.MAX_VOLUME;
 		}
-		else if(RemoteControl.MIN_VOLUME>volume){
+		else if(volume<RemoteControl.MIN_VOLUME){
 			this.volume = RemoteControl.MIN_VOLUME;
 		}
 		else {

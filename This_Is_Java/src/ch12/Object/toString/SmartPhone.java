@@ -15,9 +15,9 @@ package ch12.Object.toString;
 	 * 리턴하도록 해야 한다. 예를 들어 Date클래스는 현재 날짜와 시간을, String클래스는 저장된 문자열을
 	 * 리턴하도록 toString() 메소드를 재정의하고 있다.
 	 * 
-	 * System.out.println(); 메소드는 매개값이 기본 타입(byte, short. int,long, float, double,
-	 *	char, boolean); 이거나 문자열일 경우 그대로 출력한다. 만약 매개값이 객체인 경우
-	 *	객체의 toString() 메소드를 호출해서 리턴값을 출력한다. 
+	 * System.out.println(); 메소드는 매개값이 기본 타입(byte, short, int, long, float, double,
+	 * char, boolean); 이거나 문자열일 경우 그대로 출력한다. 만약 매개값이 객체인 경우
+	 * 객체의 toString() 메소드를 호출해서 리턴값을 출력한다. 
 	 * 
 	 */
 
@@ -30,7 +30,6 @@ public class SmartPhone {
 	public SmartPhone(String companey, String os) {
 		this.companey = companey;
 		this.os = os;
-		
 	}
 	
 	@Override

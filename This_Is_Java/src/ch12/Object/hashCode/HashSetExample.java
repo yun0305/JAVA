@@ -12,7 +12,7 @@ public class HashSetExample {
 		 * HashSet은 haseCode() 와 equals() 메소드를 이용해서 동등 객체인지 판단한다.
 		 * 
 		 * <추가>
-		 * , HashSet이 동등 객체를 판단할 때에는 해당 객체의 hashCode()와 equals() 메소드를
+		 *  HashSet이 동등 객체를 판단할 때에는 해당 객체의 hashCode()와 equals() 메소드를
 		 *  사용하며, 개발자가 이를 재정의하면 원하는 동등성 비교를 할 수 있습니다.
 		 *  즉 내가 hashSet.add()에 넣을 객체의 hashCode와 equals 메소드를 직접 재정의해줘서
 		 *  어떤기준으로 동등객체인지 정해줄 필요가 있다.

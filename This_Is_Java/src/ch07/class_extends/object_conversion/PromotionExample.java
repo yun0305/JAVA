@@ -3,7 +3,7 @@ package ch07.class_extends.object_conversion;
 class A {
 	
 }
-class B extends A{//
+class B extends A{
 	
 }
 class C extends A{
@@ -33,7 +33,7 @@ public class PromotionExample {
 			
 		
 		//객체 자동 타입변환
-		A a1 =  new B();//B는 A를 상속 받았기 때문에 A로 자동타입 변환이 된다
+		A a1 = new B();//B는 A를 상속 받았기 때문에 A로 자동타입 변환이 된다
 		A a2 = new C();//C도 A를 상속 받았기 때문에 A로 자동타입 변환이 된다
 		A a3 = new D();//D는 A를 상속받은 B를 상속 받았기 때문에 A로 타입변환이 가능하다
 		A a4 = new E();//E는 A를 상속받은 C를 상속 받았기 때문에 A로 타입변환이 가능하다

@@ -24,7 +24,7 @@ public class Exception_Handling_Example {
 		System.out.println("마무리 실행");
 	}
 	
-	}
+}
 	
 	
 	public static void main(String[] args) {
