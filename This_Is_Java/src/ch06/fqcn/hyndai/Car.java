@@ -37,7 +37,8 @@ import ch06.fqcn.kumho.AllSeasonTire;
  */
 
 public class Car {
-	/*Tier tier1 = new Tier();tire 클래스를 두개를 만들었는데 하나는 한국타이어 하나는 금호 타이어를 쓰고싶어서 2개를 임포트를 했다 하지만 이름이 같아서 인식을 할수가 없다
+	/*Tier tier1 = new Tier();tire 클래스를 두개를 만들었는데 하나는 한국타이어
+	 *하나는 금호 타이어를 쓰고싶어서 2개를 임포트를 했다 하지만 이름이 같아서 인식을 할수가 없다
 	  Tier tier2 = new Tier();
 	*/
 	ch06.fqcn.hankook.Tire tier1 = new ch06.fqcn.hankook.Tire();

@@ -37,7 +37,7 @@ public class DateExample {
 	public static void main(String[] args) {
 		
 		Date now = new Date();//년 월 일 시 분 초 한번에 나온다 따로 나오게 할 수 없다.
-		String strNow1 = now.toString();// now 의 toString을 하면  날짜를 문자열로 받아 올수 있다.
+		String strNow1 = now.toString();// now참조 변수 의 toString을 하면  날짜를 문자열로 받아 올수 있다.
 		System.out.println(strNow1);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");//데소문자 의미 있음

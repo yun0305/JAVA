@@ -27,7 +27,7 @@ public class Exception_ClassException {
 	 * 클래스를 상속 받는다.
 	 * 
 	 * 
-	 * 		    ㅡ<- Exception <-(일반 예외)(ClassCotFoundException, InterrupTedException....)
+	 * 		    ㅡ<- Exception <-(일반 예외)(ClassCantFoundException, InterrupTedException....)
 	 * 		   ㅣ
 	 *		   ▽ 		 
 	 * Throwable 

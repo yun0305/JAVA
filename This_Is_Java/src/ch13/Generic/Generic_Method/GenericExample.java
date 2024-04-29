@@ -16,10 +16,17 @@ public class GenericExample {
 		return box;
 	}
 	
+	public static <C>  int test(C x) {
+	
+		return 1;
+	}
 	
 	public static void main(String[] args) {
+	
+	GenericExample.<Integer>test(1);
 		
-	Box<Integer> box1 = boxing(100);	
+		
+	Box<Integer> box1 = GenericExample.<Integer>boxing(100);//생략가능
 	int inValue = box1.get();
 	System.out.println(inValue);
 	

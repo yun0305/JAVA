@@ -29,6 +29,7 @@ public class Car {
 			}
 			else {
 				System.out.println("멈춥니다. (남은 잔량은 gas"+gas+")");
+				
 				return;// break; 를 사용해도 되지만 return을 사용한 이유는 return을 사용하면 메소드의 사용을 완전 
 				//종료해 버린다 break;는 그뒤에 실행문이 있으면 그 실행문을 작동시킨다
 			}

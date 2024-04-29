@@ -42,10 +42,12 @@ public interface Service {
 	//정적 메소드
 	static void staticMethod1() {
 		System.out.println("staticMethod1 종속 코드");	
+		staticMethod2();
 	}
 	
 	static void staticMethod2() {
 		System.out.println("staticMethod2 종속 코드");
+		staticMethod2();
 	}
 	
 	private static void staticcommon() {

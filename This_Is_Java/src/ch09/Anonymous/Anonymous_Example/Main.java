@@ -19,6 +19,7 @@ public class Main {
 		});
 		
 		okBt.click();
+		
 		Button canCelBt = new Button();
 		
 		canCelBt.setClickListener(new Button.ClickListener() {

@@ -1,7 +1,7 @@
 package ch06._final;
 
 public class Person {
-	//final
+		//final
 		/*
 		 * final은 초기화 해줄수 있는 방법이 2가지 뿐이다
 		 * 1.final 필드는 처음에 필드를 생성해 줄때 초기화를 해주거나

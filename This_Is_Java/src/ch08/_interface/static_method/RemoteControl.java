@@ -23,9 +23,6 @@ public interface RemoteControl {
 	
 	//디폴트 메소드
 	default void setMute(boolean mute) {
-		/* 다시한번 디폴트 메소드는 구현객체가 있어야 사용할수 있다. 모든 구현객체의 기본 메소드이다
-		 * 그래서 default 메소드이다.
-		 */
 		if(mute) {
 			System.out.println("무음처리 합니다");
 			//추상 메소드 호출하면서 상수 필드 사용

@@ -35,8 +35,8 @@ public class ExceptionHandlingExample {
 		 * Unhandled exception type ClassNotFoundException 라는 예외가 발생할수 있다
 		 * ClassNotFoundException라는 오류가 뜨니까 catch로 ClassNotFoundException 예외 객체를 받아오면 된다.
 		 
-		 *Class.forName("java.lang.String"); 이코드는 예외 처리를 하지 않으면 작동을 하지 않는 코드이다
-		 *(컴파일러가 찾아줌) 이런것을 일반예외라고 부른다.
+		 * Class.forName("java.lang.String"); 이코드는 예외 처리를 하지 않으면 작동을 하지 않는 코드이다
+		 * (컴파일러가 찾아줌) 이런것을 일반예외라고 부른다.
 		 *
 		 */
 		System.out.println("종료");

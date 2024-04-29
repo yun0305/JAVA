@@ -37,7 +37,7 @@ public class GenericExample {
 		System.out.println("compare("+t1.getClass().getName()+","+t2.getClass().getName()+")");
 		
 		double v1 = t1.doubleValue();//사용할수 있는 메소드는 Number의 메소드 뿐 Number의 자식 메소드는 사용할수 없다
-		double v2 = t1.doubleValue();//단지 타입 파라미터로 Number이거나 Nuber의 자식 메소드만 받을수 있는것이다.
+		double v2 = t1.doubleValue();//단지 타입 파라미터로 Number이거나 Number의 자식 메소드만 받을수 있는것이다.
 		
 		return (v1==v2);
 		

@@ -23,6 +23,17 @@ import java.util.*;
  * int minute = now.get(Calendar.MINUTE);		//분을 리턴 
  * int second = now.get(Calendar.SECOND);		//초를 리턴
  */
+	
+ /*
+  * Calendar 클래스 사용법 익히기
+  * 
+  * 캘린더 선언
+  * Calendar now = Calendar.getInstance(); // Calendar.getInstance()로 객체를 참조한다
+  * 
+  * 메소드 사용
+  * 
+  * int year = now.get() 메소드로 접근 now.get()메소드의 매개값으로 Calendar의 정의된 상수를 넣어준다. 
+  */
 
 public class CalendarExample {
 
@@ -76,6 +87,9 @@ public class CalendarExample {
 		System.out.print(hour+"시 ");
 		System.out.print(minute+"분 ");
 		System.out.println(second+"초 ");
+		
+		System.out.println(Calendar.MONDAY);
+		System.out.println(Calendar.SATURDAY);
 	}
 
 }

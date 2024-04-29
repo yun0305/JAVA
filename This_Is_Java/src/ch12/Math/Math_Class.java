@@ -32,7 +32,7 @@ import java.util.Random;
  * 
  * int num = (int)(Math.random()*n)+start;
  * 
- * 난수를 얻는 떠 다른 방법으로 java.util.Random 클래스를 이용할 수 있다. 이 클래스를 이용하면 boolean,
+ * 난수를 얻는 또 다른 방법으로 java.util.Random 클래스를 이용할 수 있다. 이 클래스를 이용하면 boolean,
  * int, double 난수를 얻을 수 있다. 다음은 Random 객체를 생성하기 위한 생성자이다
  * 
  * 객체 생성				설명
@@ -53,45 +53,58 @@ import java.util.Random;
  *  
  *  */
 
+	/*
+	 * 	Random 객체는 객체를 생성하고 객체로 접근해서 위의 메소드를 통해서 바로 랜덤값을 얻을수 있다.
+	 */
+
 public class Math_Class {
 	public static void main(String[] args) {
 		
-		//선택번호
-		int[] selectNumber = new int[6];//선택번호 6개가 저장될 배열 생성
-		Random random = new Random(3);// 선택번호를 얻기 위한 Random 객체 생성
-		System.out.println("선택 번호");
+		/*
+		 * //선택번호 int[] selectNumber = new int[6];//선택번호 6개가 저장될 배열 생성 Random random =
+		 * new Random(3);// 선택번호를 얻기 위한 Random 객체 생성 System.out.println("선택 번호");
+		 * 
+		 * for(int i=0;i<selectNumber.length;i++) { selectNumber[i] =
+		 * random.nextInt(45)+1; System.out.print(selectNumber[i] + " "); }
+		 * 
+		 * System.out.println();
+		 * 
+		 * //당첨번호 int[] winningNumber = new int[6]; random = new Random(5);
+		 * System.out.println("당첨번호");
+		 * 
+		 * for(int i=0;i<winningNumber.length;i++) { winningNumber[i] =
+		 * random.nextInt(45)+1; System.out.print(winningNumber[i] + " "); }
+		 * 
+		 * System.out.println();
+		 * 
+		 * //당첨여부 Arrays.sort(selectNumber); Arrays.sort(winningNumber); boolean result
+		 * = Arrays.equals(selectNumber, winningNumber); System.out.println("당첨여부");
+		 * 
+		 * if(result) { System.out.println("1등 당첨"); } else { System.out.println("꽝"); }
+		 */
 		
-		for(int i=0;i<selectNumber.length;i++) {
-			selectNumber[i] = random.nextInt(45)+1;
-			System.out.print(selectNumber[i] + " ");
+	
+	
+		Random ran = new Random();
+		
+		int[] randomNumber = new int[7];
+		
+		randomNumber[0] = ran.nextInt(10)+1;
+		for(int i=1; i<7;i++){
+				
+					if(randomNumber[i-1]!=randomNumber[i]){
+						randomNumber[i-1] = ran.nextInt(10)+1;
+						
+					
+				}
+			}
+			
+		
+		for(int all : randomNumber){
+			System.out.print(all+" ");
 		}
 		
-		System.out.println();
-		
-		//당첨번호
-		int[] winningNumber = new int[6];
-		random = new Random(5);
-		System.out.println("당첨번호");
-		
-		for(int i=0;i<winningNumber.length;i++) {
-			winningNumber[i] = random.nextInt(45)+1;
-			System.out.print(winningNumber[i] + " ");
-		}
-		
-		System.out.println();
-		
-		//당첨여부
-		Arrays.sort(selectNumber);
-		Arrays.sort(winningNumber);
-		boolean result = Arrays.equals(selectNumber, winningNumber);
-		System.out.println("당첨여부");
-		
-		if(result) {
-			System.out.println("1등 당첨");
-		}
-		else {
-			System.out.println("꽝");
-		}
+	
 	}
 }
 

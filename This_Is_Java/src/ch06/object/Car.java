@@ -21,6 +21,7 @@ public class Car{
 		
 		Car(String model){
 		this(model,0,false);//this(); 는 생성자 제일 처음에 위치해야 한다.
+		
 		}
 		
 		Car(String model,int speed){

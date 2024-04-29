@@ -81,7 +81,7 @@ import java.lang.annotation.Target;
  * 
  * ElementType 열거 상수			적용 요소
  * 
- * TYPE							클래스, 인터페잇 열거 타입
+ * TYPE							클래스, 인터페이스 열거 타입
  * ANNTATION,TYPE				어노테이션
  * FILED						필드
  * CONSTRUCTOR					생성자
@@ -89,7 +89,7 @@ import java.lang.annotation.Target;
  * LOCAL_VARIABLE				로컬변수
  * PACKAGE						패키지
  * 
- * 적용 대상을 지정할 때에는 @Target 어노테치션을 사용한다. @Target기본 속성인 value는 ElementType 배열을 값으로 가진다
+ * 적용 대상을 지정할 때에는 @Target 어노테이션을 사용한다. @Target기본 속성인 value는 ElementType 배열을 값으로 가진다
  * 이것은 적용 대상을 복수 개로 지정하기 위해서이다. 예를 들어 다음과 같이 적용 대상을 지정했다고 가정해보자.
  *
  * ex)
@@ -142,7 +142,7 @@ import java.lang.annotation.Target;
 
 /*<어노테이션 설정 정보 이용>
  * 어노테이션은 아무런 동작을 가지지 않는 설정 정보일 뿐이다. 이 설정 정보를 이용해서 어떻게 처리할 것인지는 애플리케이션의 몫이다.
- * 애플리케이션은 12.11절에서 학습한 리플ㄹ랙션을 이용해서
+ * 애플리케이션은 12.11절에서 학습한 리플랙션을 이용해서
  * 적용 대상으로부터 어노테이션 정보를 다음 메소드로 얻어낼 수 있다.
  * 
  * 리터타입		메소드명(매개변수)								설명

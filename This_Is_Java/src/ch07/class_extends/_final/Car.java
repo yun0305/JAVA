@@ -10,7 +10,7 @@ public class Car {
 	 */
 	
 	//필드 선언
-	public  int speed;
+	public int speed;
 	
 	//메소드 선언
 	public void speedUp() {
