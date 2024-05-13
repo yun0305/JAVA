@@ -8,21 +8,21 @@ public class TakeNotes {
 		this.id = id;
 	}
 	
+	
 	@Override
 	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
 		
-		if(obj instanceof TakeNotes args) {
+		if(obj instanceof Member target) {
 			
-			if(args.id.equals(this.id)) {
+			if(this.id.equals(target.id)) {
 				return true;
-			}
-			else {
-				return false;
-			}
-			
+			}			
 		}
+		
 		return false;
 		
 	}
+	
 	
 }

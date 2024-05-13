@@ -17,7 +17,7 @@ package ch13.Generic.bounded_type_parameter;
 	 * Number 타입과 자식 클래스에만 대체 가능한 타입 파라미터를 정의한 것이다.
 	 * 
 	 * ex)
-	 * public <T extends Number> boolean compare(T t1, T t2){
+	 * public <T extends Number> boolean compare(T t1, T t2){ Number거나 Number를 상속받은 객체만 올수 있다.
 	 * 
 	 * 	double v1 = t1.doubleValue(); // Number의 doubleValue()메소드 사용
 	 * 	double v2 = t1.doubleValue(); // Number의 doubleValue()메소드 사용

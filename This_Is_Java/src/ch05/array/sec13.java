@@ -18,8 +18,6 @@ public class sec13 {
 		
 	}
 	
-	
-	
 	public static void printitem(int[] scores) {
 		for(int i=0;i<scores.length;i++) {
 			System.out.println("scores["+i+"] = "+scores[i]);

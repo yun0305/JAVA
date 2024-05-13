@@ -85,24 +85,7 @@ public class Math_Class {
 		
 	
 	
-		Random ran = new Random();
 		
-		int[] randomNumber = new int[7];
-		
-		randomNumber[0] = ran.nextInt(10)+1;
-		for(int i=1; i<7;i++){
-				
-					if(randomNumber[i-1]!=randomNumber[i]){
-						randomNumber[i-1] = ran.nextInt(10)+1;
-						
-					
-				}
-			}
-			
-		
-		for(int all : randomNumber){
-			System.out.print(all+" ");
-		}
 		
 	
 	}

@@ -13,9 +13,7 @@ public class sec06 {
 			System.out.println("strVal1과 strVal2는 참조가 다름");
 		}
 		if(strVal1.equals(strVal2)){
-			
 			System.out.println("strVal1과 strVal2는 문자열이 같음");
-		
 		}
 		
 		String strVal3 = new String("홍길동");

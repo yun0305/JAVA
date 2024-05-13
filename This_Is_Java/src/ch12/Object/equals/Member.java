@@ -42,7 +42,7 @@ public class Member {
 		
 		if(obj instanceof Member target) {//instaceof 로 odj객체가 member 객체로 만든 객체를 받은거라면
 										  // Member 객체로 다운캐스팅 해서 target변수에 담는다 
-			if(id.equals(target.id)) {// 현재 id와 target 변수가 외부에서 받아온 Member 객체의 id가 같다면
+			if(this.id.equals(target.id)) {// 현재 id와 target 변수가 외부에서 받아온 Member 객체의 id가 같다면
 									  // true를 리턴
 				return true;
 			}

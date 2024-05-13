@@ -12,18 +12,18 @@ public class GenericExample {
 
 	public static <T> Box<T> boxing(T t){// 메소드가 타입 파라미터를 추론하는 방법은 매개변수로 추론한다.
 		Box<T> box = new Box<T>();		//제네릭 메소드는 리턴타입 앞에 <T>를 사용하지 않으면 내부에서 T 를 사용할수 없다
-		box.set(t);
+		box.set(t);						//하지만 다른 방법으로 호출할때 명시해줄수 있다. (test 메소드를 볼것)
 		return box;
 	}
 	
-	public static <C>  int test(C x) {
+	public static <C>  int test() { //추론 방법이 없지만 이메소드를 호출할때 <Integer>test();로 명시가능
 	
 		return 1;
 	}
 	
 	public static void main(String[] args) {
 	
-	GenericExample.<Integer>test(1);
+	GenericExample.<Integer>test();
 		
 		
 	Box<Integer> box1 = GenericExample.<Integer>boxing(100);//생략가능

@@ -2,7 +2,8 @@ package ch13.Generic;
 
 /*
  * <제네릭>
- * 다음과 같이 Box 클래스를 선언하려고 한다. Box에 넣을 내용물로 content 필드를 선언하려고 할 때, 타임을 무엇으로 해야할까?
+ * 다음과 같이 Box 클래스를 선언하려고 한다. Box에 넣을 내용물로 content 필드를 선언하려고 할 때,
+ * 타임을 무엇으로 해야할까?
  * 
  * ex)
  * public class Box{
@@ -31,7 +32,7 @@ package ch13.Generic;
  * String 타입이라면 (String)으로 강제 타입 변환해서 내용물을 얻는 식이다.
  * 
  * ex)
- * String content = (String) box.content;
+ * String content = (String)box.content;
  * 
  * 그러나 어떤 내용물이 저장되어 있는지 모른다면 instanceof 연산자로 타입을 조사할 수는 있지만 모든 종류의 클래스를 대상으로
  * 조사할 수는 없다. 따라서 Object타입으로 content 필드를 선언하는 것은 좋은 방법이 아니다.
@@ -51,8 +52,10 @@ package ch13.Generic;
  * }
  * 
  * <T>는 T가 타입 파라미터임을 뜻하는 기호로, 타입이 필요한 자리에 T를 사용할 수 있음을 알려주는 역할을 한다.
- * 여기에서 Box클래스는 T를 content 필드의 타입으로 사용하였다. 즉 Box 클래스는 T가 무엇인지 모르지만, Box 객체가 생성될 시점에 다른 타입으로 대체된다는 것을 알고 있다.
- * 만약 Box의 내용물로 String을 저장하고 싶다면 다음과 같이 Box를 생성할 때 타입 파라미터 T 대신 String으로 대체하면 된다.
+ * 여기에서 Box클래스는 T를 content 필드의 타입으로 사용하였다. 즉 Box 클래스는 T가 무엇인지 모르지만,
+ * Box 객체가 생성될 시점에 다른 타입으로 대체된다는 것을 알고 있다.
+ * 만약 Box의 내용물로 String을 저장하고 싶다면 다음과 같이 Box를 생성할 때 타입 파라미터 T 대신 String으로 대체하면
+ * 된다.
  * 
  * ex)
  * Box<String> box = new Box<String>();
@@ -83,20 +86,25 @@ package ch13.Generic;
  * 
  * 실습을 통해 이해해보자. 다음과 같이 Box 클래스를 작성한다.
  * 
+ * 제네릭 클래스는 static 불가능
+ * 제네릭이 정해지기전에 static이 먼저 메모리에 저장되기 때문에 불가능
  *
+ * T는 인스턴스를 생성할 때 결정되는 타입이므로, 
+ * static 필드에 사용할 수 없습니다
  */
 
 public class Box<T> {
 
-	public T content;// 타입 파라미터로 T사용
+	public  T content;// 타입 파라미터로 T사용
 	public  int i = 0;
 	/*
 	 * 타입 파라미터는 기본적으로 Object타입으로 간주되므로 Object가 가지고 있는 메소드를 호출할 수 있다.
 	 * 다음 예제는Box의 내용물을 비교하기 위해 파라미터로 Object의 equals() 메소드를 호출한다.
 	 */
 	//Box의 내용물이 같은지 확인
-	public boolean compare(Box<T> other) {
-		
+	public <T>boolean compare(Box<T> other) {
+		// 매개값의 Box<T>의 T는 class에 있는 T의 타입파라미터 영향을 받는다
+		// 만약 매개값의 타입파라미터가 클래스의 타입파라미터와 다르면 컴파일 오류가 뜬다.
 		boolean result = content.equals(other.content);
 		
 		return result;

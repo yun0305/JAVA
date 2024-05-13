@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 	 * boolean 			hasMoreTokens() 남아 있는 문자열이 있는지 여부
 	 * String			nextToken()		문자열을 하나씩 가져옴
 	 * 
-	 * nextTOken() 메소드는 분리된 문자열을 하나씩 가져오고 더 이상 가져올 문자열이 없다면 예외를 발생시킨다.
+	 * nextToken() 메소드는 분리된 문자열을 하나씩 가져오고 더 이상 가져올 문자열이 없다면 예외를 발생시킨다.
 	 * 그래서 nextToken()을 사용하기 전에 hasMoreToken() 메소드로 가져올 문자열이 있는지 먼저 조사하는 것이 좋은 방법이다.
 	 * 
 	 */

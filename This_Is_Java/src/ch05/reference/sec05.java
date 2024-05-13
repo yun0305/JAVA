@@ -6,7 +6,8 @@ public class sec05 {
 		String hobby = "여행";
 		hobby = null;
 		/*
-		 *hobby String 객체에 여행이 들어 있었지만 null을 넣어줘서 hobby를 더이상 사용하지 않는 객체로 만들어 주었다
+		 *hobby String 객체에 여행이 들어 있었지만 null을 넣어줘서 hobby를 더이상
+		 *사용하지 않는 객체로 만들어 주었다
 		 *null을 이용해 더이상 사용하지 않는 객체로 만들어 줄 수 있고 더이상
 		 *사용하지 않는 객체는 자바에서 가비지 컬렉터가 객체를 사용하지 않는다
 		 * 
