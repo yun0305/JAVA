@@ -5,7 +5,11 @@ public class ExceptionHandlingExample03 {
 	 * 두 개 이상의 예외를 하나의 catch 블록으로 동일하게 예외 처리하고 싶을 때가 있다. 이 경우에는 catch블록에
 	 * 예외 클래스를 기호 | 로 연결하면된다
 	 */
+	 
+	
 	public static void main(String[] args) {
+		
+		
 		
 		String[] array = new String[]{"10","1oo",null,"2000"};
 				

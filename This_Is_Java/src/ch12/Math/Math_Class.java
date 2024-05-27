@@ -60,28 +60,44 @@ import java.util.Random;
 public class Math_Class {
 	public static void main(String[] args) {
 		
-		/*
-		 * //선택번호 int[] selectNumber = new int[6];//선택번호 6개가 저장될 배열 생성 Random random =
-		 * new Random(3);// 선택번호를 얻기 위한 Random 객체 생성 System.out.println("선택 번호");
-		 * 
-		 * for(int i=0;i<selectNumber.length;i++) { selectNumber[i] =
-		 * random.nextInt(45)+1; System.out.print(selectNumber[i] + " "); }
-		 * 
-		 * System.out.println();
-		 * 
-		 * //당첨번호 int[] winningNumber = new int[6]; random = new Random(5);
-		 * System.out.println("당첨번호");
-		 * 
-		 * for(int i=0;i<winningNumber.length;i++) { winningNumber[i] =
-		 * random.nextInt(45)+1; System.out.print(winningNumber[i] + " "); }
-		 * 
-		 * System.out.println();
-		 * 
-		 * //당첨여부 Arrays.sort(selectNumber); Arrays.sort(winningNumber); boolean result
-		 * = Arrays.equals(selectNumber, winningNumber); System.out.println("당첨여부");
-		 * 
-		 * if(result) { System.out.println("1등 당첨"); } else { System.out.println("꽝"); }
-		 */
+		
+		  //선택번호 
+		  int[] selectNumber = new int[6];//선택번호 6개가 저장될 배열 생성
+		  Random random = new Random(3);// 선택번호를 얻기 위한 Random 객체 생성 
+		  System.out.println("선택 번호");
+		  
+		  for(int i=0;i<selectNumber.length;i++) {
+			  selectNumber[i] = random.nextInt(45)+1;
+			  System.out.print(selectNumber[i] + " "); 
+			 }
+		  
+		  System.out.println();
+		
+		  //당첨번호 
+		  int[] winningNumber = new int[6];
+		  random = new Random(5);
+		  System.out.println("당첨번호");
+		  
+		  for(int i=0;i<winningNumber.length;i++) {
+			  winningNumber[i] =random.nextInt(45)+1;
+			  System.out.print(winningNumber[i] + " "); 
+		  }
+		  
+		  System.out.println();
+		  
+		  //당첨여부 
+		  Arrays.sort(selectNumber);
+		  Arrays.sort(winningNumber);
+		  boolean result = Arrays.equals(selectNumber, winningNumber);
+		  System.out.println("당첨여부");
+		  
+		  if(result) { 
+			  System.out.println("1등 당첨"); 
+		  } 
+		  else {
+			  System.out.println("꽝");
+			  }
+		 
 		
 	
 	

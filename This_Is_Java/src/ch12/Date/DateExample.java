@@ -1,6 +1,8 @@
 package ch12.Date;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /*
@@ -48,7 +50,6 @@ public class DateExample {
 		 * Date 클래스로 현재 날짜와 시간을 얻어오고 참조값을
 		 *  SimpleDateFormat 객체의 format() 메소드에 매개값으로 넣어준다.
 		 */
-		
 		
 	}
 

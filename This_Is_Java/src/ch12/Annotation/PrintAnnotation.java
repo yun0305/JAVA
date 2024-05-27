@@ -31,7 +31,7 @@ import java.lang.annotation.Target;
  * 
  * }
  * 
- * 이럭게 정의한 어노테이션은 코드에서 다음과 같이 사용된다
+ * 이렇게 정의한 어노테이션은 코드에서 다음과 같이 사용된다
  * ex)
  * @Annotation
  * 

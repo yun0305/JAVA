@@ -70,7 +70,7 @@ package ch13.Generic;
  * box.content = 100;
  * int content = box.content// 강제 타입 변환이 필요없이 100을 바로 얻을 수 있음
  * 
- * Object를 썻을때와 다른점은 content로 넘어온 값이 어떤타입인지 모른다는거다 그럼 Box클래스가 받아올때
+ * Object를 썻을때는 content로 넘어온 값이 어떤타입인지 모른다는거다 그럼 Box클래스가 받아올때
  * 어떤 타입인지 조사해줘야 한다는 것이다.
  * 그리고 사용할떄도 다운 캐스팅을 시켜야한다.
  *

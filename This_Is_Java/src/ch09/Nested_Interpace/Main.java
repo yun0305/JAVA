@@ -38,19 +38,18 @@ public class Main {
 		
 //////////////////////////////////////////////////////////////////////
 		
+		Button exbt = new Button();
 		
-		Button exitBt = new Button();
-		
-		class exitButton implements Button.ClickListener{
+		class exbt implements Button.ClickListener{
 			@Override
 			public void onClick() {
-				System.out.println("시스템 종료");
+				System.out.println("종료버튼실행");
 				
 			}
 		}
+		exbt.setClickListener(new exbt());
+		exbt.click();
 		
-		exitBt.setClickListener(new exitButton());
-		exitBt.click();
 	}
 
 }

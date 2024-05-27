@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
 	 * SimpleDateFormat			날짜를 형식화된 문자열로 변환
 	 * 
 	 * <DecimalFormat>
-	 * DecimalFormat은 숫자를 혈식화된 문자열로 변환하는 기능을 제공한다. 원하는 형식으로 표현하기 위해 다음과 같은
+	 * DecimalFormat은 숫자를 형식화된 문자열로 변환하는 기능을 제공한다. 원하는 형식으로 표현하기 위해 다음과 같은
 	 * 패턴을 사용한다.
 	 * 
 	 * 기호 		의미 						패턴 예 			 	1234567.89 -> 변환 결과

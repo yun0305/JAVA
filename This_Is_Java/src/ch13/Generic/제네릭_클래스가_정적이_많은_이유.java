@@ -4,7 +4,7 @@ public class 제네릭_클래스가_정적이_많은_이유 {
 
 	
 	
-	/*https://chat.openai.com/share/0bdffd0b-bcd4-4836-8a69-9dd801e5182e
+	/*https://devlog-wjdrbs96.tistory.com/201
 	 * 
 	 * 제네릭 메소드가 static으로 정의되는 경우는 흔히 있습니다.
 	 *  그 이유는 제네릭 메소드가 주로 타입-독립적인 기능을 수행하기 때문입니다. 

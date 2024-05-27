@@ -30,7 +30,7 @@ public class BeepPrintExample2 {
 				
 			}
 			
-		}	;
+		};
 			thread.start();
 			
 //			for(int i=0;i<5;i++) {

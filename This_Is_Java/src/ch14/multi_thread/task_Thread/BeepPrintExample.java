@@ -113,6 +113,7 @@ public class BeepPrintExample {
 //		}
 		Runnable task = new PrintTask();// 둘중 어떤 방식이든 상관없다 어짜피 다형성이 성립되서 run메소드만 가지고 있으면 된다
 		PrintTask task2 = new PrintTask();
+		
 		Thread thread2 = new Thread(new PrintTask());//객체를 바로 넣어줘도 되고 변수에 담아서 전달해줘도 된다
 		thread2.start();
 	}

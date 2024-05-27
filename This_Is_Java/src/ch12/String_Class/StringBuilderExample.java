@@ -11,12 +11,13 @@ package ch12.String_Class;
 	 * 잦은 문자열 변경 작업을 해야 한다면 String 보다는 StringBuilder 를 사용하는 것이 좋다.
 	 * 
 	 * StringBuilder는 내부 버퍼(데이터를 저장하는 메모리)에 문자열을 저장해두고 그 안에서 추가, 수정, 삭제 잡업을 하도록
-	 * 설계되어 있다. 따라서 String처럼 객체를 만들지 않고도 문자열을 조작할 수 있다. StringBuilder가 제공하는 조작 메소드는
+	 * 설계되어 있다. 따라서 String 처럼 객체를 만들지 않고도 문자열을 조작할 수 있다. StringBuilder가 제공하는 조작 메소드는
 	 * 다음과 같다
 	 * 
 	 * 리턴타입				메소드						설명
 	 * StringBuilder		append(기본값||문자열)			문자열을 끝에 추가
 	 * StringBuilder		insert(기본값||문자열)			문자열을 지정 위치에 추가
+	 * 
 	 * StringBuilder		delete(시작위치,끝위치)			문자열 일부를 삭제
 	 * StringBuilder		replace(시작위치,끝위치,문자열)	문자열 일부를 대체
 	 * String				toString()					완성된 문자열 리턴
