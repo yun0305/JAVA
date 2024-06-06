@@ -70,7 +70,18 @@ public class Synchronized {
 		user2Thread.start();
 		/*
 		 *현재 설명에 나온 공유객체와 2개의 스레드를만들고 2개의 스레드는 각각
-		 *같은 공유객체를 사용하고있다. 동영상 20:05 
+		 *같은 공유객체를 사용하고있다. 
+		 *그냥 실행 했을 경우엔 둘다 같은 공유 객체를 사용하기 때문에 50일 출력 되지만
+		 *User1Thred와 User2Thread 가 둘다 사용해야하는 메소드에 락을 걸어주면
+		 *먼저 사용하고 있는 스레드가 락을 걸어버리기 때문데 User1Thread가 100으로 값을 변경하고
+		 *출력할때까지 User1Thread의 setMemory 메소드의 실행이 끝날떄 까지 User2Thread는  
+		 *setMemory를 실행하지 못한다.
+		 *
+		 *User1Thread는 Calculator의 동기화 메소드인 setMemory1()을 실행하는 순간
+		 *Calculator객체를 잠근다. 따라서 User2Thread는 객체가 잠금 해제될 때까지 Calculator의 동기화
+		 *블록을 실행하지 못한다. 2초 일시정지 후에 잠금이 해제되면 비로소 User2Thread가 동기화 블록을 실행한다.
+		 *동영상 30분
+		 * 
 		 */
 		
 	

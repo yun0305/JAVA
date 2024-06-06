@@ -27,7 +27,7 @@ public class ThreadNameExample {
 
 	public static void main(String[] args) {
 	
-		Thread thread = Thread.currentThread();// 이 코드를 실행하는 스레드 객체 참조 얻기
+		Thread thread = Thread.currentThread();// 현재 이 코드를 실행하는 스레드 객체 참조 얻기
 		System.out.println(thread.getName());// 
 
 		for(int i=0;i<3;i++){
