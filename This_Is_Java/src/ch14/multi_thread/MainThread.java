@@ -22,6 +22,9 @@ public class MainThread {
 	 
 	 //자바에서는 스레드도 하나의 객체로 관리한다.
 	 Thread currThread = Thread.currentThread();
+	 System.out.println(currThread.getName());
+	 currThread.setName("test");//스레드 이름 변경
+	 
 	 //현제 이 코드를 실행하는 쓰레드 객체를 참조하는 법 Thread.currentThread(); 현재 쓰레드의 개체를 얻어옴 
 	 System.out.println(currThread.getName());
 	 //현재 쓰래드의 이름을 출력해보자.

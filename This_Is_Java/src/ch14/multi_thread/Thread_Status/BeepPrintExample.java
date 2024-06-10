@@ -1,6 +1,11 @@
 package ch14.multi_thread.Thread_Status;
 
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 /*<스레드 상태>
  * 스레드 객체를 생성(new)라고 start()메소드를 호출하면 곧바로 스레드가 실행되는 것이 아니라
@@ -118,6 +123,10 @@ import java.awt.Toolkit;
 public class BeepPrintExample {
 	
 	public static void main(String[] args) {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 		
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		

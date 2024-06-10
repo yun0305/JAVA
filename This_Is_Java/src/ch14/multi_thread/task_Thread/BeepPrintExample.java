@@ -57,7 +57,7 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  * 그래서 thread.start() 메소드를 호츨하면 해당 thread가 가지고 있는 인터페이스 매개값이 가지고 있는 Run이라는 메소드를 호출한다.
  *  
  * 이런식으로 구현 클래스를 만들어서 Thread를 사용할수 있는 방법이 있다.
- * 또 다른 방법은 익명갹채를 통해 만드는 방법이 있다.
+ * 또 다른 방법은 익명객채를 통해 만드는 방법이 있다.
  * 
  * 명시적인 Runnable 구현 클래스를 작성하지 않고 thread 생정자를 호출할 때 Runnable 익명 구현 객체를
  * 매개값으로 사용할 수 있다. 오히려 이 방법이 더 많이 사용된다.
@@ -75,7 +75,7 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  * 
  * 스레드의 동작 과정은
  * 1.메인스레드가 new Thred(task); 작업스레드를 만난서 작업 클래스접근
- * 2.메인 스레드 동작중 start() 메소드를 만난다
+ * 2.메인 스레드 동작중에 start() 메소드를 만난다
  * 3. start 메소드로 작업 메소드 실행 동시에 메인스래드도 멈추지 않고 작없스레드와 같이 실행
  * 
  * 다음은 메인 스레드가 동시에 두가지 작업을 처리할 수 없음을 보여주는 예제이다. 원래 목정은
@@ -87,9 +87,7 @@ public class BeepPrintExample {
 
 	public static void main(String[] args) throws InterruptedException {
 		Toolkit toolkit = Toolkit.getDefaultToolkit(); // Toolkit 객체 얻기
-		
-			
-			
+
 		Thread thread = new Thread(new Runnable() {
 			@Override
 			public void run() {
