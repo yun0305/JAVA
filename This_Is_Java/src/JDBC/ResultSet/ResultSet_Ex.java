@@ -1,7 +1,9 @@
-package JDBC;
+package JDBC.ResultSet;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /*
@@ -88,7 +90,7 @@ import java.sql.SQLException;
  *  만약 select 문에 연산식이나 함수 호출이 포함 되어 있다면 컬럼 이름 대신 컬럼 순번으로 읽어야 한다.
  *  예를 들어 다음과 같은 select문에서 userage -1 연산식이 사용되면 컬럼 순번으로만 읽을 수 있다.
  *  userage-1은 컬럼명이 아니기 때문이다. 하지만 별칭을 써서 하면 별칭이 컬럼 이름이 된다.
- *  동영상 1:40분
+ *  
  * 
  *  
  *  
@@ -99,22 +101,42 @@ public class ResultSet_Ex {
 	public static void main(String[] args) {
 		
 		Connection conn = null;
-		
+		User user = new User();
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
+			System.err.println("드라이버 연결성공");
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/yun","yun","12345");
+			System.err.println("DB연결 성공");
+			String sql = new StringBuilder()
+					.append("SELECT * FROM ")
+					.append("USERS ")
+					.append("WHERE userId = ? ")
+					.toString();
+			
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "nana");
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				user.setUserID(rs.getString(1));
+				user.setUserName(rs.getString(2));
+				user.setUserPassword(rs.getString(3));
+				user.setUserAge(rs.getInt(4));
+				user.setUserEmail(rs.getString(5));
+			}
 			
 			
-			
+			System.out.println(user.toString());
 		} catch (ClassNotFoundException e) {
 			
 			e.printStackTrace();
-			System.err.println("드라이버 연결실패");
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			
 			e.printStackTrace();
-			System.err.println("DB연결 실패");
+			
 			
 		}finally {
 			try {

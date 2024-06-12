@@ -1,4 +1,4 @@
-package JDBC;
+package JDBC.PreparedStatement;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

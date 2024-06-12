@@ -7,7 +7,7 @@ import ch06.fqcn.kumho.AllSeasonTire;
 //import sec06.fqcn.kumho.Tier;
 //import sec06.fqcn.hankook.Tier;
 
-/**
+/*
  * 
  * 같은 패키지에 속하는 클래스들은 아무런 조건없이 사용할수 있지만 다른 패키지에 속하는
  * 클래스를 사용하려면 두가지 방법이 있다

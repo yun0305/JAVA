@@ -28,10 +28,12 @@ public class Calculator_Static {
   	 * 클래스가 메모리에 로드될 때 한 번만 초기화되며, 모든 객체가 이를 공유합니다.
   	 * 주로 객체 간에 공유되어야 하는 상태나 동작을 나타내기 위해 사용됩니다. 
 	 */
+	
 		static double pi = 3.14;
 		int a = 1;
 		static int plus(int x,int y) {
 			return x+y;
+			
 		}
 		static int minus(int x, int y) {
 			return x-y;
