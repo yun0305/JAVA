@@ -33,6 +33,7 @@ public class StringTokenizerExample {
 		String data1 = "홍길동&이수홍,박연수";
 		String array[] = data1.split("&|,");
 		
+		
 		for(String printArray : array) {
 			System.out.println(printArray);
 		}
