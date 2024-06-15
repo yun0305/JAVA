@@ -18,7 +18,7 @@ public class Car {
 	}
 	
 	//final메소드 선언
-	public final void stop() {// 순서:  접근제한자 정적유무 final 리턴타입 메소드명 
+	public final void stop() {// 순서 :  접근제한자 정적유무 final 리턴타입 메소드명 
 		System.out.println("차를 멈춤");
 		speed = 0;
 	}

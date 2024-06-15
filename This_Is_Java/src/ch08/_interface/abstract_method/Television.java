@@ -32,18 +32,18 @@ public class Television implements RemoteControl{
 		 * 볼륨값이 인터페이스 상수 필드에 정의된 max 값보다 크면 최대치로 10을 넣어주고
 		 * min값보다 작으면 0을 넣어줄 것이다
 		 */
-		
 		@Override
-	public void setVolume(int volume) {
-		if(volume > RemoteControl.MAX_VOLUME) {
-			this.volume = RemoteControl.MAX_VOLUME;
+		public void setVolume(int volume) {
+			if(volume > RemoteControl.MAX_VOLUME) {
+				this.volume = RemoteControl.MAX_VOLUME;
+			}
+			else if(volume<RemoteControl.MIN_VOLUME){
+				this.volume = RemoteControl.MIN_VOLUME;
+			}
+			else {
+				this.volume = volume;
+			}
+			System.out.println("현재 TV 볼륨 :"+this.volume);
 		}
-		else if(volume<RemoteControl.MIN_VOLUME){
-			this.volume = RemoteControl.MIN_VOLUME;
-		}
-		else {
-			this.volume = volume;
-		}
-		System.out.println("현재 TV 볼륨 :"+this.volume);
-	}
+		
 }

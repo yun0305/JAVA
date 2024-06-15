@@ -10,4 +10,8 @@ public interface RemoteControl {
 	void turnOff();
 	void setVolume(int volume);
 	
+	
+		
+	
+	
 }

@@ -96,7 +96,7 @@ import java.sql.SQLException;
  *  
  */
 
-public class ResultSet_Ex {
+public class ResultSet_Ex1 {
 
 	public static void main(String[] args) {
 		
@@ -118,7 +118,8 @@ public class ResultSet_Ex {
 			
 			ResultSet rs = pstmt.executeQuery();
 			
-			while(rs.next()) {
+			
+			if(rs.next()) { //현재 sql 조건문이 아이디 기본키에 해당하는 걸 비교하기떄문에 아이디는 1개의 행만 나온다 그렇기떄문이 if문 을 새용했다.
 				user.setUserID(rs.getString(1));
 				user.setUserName(rs.getString(2));
 				user.setUserPassword(rs.getString(3));
@@ -126,7 +127,8 @@ public class ResultSet_Ex {
 				user.setUserEmail(rs.getString(5));
 			}
 			
-			
+			rs.close();
+			pstmt.close();
 			System.out.println(user.toString());
 		} catch (ClassNotFoundException e) {
 			
