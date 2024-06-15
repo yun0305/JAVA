@@ -92,7 +92,7 @@ public class ResultSet_Ex2 {
 			pstmt.setString(1, "나");
 			pstmt.setString(2, "난나나");
 			pstmt.setString(3, "아기고양이");
-			pstmt.setString(4, "ca.png");
+			pstmt.setString(4, "cat.png");
 			pstmt.setBlob(5, new FileInputStream("src/image/cat.png"));
 			
 			int row = pstmt.executeUpdate();
