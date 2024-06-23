@@ -5,7 +5,7 @@ public class GenericExample {
 	public static void main(String[] args) {
 		
 		Box<String> box1 = new Box<String>();
-		box1.content = "안녕하세요";
+		box1.content = "100";
 		String str = box1.content;
 		System.out.println(str);
 		
@@ -31,7 +31,7 @@ public class GenericExample {
 		Box box5 = new Box();
 		box5.content = 100;
 		
-		boolean result = box3.compare(box4);
+		boolean result = box3.compare(box1);
 		//바보 처럼 까먹었기 때문에 다시 적는다 
 		/*
 		 * box3 부터 5는 기본이 오브젝트 타입이다 거기에 문자열 100을 넣어줬고 그럼 오브젝트 부모에 String 자식이 들어간거다.

@@ -1,19 +1,26 @@
 
 public class test {
 	
-	static int test_num = 5;
+	
+	/*
+	 * 
+	 * 
+	 * */
+	
+	
 	
 	public static void main(String[] args) {
 		
-		test test1 = new test();
-		test test2 = new test();
-	
-		test.test_num = 12;
-		System.out.println(test.test_num);
+		for(int i=2;i<10;i++) {
+			System.out.println(i+"단");
+			for(int j=1;j<10;j++) {
+				
+				System.out.println(i+"x"+j +"="+i*j);
+				
+			}
+			System.out.println();
+		}
 		
-		
-		
-
 	}
 
 }

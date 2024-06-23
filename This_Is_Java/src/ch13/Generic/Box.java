@@ -3,7 +3,7 @@ package ch13.Generic;
 /*
  * <제네릭>
  * 다음과 같이 Box 클래스를 선언하려고 한다. Box에 넣을 내용물로 content 필드를 선언하려고 할 때,
- * 타임을 무엇으로 해야할까?
+ * 타입을 무엇으로 해야할까?
  * 
  * ex)
  * public class Box{
@@ -77,7 +77,7 @@ package ch13.Generic;
  * 하지만 제네릭은 생성자를 선언 할때 이미 정해지기 때문에 어떤 타입인지 조사할 필요도 없고 형변환도 사용할 필요가 없다.
  * 사실 <T>에서 타입 파라미터로 쓰이는 T는 단지 이름일 뿐이기 때문에 T대신 A부터 Z까지 어떤 알파벳을 사용해도 좋다. 
  * 주의할점은 타입 파라미터를 대체하는 타입은 클래스및 인터페이스라는 것이다, 바로 위 코드에서 Box<int>라고 하지 않는 이유는 기본 타입은 타입 파라미터의
- * 태체 타입이 될 수 없기 때문이다.
+ * 대체 타입이 될 수 없기 때문이다.
  * 
  * 그리고 변수를 선언할 때와 동일한 타입으로 호출하고 싶다면 생성자 호출 시 생성자에는 타입을 명시하지 않고 <>만 붙일수 있다.
  * 
@@ -95,14 +95,14 @@ package ch13.Generic;
 
 public class Box<T> {
 
-	public  T content;// 타입 파라미터로 T사용
-	public  int i = 0;
+	public T content;// 타입 파라미터로 T사용
+	public int i = 0;
 	/*
 	 * 타입 파라미터는 기본적으로 Object타입으로 간주되므로 Object가 가지고 있는 메소드를 호출할 수 있다.
 	 * 다음 예제는Box의 내용물을 비교하기 위해 파라미터로 Object의 equals() 메소드를 호출한다.
 	 */
 	//Box의 내용물이 같은지 확인
-	public <T>boolean compare(Box<T> other) {
+	public boolean compare(Box<T> other) {
 		// 매개값의 Box<T>의 T는 class에 있는 T의 타입파라미터 영향을 받는다
 		// 만약 매개값의 타입파라미터가 클래스의 타입파라미터와 다르면 컴파일 오류가 뜬다.
 		boolean result = content.equals(other.content);

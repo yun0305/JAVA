@@ -27,7 +27,7 @@ public class GennericExample {
 		Car car = product2.getKind();
 		String carModel = product2.getModle();
 		/*
-		 * 이번에는 Rentable 인터페이스를 제네릭 타입으로 선언해보자. 디양힌 대상을 렌트하기 위해 rent()매소드의 리턴 타입을 타입 파라미터로 선언한다.
+		 * 이번에는 Rentable 인터페이스를 제네릭 타입으로 선언해보자. 다양힌 대상을 렌트하기 위해 rent()매소드의 리턴 타입을 타입 파라미터로 선언한다.
 		 * 
 		 */
 	}

@@ -68,7 +68,7 @@ public class Math_Class {
 		  
 		  for(int i=0;i<selectNumber.length;i++) {
 			  selectNumber[i] = random.nextInt(45)+1;
-			  System.out.print(selectNumber[i] + " "); 
+			  System.out.print(selectNumber[i] + " ");
 			 }
 		  
 		  System.out.println();
@@ -93,7 +93,7 @@ public class Math_Class {
 		  
 		  if(result) { 
 			  System.out.println("1등 당첨"); 
-		  } 
+		  }
 		  else {
 			  System.out.println("꽝");
 			  }
