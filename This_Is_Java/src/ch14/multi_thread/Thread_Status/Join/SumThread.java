@@ -18,7 +18,7 @@ package ch14.multi_thread.Thread_Status.Join;
  *  threadB.join();//ThreadA 일시 정지 되고 ThreadB가 끝날때까지 기다린다
  *  //join은 (ThreadA) 입장에서 ThreadB가 끝날때 까지 기다리겠다 라는 의미다. 
  *  }
- * 다음은 SumThread가 계싼 작업을 모두 마칠 때까지 메인 스레드가 일시 정지 상태에 있다가 SumThread가 최종 계산된 결과값을 산출하고
+ * 다음은 SumThread가 계산 작업을 모두 마칠 때까지 메인 스레드가 일시 정지 상태에 있다가 SumThread가 최종 계산된 결과값을 산출하고
  * 종료하면 메인 스레드가 결과값을 받아 출력하는 예제이다.
  */
 

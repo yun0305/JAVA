@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /*
  * <DB연결>
- * 클라이언트 프로그램에서 DB와 연결하려면 하당 DBMS의 JDBC Driver 가 필요하다.
+ * 클라이언트 프로그램에서 DB와 연결하려면 해당 DBMS의 JDBC Driver 가 필요하다.
  * 또한 연결 에 필요한 다음 네가지 정보가 있어야 한다.
  * 
  * 1.DBMS가 설치된 컴퓨터의 IP주소

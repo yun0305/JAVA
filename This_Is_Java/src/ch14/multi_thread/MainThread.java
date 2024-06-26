@@ -24,6 +24,7 @@ public class MainThread {
 	 Thread currThread = Thread.currentThread();
 	 System.out.println(currThread.getName());
 	 currThread.setName("test");//스레드 이름 변경
+	
 	 
 	 //현제 이 코드를 실행하는 쓰레드 객체를 참조하는 법 Thread.currentThread(); 현재 쓰레드의 개체를 얻어옴 
 	 System.out.println(currThread.getName());

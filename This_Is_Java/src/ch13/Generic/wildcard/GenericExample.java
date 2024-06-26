@@ -20,6 +20,7 @@ public class GenericExample {
 		Course.registerCourse2(new Applicant<MiddleStudent>(new MiddleStudent()));
 		System.out.println();
 		
+		//직장인이거나 일반인만 가능.
 		Course.registerCourse3(new Applicant<Person>(new Person()));
 		Course.registerCourse3(new Applicant<Worker>(new Worker()));
 		//Course.registerCourse3(new Applicant<Student>(new Student()));

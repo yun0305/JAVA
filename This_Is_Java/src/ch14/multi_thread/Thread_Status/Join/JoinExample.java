@@ -8,7 +8,7 @@ public class JoinExample {
 		sumThread.start();
 		
 		try {
-			sumThread.join();
+			sumThread.join();//sumThread 가 종료할때까지 기다려 라는 뜻
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

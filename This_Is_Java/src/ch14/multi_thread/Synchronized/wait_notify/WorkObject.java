@@ -2,7 +2,7 @@ package ch14.multi_thread.Synchronized.wait_notify;
 
 /*<wait()와 notify()를 이용한 스레드 제어>
  * 
- * wait()과 notify()는 동기화와 관련되어 있다. 이 3개의 메소드는 Thread가 가지고 있는게 아니라
+ * wait()와 notify()는 동기화와 관련되어 있다. 이 3개의 메소드는 Thread가 가지고 있는게 아니라
  * Object가 가지고 있다.
  * 
  * wait()를 호출하면 일시정지 상태가된다. notify()를 호출하면 다른 메소드를 깨워주는 역할을 한다.
