@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import oracle.jdbc.driver.OracleDriver;
+
 /*
  * <DB연결>
  * 클라이언트 프로그램에서 DB와 연결하려면 해당 DBMS의 JDBC Driver 가 필요하다.
@@ -30,7 +32,7 @@ import java.sql.SQLException;
  * DriverManager는 드라이버를 관리하는 역할을 한다. 그래서 오라클용 드라이버를 DriverManager 에 등록하는 과정이라고 보면 된다.
  * 예로 mysql도 드라이버가 따로 있어서 Class.fromName에 mysql용 드라이버를 로딩 시키면 DriverManager에 mysql용 드라이버가 등록된다.
  * 
- * 이 과정에서 JBBC Driver 클래스의 static 블록이 실행되면서 DriverManager에 JDBC Driver 객체를 등록하게 된다.
+ * 이 과정에서 JDBC Driver 클래스의 static 블록이 실행되면서 DriverManager에 JDBC Driver 객체를 등록하게 된다.
  * 만약 Build Path에서 JDBC Driver 클래스를 찾지 못하면 
  * ClassNotFoundException이 발생하므로 예외 처리를 해야 한다.
  * 
@@ -61,10 +63,11 @@ public class ConnectionExample {
 	public static void main(String[] args) {
 		Connection conn = null;
 		
-		try {
+		try{
 			//<JDBC Driver를 메모리로 로딩하고, DriverManager에 등록>
 			Class.forName("oracle.jdbc.OracleDriver");
 			System.out.println("성공");
+			
 			/*
 			 *이제 Driver를 메모리에 로딩을 하면 DB에 연결을 할수 있다. DriverManaer로
 			 */
@@ -73,8 +76,8 @@ public class ConnectionExample {
 			System.out.println("연결 성공");
 			/*
 			 * 데이터 베이스에 접근하기 위해서는 총 4가지의 정보가있다.
-			 * DriverManager.getConnection의 3개의 매개값 중 2번째는 데이터 베이스 스키마 2번째는 비밀번호이다.
-			 * 그럼 그럼 사용자 계정과 비밀번호를 하나로 본다면 3가지의 정보가 부족한데
+			 * DriverManager.getConnection의 3개의 매개값 중 2번째는 데이터 베이스 스키마 3번째는 비밀번호이다.
+			 * 그럼 사용자 계정과 비밀번호를 하나로 본다면 3가지의 정보가 부족한데
 			 * 그 3가지 정보가 첫번째 인자값에 있어야한다. 그래야만 연결이 가능하다
 			 * 그럼 첫번째 인자에 들어가는 형식 ip,포트,데이터베이스 이름 이 3개를 작성하는 형식이
 			 * DBMS 마다 다 다르다.

@@ -28,7 +28,7 @@ import java.sql.SQLException;
  * 1.Class.forName으로 드라이버 로딩하고
  * 2.Connetion 으로 db를 연결한다
  * 3.sql 문을 만들고
- * 4.preparStatement();에 sql을 매개값으러 주거
+ * 4.preparStatement();에 sql을 매개값으로 주고
  * 5.preparStatement (pstmt) 의 setter 메소드로값을 넣어주고
  * 6.executeUpdate해주면 db에 데이터 조작이 가능하다.
  * 

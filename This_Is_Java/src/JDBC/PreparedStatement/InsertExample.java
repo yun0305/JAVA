@@ -51,11 +51,11 @@ import java.sql.SQLException;
  * 이제 마지막으로 sql 문을 DB에 보내서 실행시키는 명령어가
  * int rows = pstmt.excuteUpdate(); 이다.
  *  
- * excuteUpdate() 메소드가 리턴하는 값은 정수 값인데 데이터 베이스에서 insert를 성공하면 1행이 입력되었습니다가 뜬다.
- * 그 1을 리턴한다 무슨말이냐면 excuteUpdate() 메소드는 CUD (저장,수정,삭제)할때 다 사용된다.
+ * excuteUpdate() 메소드가 리턴하는 값은 정수 값인데 데이터 베이스에서 insert를 성공하면 1행이 입력되었습니다.가 뜬다.
+ * 그 1을 리턴한다 무슨말이냐면 excuteUpdate() 메소드는 CRUD (쓰기,읽기,수정,삭제)할때 다 사용된다.
  * 리턴하는 값은 저장된 행수가 아니라 데이터 베이스에 반영된 행의 수이다. 실제 데이터베이스에 반영된 행의수다.
  * 
- * 그럼 방금작성한 insert문의 행의 수는 1개니까 정상적으로 1이나와야한다.
+ * 그럼 방금 작성한 insert문의 행의 수는 1개니까 정상적으로 1이나와야한다.
  * 
  * 이제 더이상 pstmt를 사용하지 않을경우에는 close() 메소드로 pstmt가 사용했던 메모리를 해제한다.
  * pstmt.close();
@@ -115,6 +115,7 @@ public class InsertExample {
 		}
 			
 		//동영상1:10;17
+		
 	}
 	
 	

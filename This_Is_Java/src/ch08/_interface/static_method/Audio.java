@@ -9,7 +9,7 @@ public class Audio implements RemoteControl {
 		System.out.println("오디오를 켭니다");
 		
 	}
-
+	
 	@Override//추상 메소드
 	public void trunOff() {
 		System.out.println("오디오를 끕니다");
@@ -38,7 +38,7 @@ public class Audio implements RemoteControl {
 		return volume;
 	}
 
-
+	
 
 	private int memoryVolume;// 추가 필드 선언
 	
