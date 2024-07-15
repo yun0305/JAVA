@@ -3,6 +3,7 @@ package ch05.reference;
 public class sec03 {
 
 	public static void main(String[] args) {
+		
 		int[] arr1;//배열 변수 선언
 		int[] arr2;//배열 변수 선언
 		int[] arr3;//배열 변수 선언

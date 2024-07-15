@@ -2,7 +2,7 @@ package ch07.class_extends._protected1;
 
 public class B {
 	
-	//같은 패키지 안에서 사용 import할 필요도 없이 사용 가능
+	//같은 패키지 안에서 사용시 import할 필요도 없이 사용 가능
 	//protected는 같은패키지 안에서는 default와 같은 기능을 한다
 	public void method() {
 		
