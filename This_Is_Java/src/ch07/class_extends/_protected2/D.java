@@ -25,6 +25,6 @@ public class D extends A {
 		//A a = new A();// 객체를 생성해서는 사용 불가능
 		//a.fild = " ";// 객체를 생성해서는 사용 불가능
 		//a.method();// 객체를 생성해서는 사용 불가능
-		}
+	}
 	
 }
