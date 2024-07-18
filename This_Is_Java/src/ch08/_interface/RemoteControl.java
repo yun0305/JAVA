@@ -9,16 +9,14 @@ public interface RemoteControl {
 	 * 
 	 * 중괄호 안에는 인터페이스가 가지는 멤버들을 선언할수 있는데 다음과 같은 종류가 있다
 	 * 
-	 * 
 	 * public static final 상수 필드
 	 * public 추상 메소드
 	 * pulibc 디폴드 메소드
 	 * public|private 정적 메소드
 	 * private 메소드 (디폴트와 짝궁 왜냐면 디폴트 메소드 안에서만 호출하고 사용된다. 사용 용도 또한 디폴트의 중복을
 	 * 줄이기 위함이다)
-	 * private & static 정적 메소드() private 정적 메소드는 정적 메소드 안에 중복 코드를 줄이기 위해서 사용된다.
-	 *   
-	 *   
+	 * private & static 정적 메소드() private 정적 메소드는 정적 메소드 안에 중복 코드를 줄이기 위해서 사용된다. 
+	 *  
 	 * 지금 해볼것은 추상메소드를 사용해 볼거다
 	 */
 	

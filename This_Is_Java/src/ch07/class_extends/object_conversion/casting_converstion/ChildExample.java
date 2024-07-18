@@ -35,6 +35,7 @@ public class ChildExample {
 		Parent parent = new Child();
 		
 		parent.field1 = "data1";
+		//parent.field2 = "asdasd"; Child 클래스의 field2 사용 불가능
 		parent.method1();
 		parent.method2();
 		//parent.method3(); 사용불가능
