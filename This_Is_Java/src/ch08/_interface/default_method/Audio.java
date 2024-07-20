@@ -45,6 +45,8 @@ public class Audio implements RemoteControl {
 	@Override//디폴트 메소드
 	/*
 	 * 재정의한 디폴트 메소드는 인터페이스에 있는 디폴트 메소드를 숨기고 재정의한 디폴트 메소드를 호출한다
+	 * default 메소드는 구현을 강제하지 않는다
+	 * 재정의는 가능
 	 */
 	public void setMute(boolean mute) {
 		if(mute) {

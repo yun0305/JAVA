@@ -32,10 +32,10 @@ private int volume;
 	}
 	
 	
-	@Override
-	public int getVolume() {
-		return volume;
-	}
+		@Override
+		public int getVolume() {
+			return volume;
+		}
 	
 		@Override//디폴드 메소드
 		public void setMute(boolean mute) {

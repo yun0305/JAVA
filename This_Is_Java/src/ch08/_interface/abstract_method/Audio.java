@@ -4,7 +4,6 @@ public class Audio implements RemoteControl{
 	
 	private int volume;
 	
-	
 	@Override
 	public void turnOn() {
 		System.out.println("Audio를 켭니다");
@@ -17,6 +16,7 @@ public class Audio implements RemoteControl{
 		
 	@Override
 	public void setVolume(int volume) {
+		
 		if(volume > RemoteControl.MAX_VOLUME) {
 			this.volume = RemoteControl.MAX_VOLUME;
 		}
