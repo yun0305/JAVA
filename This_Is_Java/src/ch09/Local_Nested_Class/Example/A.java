@@ -15,9 +15,9 @@ public class A {
 	public void method1(int arg) {//매개변수
 
 		int val = 0;//로컬 변수 선언
-		
+	
 		class B{// 외부에서 접근 불가. 메소드 실행 중에만 사용됨 접근제한자도 붙지 않는다
-			//메소드
+			//메소드　
 			void method2() {
 				//로컬 변수 읽기
 				System.out.println("arg : " + arg);//로컬 클래스에서 사용하는 순간 final 특성을 갖는다.

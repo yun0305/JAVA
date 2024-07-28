@@ -2,7 +2,7 @@ package ch09.Anonymous.Anonymous_Interface;
 
 public class Home {
 	
-	private RemoteControl rc = new RemoteControl(){//선언명을 보면 인터페이스지만 엄연히 익명구현객체이다.
+	 RemoteControl rc = new RemoteControl(){//선언명을 보면 인터페이스지만 엄연히 익명구현객체이다.
 		
 		@Override
 		public void turnOff() {

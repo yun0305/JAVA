@@ -11,7 +11,8 @@ public class ExceptionHandlingExample {
 		System.out.println("주어진 클래스가 있습니다");
 		}catch(ClassNotFoundException e) {// 여기서 e라고 하는 변수에 예외객체를 참조 시킨다. 
 										  //e를 통해 예외객체의 정보를 불러온다
-			System.out.println("주어진 클래스는 없습니다");
+			System.err.println("주어진 클래스는 없습니다");
+			e.printStackTrace();
 		}
 		
 		try {
@@ -34,7 +35,7 @@ public class ExceptionHandlingExample {
 		 * 마우스 커서를 가져다 대면
 		 * Unhandled exception type ClassNotFoundException 라는 예외가 발생할수 있다
 		 * ClassNotFoundException라는 오류가 뜨니까 catch로 ClassNotFoundException 예외 객체를 받아오면 된다.
-		 
+		 *
 		 * Class.forName("java.lang.String"); 이코드는 예외 처리를 하지 않으면 작동을 하지 않는 코드이다
 		 * (컴파일러가 찾아줌) 이런것을 일반예외라고 부른다.
 		 *
