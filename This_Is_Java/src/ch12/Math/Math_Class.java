@@ -9,21 +9,21 @@ import java.util.Random;
  * 정적 이므로 Math클래스로 바로 접근할 수 있다. 다음은 Math 클래스가 제공해주는 주요 메소드이다.
  * 
  * 구분 			코드								리턴값
- * 절대값			int v1 = Math.abs(-5);			v1 = 5
+ * 절대값			int v1 = Math.abs(-5);				v1 = 5
  * 
- * 올림값			double v3 = Math.ceil(5.3);		v3 = 6.0
- * 				double v4 = Math.ceil(-5.3)		v4 = -5.0
+ * 올림값			double v3 = Math.ceil(5.3);			v3 = 6.0
+ * 					double v4 = Math.ceil(-5.3)			v4 = -5.0
  * 
- * 버림값			double v5 = Math.floor(5.3);	v5 = 5.0
- * 				double v6 = Math.floor(-5.3);	v6 = -6.0
+ * 버림값			double v5 = Math.floor(5.3);		v5 = 5.0
+ * 					double v6 = Math.floor(-5.3);		v6 = -6.0
  * 
- * 최댓값			int v7 = Math.max(5,9);			v7 = 9
+ * 최댓값			int v7 = Math.max(5,9);				v7 = 9
  * 
- * 최소값			int v9 = Math.min(5,9);			v9 = 5
+ * 최소값			int v9 = Math.min(5,9);				v9 = 5
  * 
- * 랜덤값 		double v11 = Math.random();		0.0<=v11<1.0
+ * 랜덤값 			double v11 = Math.random();			0.0<=v11<1.0
  * 
- * 반올림값 		long v14 = math.round(5.3);		v14=5
+ * 반올림값 		long v14 = Math.round(5.3);			v14=5
  * 
  * <random>
  * random() 메소드는 0.0 과 1.0 사이의 double 타입 난수를 리턴한다. 이 값을 이용해서 start 부터

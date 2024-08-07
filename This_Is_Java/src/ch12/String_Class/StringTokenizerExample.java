@@ -12,6 +12,7 @@ import java.util.StringTokenizer;
 	 * 메소드를 사용해야한다. 정규 표현식을 작성하는 방법은 12.10절에서 학습한다.
 	 * 
 	 * String data = "홍길동&이수홍,박연수"
+	 * String[] str = data.split("&|,");
 	 * StringTokenizer st = new StringTokenizer(data,"/");
 	 * 
 	 * StringTokenizer 객체가 생성되면 다음 메소드들을 이용해서 분리된 문자열을 얻을 수 있다.

@@ -80,7 +80,7 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  * 
  * 다음은 메인 스레드가 동시에 두가지 작업을 처리할 수 없음을 보여주는 예제이다. 원래 목적은
  * 0.5초 주기로 비프음을 발생시키면서 동시에 프린팅 까지 하는 작업이지만, 메인 스레드는 비프음을 모두 발생한 다음에야
- * 프린틍을 시작한다.
+ * 프린팅을 시작한다.
  * 
  *  */
 public class BeepPrintExample {

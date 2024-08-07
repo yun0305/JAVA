@@ -9,14 +9,16 @@ package ch12.System;
 	 * 프로세스는 종료되는데 정상 종료일 경우 0, 비정상 종료는 1 또는 -1로 주는것이 관례이다.
 	 * 
 	 * 
+	 * 
 	 */
 
 
 public class ExitExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		for(int i=0;i<=10;i++) {
+			Thread.sleep(1000);
 			System.out.println(i);
 			if(i==5) {
 				System.out.println("프로세스 강제종료");

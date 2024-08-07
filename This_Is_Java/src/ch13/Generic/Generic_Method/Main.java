@@ -6,6 +6,7 @@ public class Main {
 		
 		Box<Integer> box1 = Util.<Integer>boxing(100);
 		Box<String> box2 = Util.boxing("암묵적 호출");
+	
 	}
 	
 	/*

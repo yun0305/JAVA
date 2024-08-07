@@ -24,14 +24,13 @@ public class MainThread {
 	 Thread currThread = Thread.currentThread();
 	 System.out.println(currThread.getName());
 	 currThread.setName("test");//스레드 이름 변경
-	
 	 
-	 //현제 이 코드를 실행하는 쓰레드 객체를 참조하는 법 Thread.currentThread(); 현재 쓰레드의 개체를 얻어옴 
+	 //현제 이 코드를 실행하는 쓰레드 객체를 참조하는 법 Thread.currentThread(); 현재 쓰레드의 객체를 얻어옴 
 	 System.out.println(currThread.getName());
 	 //현재 쓰래드의 이름을 출력해보자.
 	 //해보면 main이라는 이름이 나온다.
 	 //그래서 만약 오류가 발생하면 오류 코드에 in main Thread라고 나온다.
-			 
+	 
 			 
 	 System.out.println("종료");
 	 

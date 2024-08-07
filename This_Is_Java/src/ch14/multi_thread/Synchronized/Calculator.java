@@ -7,8 +7,11 @@ public class Calculator {
 	public int getMemory() {
 		return memory;
 	}
-
+	
+	
+	
 	public synchronized void setMemory(int memory) {
+//public synchronized static final void test() 선언 위치틑 public 다음이다.
 //이메소드를 하나의 메소드가 사용할때 Calculator를 잠그기위해서 synchronized를 붙였다
 //하지만 Calculator객체를 잠그더라도 synchronized가 붙지 않은 일반 메소드는 객체에 락이 걸리더라도 다른 스래드가 접근할수 있다.
 		this.memory = memory;
@@ -37,8 +40,6 @@ public class Calculator {
 			System.out.println(Thread.currentThread().getName() + " : " + this.memory);	
 		}
 		
-				
+			
 			}
-	
-	
 }

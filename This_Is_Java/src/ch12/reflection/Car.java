@@ -6,8 +6,15 @@ package ch12.reflection;
 	 * 
 	 * 메소드										용도
 	 * Constructor[] getDeclaredConstructors()  생성자 정보 읽기
+	 * 				 getConstructor()			public 접근제어자를 가진 생성자만 가져옴 
+	 * 
 	 * Field[] getDeclaredFields()				필드 정보 읽기
+	 * 		   getField()						public 접근제어자를 가진 field만 가져옴
+	 * 
 	 * Method[] getDeclaredMethod()				메소드 정보 읽기	
+	 * 			getMethod()						public 접근제어자를 가진 method만 가져옴
+	 * 
+	 * 
 	 * 
 	 * 메소드 이름에서 알 수 있듯이 각각 Constructor 배열, Field 배열, Method 배열을 리턴한다.
 	 * Constructor, Field, Method 클래스는 모두 java.lang.reflect 패키지에 있는데 각각 생성자, 필드,
@@ -18,15 +25,16 @@ public class Car {
 	
 	//필드
 	private String model;
-	private String owner;
+	private int owner;
 	
 	//생성자
 	public Car() {
 		
 	}
 	
-	public Car(String model) {
+	public Car(String model,int owner) {
 		this.model = model;
+		this.owner = owner;
 	}
 	
 	//메소드
@@ -38,11 +46,11 @@ public class Car {
 		this.model = model;
 	}
 	
-	public String getOwner() {
+	public int getOwner() {
 		return owner;
 	}
 	
-	public void setOwner(String owner) {
+	public void setOwner(int owner) {
 		this.owner = owner;
 	}
 	

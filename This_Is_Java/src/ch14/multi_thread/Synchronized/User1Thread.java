@@ -6,9 +6,9 @@ public class User1Thread extends Thread {
 
 	private Calculator cal;
 	
-	public User1Thread() {
+	public User1Thread(String threadName) {
 		
-		setName("User1Thread");
+		setName(threadName);
 		
 	}
 	

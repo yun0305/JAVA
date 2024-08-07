@@ -19,6 +19,7 @@ package ch12.Wrapper;
  * 박싱은 포장 클래스 변수에 기본 타입 값이 대입될 때 발생한다. 반대로 언박싱은 기본타입 변수에 포장 객체가
  * 대입될때 발생한다
  * 
+ * <오토박싱>
  * Integer obj = 100; //박싱 (new Integer(100); 도 된다)
  * int value = obj;   // 언박싱 (obj.intValue(); 도 된다)
  * 
@@ -37,7 +38,7 @@ public class BoxingUnBixingExample {
 		//intValue() 메소드는 Integer 객체 내부의 int 값을 리턴한다.
 		
 		//UnBoxing
-		int value = obj;
+		int value = obj;//이떄는 오브젝트의 toString()이 호출되지 않는다. 오토박싱이 일어나 숫자 100이 나온다 자바의 특징이다.
 		System.out.println("vlaue " + value);
 		
 		//연산 시 Unboxing

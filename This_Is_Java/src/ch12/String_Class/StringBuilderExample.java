@@ -7,7 +7,7 @@ package ch12.String_Class;
 	 * String data = "ABC";
 	 * data += "DEF";
 	 * 
-	 * 문자열의 + 연산은 새로은 String 객체가 생성되고 이전 객체는 계속 버려지는 것이기 떄문에 효율성이 좋다고 볼 수 없다.
+	 * 문자열의 + 연산은 새로운 String 객체가 생성되고 이전 객체는 계속 버려지는 것이기 떄문에 효율성이 좋다고 볼 수 없다.
 	 * 잦은 문자열 변경 작업을 해야 한다면 String 보다는 StringBuilder 를 사용하는 것이 좋다.
 	 * 
 	 * StringBuilder는 내부 버퍼(데이터를 저장하는 메모리)에 문자열을 저장해두고 그 안에서 추가, 수정, 삭제 잡업을 하도록
@@ -36,6 +36,7 @@ public class StringBuilderExample {
 						.insert(0, "ABC")
 						.delete(3, 4)
 						.toString();// 결국 마지막에 String을 리턴하기 때문에 data에 완성된 문자열이 들어간다.
+		
 		System.out.println(data);
 		
 

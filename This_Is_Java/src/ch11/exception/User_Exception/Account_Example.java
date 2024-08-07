@@ -8,7 +8,6 @@ public class Account_Example {
 		at.deposit(10000);
 		System.out.println("현재 예금금액 : "+at.getBalance());
 		
-		
 		try {
 		at.withdraw(30000);
 		}catch(InsufficienException e){
@@ -17,7 +16,5 @@ public class Account_Example {
 			System.out.println("현재 예금금액 : "+at.getBalance());
 		}
 		System.out.println("프로그램 정상 종료");
-		
 	}
-
 }

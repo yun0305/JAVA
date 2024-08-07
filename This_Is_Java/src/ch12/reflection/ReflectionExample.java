@@ -17,10 +17,15 @@ import java.lang.reflect.Method;
  * Constructor, Field, Method 클래스는 모두 java.lang.reflect 패키지에 있는데 각각 생성자, 필드,
  * 메소드에 대한 선언부 정보를 제공한다. 다음은 Car 클래스에서 선언된 생성자, 필드, 메소드의 선언부 정보를
  * 얻고 출략하는 예제이다.
+ * 
+ * <추가>
+ * String의 파라미터 정보를 가져올때 
+ * 
  */
 public class ReflectionExample {
 
 	public static void main(String[] args) {
+		
 		Class clazz = Car.class;
 		
 		System.out.println("생성자 정보");
@@ -30,10 +35,9 @@ public class ReflectionExample {
 			Class[] parameters = constructor.getParameterTypes();//매개변수의 정보
 			printParameters(parameters);
 			System.out.println(")");
-			
 		}
-		System.out.println();
 		
+		System.out.println();
 		
 		System.out.println("필드정보");
 		Field[] fields = clazz.getDeclaredFields();
@@ -55,14 +59,25 @@ public class ReflectionExample {
 	private static void printParameters(Class[] parameters) {
 			
 		for(int i=0;i<parameters.length;i++) {	
-			System.out.print(parameters[i].getName());
+			System.out.print(parameters[i].getSimpleName());
 			if(i<parameters.length-1) {
 				System.out.print(",");
 			}
 		}
 		
-		
 	}
 	
-
 }
+/*생성자 (Constructor)
+	getName() 메서드는 생성자가 속한 클래스의 이름을 반환해.	
+	따라서 패키지 정보까지 포함된 클래스 이름이 반환되는 거야.
+	생성자는 클래스의 이름과 동일하기 때문에, 리플렉션에서 생성자를 식별할 때
+	클래스 이름을 반환하는 것처럼 보여.
+
+메서드 (Method)
+	getName() 메서드는 메서드의 이름만 반환해. 패키지 정보는 포함되지 않아.	
+	메서드 이름은 메서드 자체의 이름만을 나타내기 때문에 클래스 정보나 패키지 정보가 필요하지 않아.
+
+필드 (Field)
+	getName() 메서드는 필드의 이름만 반환해. 이 역시 패키지 정보는 포함되지 않아.
+	필드 이름은 필드 자체의 이름만을 나타내기 때문에 클래스 정보나 패키지 정보가 필요하지 않아.*/

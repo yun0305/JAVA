@@ -2,7 +2,7 @@ package ch14.multi_thread.Synchronized;
 /*
  *<스레드 동기화>
  * 동기화란 뭔가를 맞춘다라는 의미다 하나의 스레드를 가지고 하는 작업이 아니라 2개 이상의 스레드를 가지고 동기화를 한다.
- * 그럼 뭘 맞춘다는 것일까 바로 실행 순서를 맞춘다는 개념이다. 그레드 간에 실행 순서를 맞춘다.
+ * 그럼 뭘 맞춘다는 것일까 바로 실행 순서를 맞춘다는 개념이다. 스레드 간에 실행 순서를 맞춘다.
  * 
  * 멀티 스레드는 하나의 객체를 공유해서 작업할 수도 있다. 즉 공유 객체가 있고 여러 스레드가 공유해서 작업을 할수 있다 는 뜻이다.
  * 
@@ -19,7 +19,7 @@ package ch14.multi_thread.Synchronized;
  * 그러면 User1Thread가 2초간 일시정지 상태라도 다른 스레드가 memory값을 못바꾸게 할 필요가 있다.
  * 
  * 그럼 이를 해결하기 위한 방법은 스레드가 사용 중인 객체를 다른 스레드가 변경할수 없도록 하기위해
- * 스레드 작업이 끝날 때까지 객체에 잠금을 걸면 된다. 이를 위해 자바는 동기와(synchornized) 메소드와 블록을 제공한다.
+ * 스레드 작업이 끝날 때까지 객체에 잠금을 걸면 된다. 이를 위해 자바는 동기화(synchornized) 메소드와 블록을 제공한다.
  * 
  * 그럼 다시 예시를 들어 보겠다 만약 User1Thread가 동기화된 메소드를 사용하면 Calculator 공유 객체가 락이 걸려 버린다.
  * 공유 객체가 락이 걸리면 어떻게 되냐면 User2Thread가 동기화된 메소드를 사용할수 없게 된다. 물론 동기화가 붙은 메소드는 다 사용할수 없다.
@@ -61,11 +61,14 @@ public class Synchronized {
 		
 		Calculator cal = new Calculator();// 공유객체
 		
-		User1Thread user1Thread = new User1Thread();
+		User1Thread user1Thread = new User1Thread("user1");
 		user1Thread.setCalculator(cal);
 		user1Thread.start();
 
-		User2Thread user2Thread = new User2Thread();
+		User2Thread user2Thread = new User2Thread("user2");
+		//User1Thread 가 작업을 끝낼때까지 실행 대기 상태
+		//정확히 말하면 User2Thread가 실행 대기 상태가 아니라 실행 기회를 받지만
+		//Calculator 객체가 잠겨있기 때문에 작업을 수행할 수 없어서 다시 실행 대기 상태로 돌아가는 형식이다.
 		user2Thread.setCalculator(cal);
 		user2Thread.start();
 		/*

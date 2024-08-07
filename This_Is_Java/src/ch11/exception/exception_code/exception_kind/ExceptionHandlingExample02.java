@@ -10,7 +10,7 @@ public class ExceptionHandlingExample02 {
 	 */
 	
 	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		String[] array = new String[]{"100","1oo"};
 		

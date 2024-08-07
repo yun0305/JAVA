@@ -3,7 +3,7 @@ package ch12.String_Class;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
-/*
+	/*
 	 * 자바에서 문자열과 관련된 주요 클래스는 다음과 같다.
 	 * 
 	 * 클래스				설명

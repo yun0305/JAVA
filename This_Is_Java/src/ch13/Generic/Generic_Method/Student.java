@@ -1,6 +1,7 @@
 package ch13.Generic.Generic_Method;
 
-/**https://devlog-wjdrbs96.tistory.com/201
+/**
+ * https://devlog-wjdrbs96.tistory.com/201
  * 제네릭 메소드는 메소드의 선언 부에 적은 제네릭으로 리턴 타입, 파라미터의 타입이 정해지는 메소드이다.
  * 
  * public static <T> T getName(T name){
@@ -32,11 +33,11 @@ package ch13.Generic.Generic_Method;
  *		return id;
  *	}
  *	
- *	사용방법은 위와 같이 return type 앞에 제네릭을 사용해주면 된다. 여기서 주의해야 할 점은 Student 클래스에 지정한 제네릭 타입<T>와 제네릭 메소드에 붙은 <T>는 같은
+ *	사용 방법은 위와 같이 return type 뒤에 제네릭을 사용해주면 된다. 여기서 주의해야 할 점은 Student 클래스에 지정한 제네릭 타입<T>와 제네릭 메소드에 붙은 <T>는 같은
  *	T를 사용하더라도 전혀 별개의 제네릭이라는 것이다.
  *
  *	클래스에 표시하는 <T>는 인스턴스 변수라고 생각하자, 인스턴스가 생성될 떄마다 지정되기 때문이다.
- *	그리고 제네릭 메소드에 붙은 T는 지역변수를 선언한 것돠 같다고 생각하자.
+ *	그리고 제네릭 메소드에 붙은 T는 지역변수를 선언한 것과 같다고 생각하자.
  *	(메소드의 붙은 모든 T는 클래스에 붙은 T와 다르다.)
  *
  *	<제네릭 클래스와 독립적>
@@ -63,7 +64,8 @@ public class Student<T> {
 		return id;
 	}
 	
-	public <T> T getId(T id){ // 2 제네릭 클래스의 T와 다름 
+	public <T> T getId(T id){ 
+		// 2 제네릭 클래스의 T와 다름 이럴경우 제네릭 메소드에 있는 타입 파라미터가 우선순위가 높아서 모든 T가 제네릭 메소드 꺼다
 		return id;
 	}
 	

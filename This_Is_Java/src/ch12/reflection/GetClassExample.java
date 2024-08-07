@@ -1,5 +1,7 @@
 package ch12.reflection;
 
+import java.lang.reflect.Constructor;
+
 /*
  * 자바는 클래스와 인터페이스의 메타 정보를 Class 객체로 관리한다.
  * 여기서 메타 정보란 패키지 정보, 타입 정보(클래스나 인터페이스의 이름),멤버(생성자, 필드, 메소드) 
@@ -46,6 +48,19 @@ public class GetClassExample {
 		//how3
 		//Car car = new Car();
 		//Class clazz = car.getClass();
+		
+		Constructor[] csrt = clazz.getConstructors();
+		
+		for(Constructor constructor : csrt) {
+			Class[] type = constructor.getParameterTypes();
+			System.out.println(constructor.getName());
+			
+			for(Class get_Class:type) {
+ 				System.out.println(get_Class.getSimpleName());
+ 			}
+			
+			
+		}
 		
 		System.out.println("패키지: "+ clazz.getPackage().getName());
 		System.out.println("클래스 간단 이름: "+ clazz.getSimpleName());
