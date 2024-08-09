@@ -2,7 +2,7 @@ package ch14.multi_thread.daemon;
 
 /*<데몬스레드>
  * 데몬 스레드는 주 스레의 작업을 돕는 보조적인 역할을 수행하는 스레드다.
- * 주란 주인이 되는 스레드다 어떤스레드든 주 스레드가 될수있다. 데몬스레드를
+ * 주란 주인이 되는 스레드다 어떤스레드든 주 스레드가 될수있다.
  * 그래서 데몬스레드를 만드는 스레드가 데몬 스레드 이다.
  * 
  * 주 스레드가 종료되면 데몬 스레드도 따라서 자동으로 종료 된다.
@@ -50,7 +50,7 @@ public class AutoSaveThread extends Thread{
 		while(true) {
 			
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(10000);
 			} catch (InterruptedException e) {
 				break;
 			}

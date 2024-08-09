@@ -25,7 +25,7 @@ import oracle.jdbc.driver.OracleDriver;
  * Class.forName("oracle.jdbc.OracleDriver");
  * 
  * Class.forName 매개값에 문자열로 값을 주면 그 문자열이 클래스 패스상에 있을 경우에 그 클래스의 바이크코드를 읽고 메모리에 올린다.
- * 그리고 Class.forName 는 그 클래스의 대한 클래스 객체를 리턴한다 하지만 메모리에 올리는게는게 목적이라서 Class.forName 이걸 사용한다.
+ * 그리고 Class.forName은 그 클래스의 대한 클래스 객체를 리턴한다 하지만 메모리에 올리는게는게 목적이라서 Class.forName 이걸 사용한다.
  * 
  * 실제로 oracle.jdbc.OracleDriver 이 클래스가 어디에 있냐면 빌드 패스에 등록해놓은 드라이버 에 있다.
  * 그럼 이제 이 oracle.jdbc.OracleDriver를 로딩하는 순간 DriverManager에 등록이 된다
@@ -36,7 +36,7 @@ import oracle.jdbc.driver.OracleDriver;
  * 만약 Build Path에서 JDBC Driver 클래스를 찾지 못하면 
  * ClassNotFoundException이 발생하므로 예외 처리를 해야 한다.
  * 
- * 그런데 왜 Class.forName("oracle.jdbc.OracleDriver"); 만 사용했는데 어떻게 DriverManager가 OracleDriver을 사용할수 있는 냐하면
+ * 그런데 왜 Class.forName("oracle.jdbc.OracleDriver"); 만 사용했는데 어떻게 DriverManager가 OracleDriver을 사용할수 있냐하면
  * 
  * OracleDriver 클래스의 구조에 보면 static 블록에 코드가 이런식으로 선언되어있다.
  * 
@@ -59,9 +59,10 @@ import oracle.jdbc.driver.OracleDriver;
  * 
  */
 public class ConnectionExample {
-
 	public static void main(String[] args) {
 		Connection conn = null;
+		
+		
 		
 		try{
 			//<JDBC Driver를 메모리로 로딩하고, DriverManager에 등록>
@@ -82,7 +83,7 @@ public class ConnectionExample {
 			 * 그럼 첫번째 인자에 들어가는 형식 ip,포트,데이터베이스 이름 이 3개를 작성하는 형식이
 			 * DBMS 마다 다 다르다.
 			 * 
-			 * 첫번째 인자값은 연결 문자열인데, 다음 은 Oracle의 연결 문자열 형식이다
+			 * 첫번째 인자값은 연결 문자열인데, 다음은 Oracle의 연결 문자열 형식이다
 			 * 
 			 * jdbc:oracle:thin:@localhost(ip):1521(포트)/orcl(DB명) 이다.
 			 *       

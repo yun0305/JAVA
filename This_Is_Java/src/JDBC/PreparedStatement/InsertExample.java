@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * values('yun0305','허윤','12345',25,'heuyoon19@gmail.com');
  * 
  * 이제 이걸 자바코드에서 사용할때는 값을 ?로 대체한 매개변수화된 insert문으로 변경하면
- * 다은과 같다
+ * 다음과 같다
  * 
  * INSERT INTO users(userid,username,userpassword,userage,useremail)
  * VALUE(?,?,?,?,?)

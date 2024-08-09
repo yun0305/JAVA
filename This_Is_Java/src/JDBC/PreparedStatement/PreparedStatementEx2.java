@@ -14,12 +14,12 @@ import java.sql.SQLException;
  * INSERT 문은 다음과 같다.SEQ_BNO.NEXTVAL은 SEQ_BNO 시퀀스에서 가져올 번호이고,
  * SYSDATE는 현재 시간이다
  * 
- * INSERT INTO boards (bon,btitle,bcontent,bwriter,bdate,bfilename,bfiledata)
+ * INSERT INTO boards (bno,btitle,bcontent,bwriter,bdate,bfilename,bfiledata)
  * VALUE(SEQ_BNO.NEXTVAL,?,?,?,SYSDATE,?,?);
  * 
  * SEQ_BNO.NEXTVAL와 SYSDATE를 제외하고 나머지는 ?로 대체한 매개변수화된 INSERT 문으로 만들고 String 타입 변수 sql에 저장한다
  * 
- * 매개변수화된 INSERT문을 실행하기 위해 다음돠 같으 preparstatement() 메소드로부터
+ * 매개변수화된 INSERT문을 실행하기 위해 다음과 같은 preparstatement() 메소드로부터
  * PreparedStatement 객체를 얻는데 이전과 다르게 두 번째 매개값이 있다.
  * 
  * PreparedStatement pstmt = conn.preaparStatement(sql,new String[] {"bno"});//보통 2번째 인자값은 기본키 컬럼이온다.
