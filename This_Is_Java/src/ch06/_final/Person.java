@@ -15,12 +15,14 @@ public class Person {
 		 * 한번 초기화 해주고 바뀌면 안돼는 데이터를 선언할떄 final을 사용한다
 		 * 
 		 */
+	
 		final String nation = "korean";
 		final String ssn;
+		
 		String name;
 		Person(String ssn,String name){
-			this.ssn = ssn;
 			this.name = name;
+			this.ssn = "";
 		}
 		
 		

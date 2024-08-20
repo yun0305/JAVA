@@ -6,7 +6,10 @@ public class sec14 {
 		int[][] scores = new int[][] {
 			{80,90,96},
 			{76,88}
-		};
+			};
+			
+		
+		
 		System.out.println("1차원 배열 길이(반의 수): "+scores.length);
 		System.out.println("2차원 배열 길이(인원의 수): "+scores[0].length);
 		System.out.println("2차원 배열 길이(인원의 수): "+scores[1].length);

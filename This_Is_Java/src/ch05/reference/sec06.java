@@ -3,8 +3,11 @@ package ch05.reference;
 public class sec06 {
 
 	public static void main(String[] args) {
+		
 		String strVal1 = "홍길동";
 		String strVal2 = "홍길동";
+		
+		
 		
 		if(strVal1 == strVal2){
 			System.out.println("strVal1과 strVal2는 참조가 같음");

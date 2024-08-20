@@ -22,19 +22,19 @@ import java.sql.SQLException;
  * 매개변수화된 INSERT문을 실행하기 위해 다음과 같은 preparstatement() 메소드로부터
  * PreparedStatement 객체를 얻는데 이전과 다르게 두 번째 매개값이 있다.
  * 
- * PreparedStatement pstmt = conn.preaparStatement(sql,new String[] {"bno"});//보통 2번째 인자값은 기본키 컬럼이온다.
+ * PreparedStatement pstmt = conn.preaparStatement(sql,new String[] {"	"});//보통 2번째 인자값은 기본키 컬럼이온다.
  * 
  * 두번쨰 매개값은 INSERT문이 실행된 후 가져올 컬럼 값으로,new String[] {"bno"}; 라고 주면
  * bno 컬럼 값을 가져온다. sql문이 실행되기 전까지는 SEQ_BNO.NEXTVAL로 얻은 번호를 모르기 떄문에
- * SQL 문이 실행된 후에bno 컬럼에 실제로 저장된 값을 얻어오는 것이다.
+ * SQL 문이 실행된 후에 bno 컬럼에 실제로 저장된 값을 얻어오는 것이다.
  * 
  * 이제 ?에 해당하는 값을 지정한다. bfiledata 컬럼은 바이너리 타입(blob)이므로 ?에 값을 지정하려면
  * setBinaryStream(), setBolb(), setBytes() 메소드 중 하나를 이용해야 한다. 다음은 setBlob을 이용해서 바이트 입력 스트림을 제공한 것이다.
  * 
- * .
- * .
- * .
- * pstmt.setBlob(5,new FileInputStream("파일 주소"));
+ * 
+ * 
+ * 
+ * pstm.setBlob(5,new FileInputStream("파일 주소"));
  *
  * int rows = pstms.excuteUpdate();
  * if()
@@ -84,7 +84,9 @@ public class PreparedStatementEx2 {
 			pstmt.setString(2, "고양양");
 			pstmt.setString(3, "아기");
 			pstmt.setString(4, "cat.png");
+			
 			Blob bolb = null;
+			
 			pstmt.setBlob(5, new FileInputStream("src/image/cat.png"));
 			
 			int row = pstmt.executeUpdate();

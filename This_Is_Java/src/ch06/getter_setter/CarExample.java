@@ -5,6 +5,7 @@ public class CarExample {
 	public static void main(String[] args) {
 		//객체생성
 		Car car = new Car();
+		
 		//잘못된 속도 변경
 		car.setSpeed(-50);
 		System.out.println("현재 속도: " + car.getSpeed());

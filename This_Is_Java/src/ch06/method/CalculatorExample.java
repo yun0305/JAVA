@@ -11,6 +11,7 @@ public class CalculatorExample {
 		//리턴값이 있는 메소드 호출
 		int result = cal.plus(5,6);//변수에 넣어서 출력해줘도 되고 바로 print메소드로 출력해 줘도 된다 
 		System.out.println(result);
+		
 		int x = 10;
 		int y = 4;
 		//divide() 메소드 호출 시 변수 x와 y의 값을 매개값으로 제공하고,

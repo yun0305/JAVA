@@ -4,6 +4,7 @@ public class sec07 {
 
 	public static void main(String[] args) {
 		//문자열 추출
+		
 		String ssn = "010305-3253514";
 		char sex = ssn.charAt(7);//charAt 메소드는 문자열을 추출할수 있다
 		

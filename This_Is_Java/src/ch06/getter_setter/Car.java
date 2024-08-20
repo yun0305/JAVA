@@ -3,7 +3,6 @@ package ch06.getter_setter;
 public class Car {
 	
 	private int speed;
-	
 	private boolean stop;
 	
 	public int getSpeed() {

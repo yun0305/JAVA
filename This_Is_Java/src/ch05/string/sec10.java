@@ -10,6 +10,8 @@ public class sec10 {
 		String secondNum = ssn.substring(7);//인덱스가 하나면 7번째 자리부터 끝까지(해당 파라미터 이상 7이상)
 		System.out.println(firstNum);
 		System.out.println(secondNum);
+		
+		
 
 	}
 

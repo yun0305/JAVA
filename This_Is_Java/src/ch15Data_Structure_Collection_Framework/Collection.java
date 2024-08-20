@@ -3,7 +3,7 @@ package ch15Data_Structure_Collection_Framework;
 /*<컬렉션 자료구조>
  * 
  * 컬력션은 모음을 뜻한다. 무엇을 모은다는 것일까? 객체이다. 객체를 저장할수 있는 자료 구조이다.
- * 베열도 객체를 저장한다.
+ * 배열도 객체를 저장한다.
  * 
  * 예로
  * Member[] member = new Member[10]; 이런식으로 만들수 있다.
@@ -15,7 +15,7 @@ package ch15Data_Structure_Collection_Framework;
  * 1.같은 타입만 저장 가능하다.
  * 2.길이를 변경할수 없다.
  * 
- * 만약 길이가 10 짜리 배여을 쓰다가 11개 짜리 배열을 사용하려면
+ * 만약 길이가 10 짜리 배열을 쓰다가 11개 짜리 배열을 사용하려면
  * 배열을 복사해서 새로운 배열을 만들고 거기에 복사를 해야한다.
  * 
  * 15장의 컬랙션의 경우 배열과 유사한데 배열과는 다른 특징이 있다.
@@ -41,7 +41,7 @@ package ch15Data_Structure_Collection_Framework;
  * 하지만 Map은 Collection을 상속 받지 않기 때문에 저장 방식 사용방식 이 좀 다르다,
  * 
  * List와 Set은 객체를 추가, 삭제, 검색하는 방법에 있어서 공통점이 있기 때문에 공통된 메소드만 따로 모아
- * Cokkection 인터페이스로 정의해 두고 이것을 상속하고 있다. Map은 키와 값을 하나의 쌍으로 묶어서 관리하는 구조로 되어 있어
+ * Collection 인터페이스로 정의해 두고 이것을 상속하고 있다. Map은 키와 값을 하나의 쌍으로 묶어서 관리하는 구조로 되어 있어
  * List 및 Set과는 사용 방법이 다르다. 다음은 각 인터페이스 별로 사용할 수 있는 컬렉션의 특징을 정리한 것이다.
  * 
  * 인터페이스 분류		특징								구현 클래스
@@ -52,7 +52,7 @@ package ch15Data_Structure_Collection_Framework;
  * 				Set		순서를 유지하지 않고저장			HashSet, ThreeSet
  * 						종복저장 안됨
  * 
- * Map					키와 값으로 구성된 엔트리 저장 		HashMap,Hashtable,
+ * 		Map				키와 값으로 구성된 엔트리 저장 		HashMap,Hashtable,
  * 						키는 중복 저장 안됨.				TreeMap, Properties
  * 
  * 

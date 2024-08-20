@@ -3,8 +3,11 @@ package ch05.reference;
 public class sec05 {
 
 	public static void main(String[] args) {
+		
+		//<가비지 컬랙터가 수거해가는 경우>
 		String hobby = "여행";
 		hobby = null;
+		
 		/*
 		 *hobby String 객체에 여행이 들어 있었지만 null을 넣어줘서 hobby를 더이상
 		 *사용하지 않는 객체로 만들어 주었다
@@ -12,7 +15,8 @@ public class sec05 {
 		 *사용하지 않는 객체는 자바에서 가비지 컬렉터가 객체를 사용하지 않는다
 		 * 
 		 */
-
+		
+		//<메모리에 남아있는 경우>
 		String kind1 = "자동차";
 		String kind2 = kind1;
 		kind1 = null;
