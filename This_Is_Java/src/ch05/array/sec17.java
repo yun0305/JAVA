@@ -14,7 +14,7 @@ public class sec17 {
 		int result = num1+num2;
 		System.out.println("num1과 num2의 합은 = "+result);
 		*/
-		if(args.length != 2) {
+		if(args.length != 2) { 
 			System.out.println("프로그램 입력값이 부족합니다(오직 2개)");
 			System.exit(0);
 		}

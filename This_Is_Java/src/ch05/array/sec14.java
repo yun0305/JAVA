@@ -4,11 +4,11 @@ public class sec14 {
 
 	public static void main(String[] args) {
 		int[][] scores = new int[][] {
+			
 			{80,90,96},
 			{76,88}
-			};
 			
-		
+			};
 		
 		System.out.println("1차원 배열 길이(반의 수): "+scores.length);
 		System.out.println("2차원 배열 길이(인원의 수): "+scores[0].length);

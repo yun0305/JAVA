@@ -5,7 +5,7 @@ public class sec08 {
 	public static void main(String[] args) {
 		//문자열 길이
 		String ssn = "0103053253514";
-		int length = ssn.length();
+		int length = ssn.length(); 
 		
 		System.out.println(ssn.length());
 		System.out.println(ssn.charAt(12));

@@ -1,6 +1,6 @@
 package ch05.array;
 
-public class StrArray {
+public class StrArray { 
 	
 	public static void main(String[] args) {
 	

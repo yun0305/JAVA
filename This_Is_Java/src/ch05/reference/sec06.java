@@ -4,7 +4,7 @@ public class sec06 {
 
 	public static void main(String[] args) {
 		
-		String strVal1 = "홍길동";
+		String strVal1 = "홍길동";//리터럴로 넣을경우 참조
 		String strVal2 = "홍길동";
 		
 		
