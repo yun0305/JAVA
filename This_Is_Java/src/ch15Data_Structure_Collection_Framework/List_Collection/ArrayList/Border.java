@@ -1,4 +1,4 @@
-package ch15Data_Structure_Collection_Framework.List_Collection;
+package ch15Data_Structure_Collection_Framework.List_Collection.ArrayList;
 
 public class Border {
 	
@@ -111,6 +111,65 @@ public class Border {
 	 * 그래서 인덱스에 저장이 되는 객체가 다 다를 수도 있지만 동일한 객체도 다른 인덱스로 저장을 할 수 있다
 	 * 이걸 중북 저장이라고 이야기를 하는데 가능한 이유가 번지만 저장이 되기 떄문에 그렇다
 	 * 
+	 * <ArrayList 문법>
+	 * List<E> list = new ArrayList<E>(); // E에 지정된 타입의 객체만 저장
+	 * List<E> list = new ArrayList<>();  // E에 지정된 타입의
+	 * List list = new ArratList();		  // 모든 타입의 객체를 저장	
+	 * 
+	 * 
+	 * <ArrayList 구조>
+	 * 구체적인 타입을 준것과 안준것의 차이점은 만약 구체적인 타입으로 Memeber라는 객체를 주면
+	 * ArrayList에 저장되는 객체는 전부다. Member 객체이다.
+	 * 
+	 * 그런데 만약 정확한 타입을 주지 않으면 ArrayList에 저장되는 객체는 전부 Object 타입이다.
+	 * 
+	 * add로 객체를 추가하게 되면 인덱스의 순번대로 저장이되는데 만약 객체를 10개를 저장을 했다
+	 * 인덱스가 0부터 해서 9까지 쭉 객체가 저장이 되었다 배열과 다르게 계속 추가할수 있다 20개 30개 
+	 * 계속해서 저장을 할수 있다. 
+	 * 
+	 * 이제 삭제를 하는데 삭제할 떄는 clear나 remove를 사용한다고 했다. 
+	 * 만약 인덱스 0부터 9까지 있는데 내가 4번 인덱스에 있는 객체를 지웠다. 그러면 4번이 비여있느냐
+	 * 아니다. 기존에 5인덱스가 4가 되고 6인덱스가 5가되고 하나씩 앞으로 떙겨진다.
+	 * 
+	 * List 같은 경우 인덱스를 삭제한다고 해서 Null이 들어가는 건아니다. 앞으로 인덱스가 하나씩 떙겨질뿐
+	 * 그래서 4를 두번지으면 기존에 4번 과 5번이 지워진다.
 	 */
+	
+	private String subject;
+	private String content;
+	private String writer;
+	
+	public Border(String subject,String content,String writer) {
+		
+		this.subject = subject;
+		this.content = content;
+		this.writer = writer;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	
+	
 	
 }
