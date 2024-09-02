@@ -5,7 +5,7 @@ public class DriveExample {
 	public static void main(String[] args) {
 		Driver driver = new Driver();
 		
-		Vehcle vehcle = new Vehcle();
+		Kuruma vehcle = new Kuruma();
 		Bus bus = new Bus();
 		Texi texi = new Texi();
 		

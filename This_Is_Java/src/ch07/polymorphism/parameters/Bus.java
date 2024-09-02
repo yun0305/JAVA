@@ -1,6 +1,6 @@
 package ch07.polymorphism.parameters;
 
-public class Bus extends Vehcle{
+public class Bus extends Kuruma{
 
 	@Override
 	public void run() {

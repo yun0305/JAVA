@@ -5,15 +5,16 @@ public class AnimalExample {
 	public static void main(String[] args) {
 		Dog dog = new Dog();
 		Cat cat = new Cat();
-		
-		
+			
+		Animal A = dog;
+	
 		animalSound(cat);
-		animalSound(dog);
-
-						
+		animalSound(dog);						
 	}
+	
 	public static void animalSound(Animal animal) {
 		animal.sound();
 		
 	}
+	
 }

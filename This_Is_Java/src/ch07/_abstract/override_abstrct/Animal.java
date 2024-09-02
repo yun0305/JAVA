@@ -9,4 +9,6 @@ public abstract class Animal {
 	}
 	
 	abstract void sound();//추상 메소드
+	
+	
 }

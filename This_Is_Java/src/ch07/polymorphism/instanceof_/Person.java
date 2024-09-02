@@ -10,6 +10,7 @@ public class Person {
 	
 	//메소드 선언
 	public void walk() {
-		System.out.println("겉습니다.");
+		System.out.println("걷습니다.");
 	}
+	
 }

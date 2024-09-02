@@ -1,6 +1,6 @@
 package ch07.polymorphism.parameters;
 
-public class Texi extends Vehcle{
+public class Texi extends Kuruma{
 	
 	@Override
 	public void run() {

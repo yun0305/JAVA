@@ -1,4 +1,4 @@
-package ch15Data_Structure_Collection_Framework.List_Collection.ArrayList;
+package ch15Data_Structure_Collection_Framework.List_Collection;
 
 public class Border {
 	
