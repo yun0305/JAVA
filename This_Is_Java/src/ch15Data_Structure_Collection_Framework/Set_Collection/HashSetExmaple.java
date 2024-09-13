@@ -1,5 +1,8 @@
 package ch15Data_Structure_Collection_Framework.Set_Collection;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /*
  * <Set>
  * 이번엔 Set 컬래션이다.
@@ -69,13 +72,10 @@ package ch15Data_Structure_Collection_Framework.Set_Collection;
  *  글로 설명을 하자면 set객체 가 있다 set 안에는 객체가 a,b,c 3개가 들어가 있다. Iterator는 set 안에
  *  객체의 개수를 파악해서 hasNext()로 가져올게 있느냐 물어본다.
  *  그리고 next()로 객체를 가져올수 있다. 가져온 객체를 a객체라고 치고 그럼 남은게 b,c객체이다.
- *  
  *  다시 hasNext() 하면 가져올게 있으니까 true다. 다시 next()로 C를 가져왔다 치자.
  *  
  *   그럼 set안에는 b객체 하나 남은거다. 
- *   
  *   다시 또 가져올게 있냐 해서 가져온다 b도 가져왔다
- *   
  *   이제 다 한번씩 가져왔다. 이제 더이상 가져올게 없다. 
  *   
  *   그렇다고해서 객체를 꺼내서 가져온다는 개념은 아니고  set에 있는 객체를 한번씩 참조해서 가져온다는 거지
@@ -103,19 +103,38 @@ package ch15Data_Structure_Collection_Framework.Set_Collection;
  *  Set<E> set = new HashSet<>(); 	//E에 저장된 타입의 객체만 저장
  *  Set set = new HashSet(); 	//모든 타입의 객체만 저장
  *  
- *  10분 2초
- *   
- *   
+ *  HashSet은 동일한 객체는 중복 저장하지 않는다. 여기서 동일한 객체란 동등 객체를 말한다.
  *  
+ *  동등 객체인지 아닌지 판단할떄는 처음에 hashCode() 값이 같은지 본다.
+ *  같다면(true) 그 다음에 equals()메소드가
+ *  true가 나오는지 확인을한다.
  *  
- * 
- * 
  */
 public class HashSetExmaple {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		//HashSet 컬랙션 생성
+		Set<String> set1 = new HashSet<String>();
+		
+		//객체 저장
+		set1.add("Java");
+		set1.add("JDBC");
+		set1.add("JSP");
+		set1.add("Java");//중복 객체임으로 중복 저장하지 않음
+		set1.add("Spring");
+		
+		//저장된 객체 수 출력
+		
+		System.out.println(set1.size());
+		
+		Set<Member> set2 = new HashSet<Member>();
+		
+		set2.add(new Member("허윤",24));//객체는 다르지만 동등 객체이기 때문에 중복 저장이 안됨.
+		set2.add(new Member("허윤",24));
+		
+		System.out.println("set2에 저장된 객체 " + set2.size()+"개");
+		//17분33초
 	}
 
 }
