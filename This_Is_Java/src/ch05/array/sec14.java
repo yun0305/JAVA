@@ -23,6 +23,7 @@ public class sec14 {
 		for(int i=0;i<scores[0].length;i++) {
 			class1Sum += scores[0][i];
 		}
+		
 		double class1Avg = (double)class1Sum / scores[0].length;
 		System.out.println("첫번째 반의 평균 : "+ class1Avg);
 		

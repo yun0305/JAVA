@@ -23,7 +23,7 @@ package ch15Data_Structure_Collection_Framework;
  * 배열처럼 같은 타입만 저장할수 있도록 만들기도 하고 다양한 타입이 저장될수 있도록 만들수 있는데
  * 하지만 보통 같은 타입만 가능하게 만든다.
  * 
- * 그리고 컬랙션은 길이가 고정되어있지 않다. 저장 방식도 조금 다른데 키를 주고 같을 주는 방식도 있다.
+ * 그리고 컬랙션은 길이가 고정되어있지 않다. 저장 방식도 조금 다른데 키를 주고 값을 주는 방식도 있다.
  * 
  * 프레임 워크란 짜여진 틀을 이야기 한다.
  * 
@@ -31,7 +31,7 @@ package ch15Data_Structure_Collection_Framework;
  * 이와 같은 클래스와 인터페이스는 java.util에 있다.
  * 
  * 컬랙션 프레임 워크는 몇가지 인터페이스를 통해서 다양한 컬렉션 클래스를 이용할 수 있도록 설계되어 있다.
- * 주요 인터페이스러는 List, Set< Map이 있는데, 이 인터페이스로 사용 가능한 컬랙션
+ * 주요 인터페이스러는 List, Set, Map 이 있는데, 이 인터페이스로 사용 가능한 컬랙션
  * 객체의 종류는 다음과 같다.
  * 
  * <List  Set  Map>
@@ -46,7 +46,7 @@ package ch15Data_Structure_Collection_Framework;
  * 
  * 인터페이스 분류		특징								구현 클래스
  * 
- * 				List	순서를 유지하고 저장(배열 인덱스)	ArrayList,Vector
+ * 				List	순서를 유지하고 저장(배열 인덱스)	ArrayList,Vector,
  * 						중복저장 가능						LinkedList					
  * Collection
  * 				Set		순서를 유지하지 않고저장			HashSet, ThreeSet

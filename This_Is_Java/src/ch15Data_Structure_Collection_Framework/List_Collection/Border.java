@@ -38,7 +38,7 @@ public class Border {
 	 * List<E>
 	 * 
 	 * 그래서 List 컬랙션 안에 저장할 수 있는 객체의 종류를 지정할수 있다
-	 * 예로 내가 Member만 저장 하고 싶다면 List<Member> 문자열만 저장하고 싶다면 Member<String>
+	 * 예로 내가 Member만 저장 하고 싶다면 List<Member> 문자열만 저장하고 싶다면 List<String>
 	 * 
 	 * 다시 List는 인터페이스다 List 컬랙션 중에서 List 를 구현한 객체가 ArrayList,Vector,LinkedList
 	 * 이렇게 있었다. 그러면 이러한 객체를 이용할떄 List 인터페이스를 통해서 이용할수 있다. 
