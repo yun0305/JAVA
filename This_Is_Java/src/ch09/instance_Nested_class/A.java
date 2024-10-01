@@ -13,7 +13,7 @@ public class A {
 	 */
 
 	String out_Class_member = "A의 필드";
-	B b = new B();//B 타입의 필드생성
+	B b = new B();//B 참조변수 타입의 필드생성
 	
 	
 	public A() {

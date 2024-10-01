@@ -60,8 +60,10 @@ public class DateTimeOperationExample {
 		/*
 		 * LocalDateTime 을 포맷 할때는 DateTimeFormatter를 사용한다. 
 		 * LocalDateTime 객체를 만들고 DateTimeFormatter 객체를 만든다음
-		 * 
 		 * LocalDateTime 메소드중 format() 메소드의 DateTimeFormatter 객체를 넣어준다.
+		 * 
+		 * 
+		 * 
 		 */
 
 	}

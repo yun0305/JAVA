@@ -1,6 +1,7 @@
 package ch15Data_Structure_Collection_Framework.Set_Collection;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /*
@@ -34,7 +35,7 @@ import java.util.Set;
  * 그런데 객체를 가지고 오는 메소드는 없다. 저번 시간에 배운 List는 get이 있었다. 
  * set은 객체를 하나하나 가져오는 방법이 없다.
  * 
- * 그러면 저장만 할수 있고 가져올수 없가도 하면 효용 가치가 없는거 아닐까 라는 생각이 들지만.
+ * 그러면 저장만 할수 있고 가져올수 없다고 하면 효용 가치가 없는거 아닐까 라는 생각이 들지만.
  * 하나하나씩 갖고 오는 기능은 없다는 거지 set 안에 있는 요소를 꺼낼 방법이 없다는 건 아니다
  * 
  * 메소드중에 iterator() 라는 메소드가 있다.
@@ -109,6 +110,25 @@ import java.util.Set;
  *  같다면(true) 그 다음에 equals()메소드가
  *  true가 나오는지 확인을한다.
  *  
+ *  Set 컬랙션은 인덱스로 객체를 검색해서 가져오는 메소드가 없다 대신 객체를 한개씩
+ *  반복해서 가져와야 하는데, 여기에는 두 가지 방법이 있다 하나는 for each 가져오는 방법인데
+ *  
+ *  지금 까지는 그냥 배열로 넣어서 사용했다 하지만 List도 사용할수 있다 코드를 보겠다
+ *  
+ *  Set<E> set = new HashSet<E>();
+ *  for(E e : set){
+ * 	...
+ *  }
+ *  
+ *  이러면 set의 모든 객체가 하나씩 나오는데 여기서 새로운 사실은 향상된 for문에서 반복 시킬수 있는 이유가 
+ *  뭐냐 이다.
+ *  
+ *  이유는 도큐먼드를 보면 알수 있다. 어떤 클래스든 어떤 인터페이스든 구현하고 있는 인터페이스 중에서 또는 상속하고
+ *  있는 Interface중에서 Interable<E>(인터페이스)을 포함하고 있으면
+ *  
+ *  향상된 for문에서 사용이 가능하다.
+ *  
+ *  
  */
 public class HashSetExmaple {
 
@@ -132,6 +152,51 @@ public class HashSetExmaple {
 		
 		set2.add(new Member("허윤",24));//객체는 다르지만 동등 객체이기 때문에 중복 저장이 안됨.
 		set2.add(new Member("허윤",24));
+		
+		
+		//Iterator로 객체 가져오기
+		Iterator<String> iterator = set1.iterator();
+		
+		/*주의할점 Iterator는 일회용이다 한번 순회를 돌면 다시 iterator에 새롭게 참조를 해줘야 한다.
+		 * 
+		 */
+		//잘못된 사용예)
+//		for(int i=0;i<set1.size();i++) {
+//			if(iterator.hasNext()) {
+//				System.out.println(iterator.next());
+//			}
+//			}
+//		for(int i=0;i<set1.size();i++) {
+//			if(iterator.hasNext()) {
+//				if(iterator.next().equals("Spring")) {
+//				iterator.remove();
+//				}
+//				}
+//		}
+//		이러면 첫번쨰 for문에서 iterator가 next로 순회를 전부 돌았기 떄문에 다음 for문에서
+//		같은 참조값으로 또 next를 하게 될 경우 더이상 next를 할게 없기 떄문에 지울수가 없다. 
+		
+		//옳바른 예
+		
+		while (iterator.hasNext()) {
+		    System.out.println(iterator.next());
+		}
+
+		// JSP 삭제
+		iterator = set1.iterator(); // 새로운 iterator 생성
+		while (iterator.hasNext()) {
+		    if (iterator.next().equals("JSP")) {
+		        iterator.remove();
+		    }
+		}
+
+		// JSP 삭제 후 남은 요소 출력
+		iterator = set1.iterator();
+		while (iterator.hasNext()) {
+		    System.out.println(iterator.next());
+		}
+		
+		System.out.println(set1.size());
 		
 		System.out.println("set2에 저장된 객체 " + set2.size()+"개");
 		//17분33초

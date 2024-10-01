@@ -24,6 +24,7 @@ public class SmartPhone extends Phone {
 		
 		this.color = color;//실행순서 2 ...
 		this.model = model;
+		
 		System.out.println("Smart Phone(String color String model)생성자 실행됨");
 	}
 	

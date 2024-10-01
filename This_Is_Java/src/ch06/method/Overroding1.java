@@ -18,6 +18,7 @@ public class Overroding1 {
 		double areaRectangle(double width,double height) {
 			return width*height;
 		}
+		
 		 int areaRectangle(int a, int b,int c) {
 			 return a*b*c;
 		 }

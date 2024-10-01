@@ -5,7 +5,7 @@ public class SmartPhone extends Phone{
 	private boolean wifi;
 
 	public SmartPhone(String model,String color) {
-		this.setColor(color);//private로 선언되면 자식클래스로 상속이 안된다(검증완료)
+		this.setColor(color);//private로 선언되면 자식클래스로 직접 접근이 안된다(검증완료)
 		this.setModel(model);
 	}
 	
@@ -15,7 +15,10 @@ public class SmartPhone extends Phone{
 	
 	public void setWifi(boolean wifi) {
 		this.wifi = wifi;
-		System.out.println("와이파이 상태를 변경했습니다.");	
+		System.out.println("와이파이 상태를 변경했습니다.");
+		
+		
+		
 	}
 	
 	public boolean isWifi() {

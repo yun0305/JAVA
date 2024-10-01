@@ -5,8 +5,6 @@ public class AnimalExample {
 	public static void main(String[] args) {
 		Dog dog = new Dog();
 		Cat cat = new Cat();
-			
-		Animal A = dog;
 	
 		animalSound(cat);
 		animalSound(dog);						
@@ -14,7 +12,7 @@ public class AnimalExample {
 	
 	public static void animalSound(Animal animal) {
 		animal.sound();
-		
+		Animal.test();// 추상 클래스 소속 메소드 호출
 	}
 	
 }

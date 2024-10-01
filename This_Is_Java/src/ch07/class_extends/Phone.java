@@ -2,6 +2,19 @@ package ch07.class_extends;
 
 public class Phone {
 
+	/*<주의>
+	 * 상속은 인스턴스 기반 즉 객체 기반의 개념이다.
+	 * 
+	 * static 메소드와 static 필드는 상속의 대상이 아니다.
+	 * 왜냐면 클래스 수준에서 관리가 되기때문에 인스턴스 기반의 상속
+	 * 개념과는 별도로 취급된다.
+	 * 
+	 * private 접근제한자를 가지면 자식 클래스에서 직접 접근할수 없다.
+	 * 상속 자체는 되지만, 자식 클래스에서 직접 사용할 수 없다.
+	 * 
+	 * 결론적으로 상속의 대상이 되는 것은 클래스와 그 안의 필드, 메소드이고,
+	 * 생성자와 private 요소, 그리고 static 요소는 상속이 직접적으로 되지 않는다.
+	 */
 	//필드 선언
 	private String model;
 	private String color;

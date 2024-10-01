@@ -24,4 +24,6 @@ public class Calculator {
 			double result = (double)x/(double)y;
 			return result;
 		}
+		
+		
 }

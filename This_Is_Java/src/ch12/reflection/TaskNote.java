@@ -6,7 +6,7 @@ public class TaskNote {
 
 	public static void main(String[] args) {
 		
-		Class clazz = Car.class;
+		Class clazz = Car.class;//
 		
 		Method[] method = clazz.getDeclaredMethods();
 		

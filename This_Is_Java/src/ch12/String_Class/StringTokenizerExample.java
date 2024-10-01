@@ -41,8 +41,8 @@ public class StringTokenizerExample {
 		System.out.println();
 		
 		
-		String data2 = "홍길동/이수홍/박연수";
-		StringTokenizer st = new StringTokenizer(data2,"/");
+		String data2 = "홍길동 이수홍 박연수";
+		StringTokenizer st = new StringTokenizer(data2," ");
 		
 		while(st.hasMoreTokens()) {
 			String token = st.nextToken();

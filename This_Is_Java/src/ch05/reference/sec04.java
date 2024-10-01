@@ -13,23 +13,19 @@ public class sec04 {
 		String str = null;
 		System.out.println("총 문자 수: "+str.length());
 		
+		
+		
 		}catch(NullPointerException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 			
-			intArray = new int[5];
-			
-			for(int i=0;i<intArray.length;i++) {
-				intArray[i] = i;
-			}
 			
 		}finally {
-			for(int all : intArray) {
-				System.out.println(all);
-			}
+			
+			
 		}
 		
-		
+		System.out.println("종료");
 		
 	}
 }

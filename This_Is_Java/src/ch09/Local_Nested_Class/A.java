@@ -8,8 +8,9 @@ package ch09.Local_Nested_Class;
 
 public class A {
 	
+	int test = 0;
 	//메소드 선언
-	void useB() {
+	static void useB() {
 		
 		//로컬 내부 클래스 선언
 		class B{
@@ -18,6 +19,7 @@ public class A {
 			
 			//생성자
 			B(){
+				
 				System.out.println("B-생성자 실행");
 			}
 			

@@ -2,7 +2,7 @@ package ch11.exception.User_Exception;
 
 public class Account_Example {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		Account at = new Account();
 		
 		at.deposit(10000);

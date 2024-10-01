@@ -11,6 +11,7 @@ public class Calculator_Static_Example {
 		 System.out.println("result1 "+result1);
 		 System.out.println("result2 "+result2);
 		 System.out.println("result3 "+result3);
+		 
 		 }
 
 }

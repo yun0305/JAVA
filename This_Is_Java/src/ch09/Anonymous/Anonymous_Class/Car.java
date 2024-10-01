@@ -39,7 +39,7 @@ public class Car {
 		
 		tire.roll();
 	}
-	
+//---------------------------------------------------------------	
 	//매개변수
 	public void run3(Tire tire) {
 		

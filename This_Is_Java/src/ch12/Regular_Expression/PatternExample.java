@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
  * <Pattern 클래스로 검증>
  * java.util.regex 패키지의 Pattern 클래스는 정규 표현식으로 문자열을 검증하는
  * matches() 정적 메소드를 제공한다. 첫 번째 매개값은 정규 표현식이고, 두번째 매개값은 검증할 문자열이다.
- * 검증한 후의 결과는 boolean 타입으로 리터된다.
+ * 검증한 후의 결과는 boolean 타입으로 리턴된다.
  * 
  * boolean result = Pattern.matches("정규식,"검증할 문자열");
  * 

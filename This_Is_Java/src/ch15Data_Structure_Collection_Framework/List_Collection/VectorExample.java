@@ -1,7 +1,7 @@
 package ch15Data_Structure_Collection_Framework.List_Collection;
 
 import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 /*
  * <Vector>
@@ -58,7 +58,6 @@ import java.util.Vector;
  * 다음은 ThreadA와 ThreadB에서 동시에 Border객체를 Vector에 각각 1000개씩 추가한 후, 전체
  * 저장된 수를 출력하는 예제이다.
  * 
- * 27:12분
  * 
  */
 

@@ -13,10 +13,10 @@ public class RemoteControlExample {
 		tv.test();//구현객체에에서 생성한 메소드
 		tv.turnOn();// 구현객체 안에 인터페이스를 통해 재정의 받은 메소드는 인터페이스 없이 사용할수도 있다.
 					// 왜냐면 재정의한 메소드도 구현객체 소속이니까
-		
 		RemoteControl adRc = new Audio();
 		controler(tvRc);
 		controler(adRc);
+		
 	}
 
 	public static void controler(RemoteControl rc) {

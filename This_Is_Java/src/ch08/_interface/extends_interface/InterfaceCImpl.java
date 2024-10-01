@@ -1,6 +1,6 @@
 package ch08._interface.extends_interface;
 
-public class InterfaceCImpl implements InterfaceC {
+public class InterfaceCImpl  implements InterfaceC {
 
 	
 	@Override//부모 A인터페이스
