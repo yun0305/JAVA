@@ -49,6 +49,21 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  *	Runnable task = new Task(); // Runnable 대신 Task가 와도 상관은 없다.
  *	
  *	Thread thread = new Thread(task);
+ *	
+ *	항상 헷갈려서 적어놈{
+ *	
+ *	헷갈리면 안되는게 여기에 구현객체를 생성자에 넣어줘야지 그냥 Thread 참조변수에 구현객체를
+ *	대입 시키는게 아니다 좀만 생각해보면 논리적으로 말이 안되는걸 알거다. Rubable 을 처리할수 있는 
+ *	생성자가 있는거지 Thread에 그대로 Runable을 참조시키면 안된다는 거다.
+ *
+ *	<항상 착각하는거>
+ *	Thread thread = new Runable구현객체(); // 이게 잘못된거
+ *
+ *	<정상>
+ *	Thread thread = new Thread(Runable구현객체()); 이게 맞는거
+ *
+ *	}
+ *
  *	구현 객체를 만든다음 구현객체를 Thread 생성자에 제공해주면 된다.
  *	
  * Runnable 인터페이스에는 딱 1개의 추상 메소드가 정의되어 있는데. 그게 뭐냐면 Run 이라는 메소드이다.
@@ -114,6 +129,9 @@ public class BeepPrintExample {
 		
 		Thread thread2 = new Thread(new PrintTask());//객체를 바로 넣어줘도 되고 변수에 담아서 전달해줘도 된다
 		thread2.start();
+		
+		
+		
 	}
 
 }

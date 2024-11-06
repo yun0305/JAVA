@@ -2,7 +2,7 @@ package ch13.Generic;
 
 public class GPT {
 
-	/* https://chat.openai.com/share/0bdffd0b-bcd4-4836-8a69-9dd801e5182e
+	/* 
 	 * 
 
 		제네릭 클래스의 기본 설명:

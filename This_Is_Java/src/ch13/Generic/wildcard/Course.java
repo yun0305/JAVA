@@ -7,6 +7,10 @@ public class Course {
 		
 	}
 	
+	public static Applicant<? extends Student> test(){
+		return new Applicant<Student>(new Student());
+	}
+	
 	//학생만 등록 가능
 	public static void registerCourse2(Applicant<? extends Student> applicant) {
 		System.out.println(applicant.kind.getClass().getSimpleName()+"이 Course2을 등록함");

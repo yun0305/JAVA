@@ -16,7 +16,7 @@ package ch13.Generic.Generic_Method;
  * 	static T name;
  * }
  * 
- * 먼자 static 변수는 제네릭을 사용할수 없다, 왜냐하면 Student 클래스가 인스턴스가 되기전에 static은 메모리에 올라가는데 이 때 name의 타입인 T가
+ * 먼저 static 변수는 제네릭을 사용할수 없다, 왜냐하면 Student 클래스가 인스턴스가 되기전에 static은 메모리에 올라가는데 이 때 name의 타입인 T가
  * 결정되지 않기 때문이다. 위와 같이 사용할 수 없는 것 이다.
  * 
  * 	static T getName(T name) {
@@ -27,7 +27,9 @@ package ch13.Generic.Generic_Method;
 	static 변수와 마찬가지로 Student 클래스가 인스턴스화 되기 전에 메모리에 올라가기 떄문에 T의 타입이 정해지지 않기 때문이다.
 
  *	<제네릭 메소드는 static이 가능하다.>
- *	위에서 에러가 발생했는데 어떻게 가능한 것일까? 이럴 떄 사용하는 것이 제네릭 메소드이다. 제네릭 메소드는 호출 시에 매개 타입을 지정하기 때문에 static이 가능하다. 
+ *	위에서 에러가 발생했는데 어떻게 가능한 것일까? 이럴 떄 사용하는 것이 제네릭 메소드이다. 
+ *	제네릭 메소드는 호출 시에 매개 타입을 지정하기 때문에 static이 가능하다. 즉 인스턴스화 할때 정해지는게 아니라
+ *	메소드 호출을 할떄 정해지기 떄문에 가능한거다.
  *  
  *  static <T> T getOneStudent(T id) {
  *		return id;

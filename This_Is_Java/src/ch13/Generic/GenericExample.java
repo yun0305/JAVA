@@ -40,7 +40,6 @@ public class GenericExample {
 		 * 그러니까 box는 오브젝트지만 대입된 값이 String 객체이기 때문에 equals로 비교하면 String에 equals 재정의 되어있는
 		 * equals가 동작해서 true가 나온다,
 		 * 
-		 * 복습할 양이 많아서 헷갈리나보다..
 		 */
 		System.out.println(result);
 		
