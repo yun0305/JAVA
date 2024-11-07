@@ -10,10 +10,10 @@ public class ChildExample {
  * 자식 타입이 부모 타입으로 자동 변환한 후, 다시 자식 타입으로 변환할 때 강제 타입 변환을 사용할수 있다.
  * 불가능 예시)
  * Parent pt = new Parent();
-		
-	Child ch = (Child)pt;
-		
-	ch.field2 = "";
+ *		
+ *	Child ch = (Child)pt;
+ *		
+ *	ch.field2 = "";
 	ch.method3();
 			
 			
@@ -31,7 +31,7 @@ public class ChildExample {
  * 	자식 타입이 부모타입으로 자동 변환되면 부모타입의 필드와 메소드만 사용할수 있다는 제약사항을 따른다(하지만 자식객체에서 오버라이딩 된 메소드는 부모 메소드가 아닌 자식 메소드를 사용한다)
  *	만약 자식 타입에 선언된 필드나 메소드를 사용하고 싶다면 강제 타입 변환을 사용해서 자식 타입으로 바꿔준 다음 사용하면 된다
  */
-		
+
 		Parent parent = new Child();
 		
 		parent.field1 = "data1";
@@ -49,6 +49,5 @@ public class ChildExample {
 		child.method2();
 		child.method3();
 	}
-
 }
 
