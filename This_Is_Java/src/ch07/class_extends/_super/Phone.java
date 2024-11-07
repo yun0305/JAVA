@@ -1,6 +1,7 @@
 package ch07.class_extends._super;
 
 public class Phone {
+	
 	//필드
 	public String model;
 	public String color;
@@ -9,5 +10,6 @@ public class Phone {
 	public Phone(){
 		System.out.println("Phone 생성자 실행");
 	}
+	
 }
 

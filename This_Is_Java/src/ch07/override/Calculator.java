@@ -18,6 +18,7 @@ public class Calculator {
 	 * 
 	 * 3. 새로운 예외를 throws할 수 없다(예외는 10장 참고)
 	 *  
+	 * 4. staitc 메소드는 재정의 대상이 아니다. 
 	 */
 	
 	//메소드 선언
