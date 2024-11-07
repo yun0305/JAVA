@@ -18,7 +18,7 @@ public class Car {
 		}
 	}
 	
-	public boolean isStop() {
+	public boolean isStop(){
 		return stop;
 	}
 	

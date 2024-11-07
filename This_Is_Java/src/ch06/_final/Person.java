@@ -14,16 +14,23 @@ public class Person {
 		 * 
 		 * 한번 초기화 해주고 바뀌면 안돼는 데이터를 선언할떄 final을 사용한다
 		 * 
+		 * 지역변수에 붙게된다면 변선언돠 동시에 초기화 하지않아도 오류는 발생하지 않지만 
+		 * 다음에 한번이라도 초기화하면 재할당 할수 없다.
+		 * 
 		 */
 	
 		final String nation = "korean";
 		final String ssn;
 		
 		String name;
+		
 		Person(String ssn,String name){
 			this.name = name;
 			this.ssn = "";
 		}
+		
+		
+		
 		
 		
 		
