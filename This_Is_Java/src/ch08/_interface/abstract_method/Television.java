@@ -25,7 +25,7 @@ public class Television implements RemoteControl{
 	}
 		
 		/*
-		 * setVolume 메소드는 볼륨값을 외부에서 매개변수로 받아서 Television 클래스의 필드 volume에 값을 넣어준다
+		 * setVolume 메소드는 볼륨 값을 외부에서 매개변수로 받아서 Television 클래스의 필드 volume에 값을 넣어준다
 		 * 하지만 RemoteControl 인터페이스에 정의된 최대볼륨은 10이다 그러니까 설계할때 우리는
 		 * 최대 볼륨을 10으로 맞춰줄거다.
 		 * 외부에서 볼륨값을 10보다 크게 설정한다고 하면 100을 넣어줘도 11을 넣어줘도 볼륨값은 10이 들어가야 하기 때문에
