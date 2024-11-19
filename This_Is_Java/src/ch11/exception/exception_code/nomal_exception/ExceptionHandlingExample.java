@@ -4,8 +4,6 @@ public class ExceptionHandlingExample {
 
 	public static void main(String[] args) {
 		
-		
-		
 		try {
 		Class.forName("java.lang.String");//예외가 발생하면 예외 객체가 생성된다
 		System.out.println("주어진 클래스가 있습니다");

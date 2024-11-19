@@ -1,4 +1,7 @@
 package ch11.exception.exception_code.exception_kind;
+
+import oracle.net.aso.e;
+
 public class ExceptionHandlingExample03 {
 	
 	/*
@@ -23,10 +26,14 @@ public class ExceptionHandlingExample03 {
 				System.out.println("숫자로 변환할수 없는 항목이 있습니다. 확인해 주세요"+e.getMessage());
 			}catch(NullPointerException | ArrayIndexOutOfBoundsException e){
 				System.out.println("문자열이 null이거나 항목의 수가 부족합니다.");
+			
 			}catch(Exception e){// 예상 못하는 예외가 발생시
 				System.out.println("예상치 못한 예외가 발생했습니다");
-			}
+				
+			}catch(Throwable e){			
 			
+			
+			}
 		}
 		
 		System.out.println("시스템 종료");

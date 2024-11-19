@@ -13,8 +13,13 @@ public class InsufficienException extends Exception {
 	 * 통상적으로 일반 예외는 Exception의 자식 클래스로 선언하고,
 	 * 실행 예외는 RunTimeException의 자식 클래스로 선언한다.
 	 * 
+	 *  Exception: 복구 가능한 예외를 명시적으로 처리하도록 강제하고 싶을 때 사용.
+	 *  
+	 *	RuntimeException: 프로그래머 실수나 로직 문제를 표현하고, 
+	 * 	호출자가 예외 처리를 선택적으로 할 수 있게 하고 싶을 때 사용.
+	 * 
 	 *  예)
-	 *  public class XXXException exteds Exception | RunTimeException {
+	 *  public class XXXException extends Exception | RunTimeException {
 	 *  
 	 *  	public XXXException(){ // 기본 생성자
 	 *  	
