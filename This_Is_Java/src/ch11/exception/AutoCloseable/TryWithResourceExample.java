@@ -25,8 +25,6 @@ public class TryWithResourceExample {
 		System.out.println();
 	
 		
-		
-		
 		MyResource res1 = new  MyResource("A");
 		MyResource res2 = new  MyResource("A");
 		
