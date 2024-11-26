@@ -3,7 +3,7 @@ package ch12.Date.DateTimeFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/*
+/*<날짜와 시간 정보를 조작할수 있는 LocalDateTime 클래스>
  * Date와 Calendar는 날짜와 시간 정보를 얻기에는 충분하지만, 날짜와 
  * 시간을 조작할수는 없다. 이때는 java.time 패키지의 LocalDateTime 클래스가 제공하는
  * 다음 메소드를 이용하면 매우 쉽게 날짜와 시간을 조작할수 있다.

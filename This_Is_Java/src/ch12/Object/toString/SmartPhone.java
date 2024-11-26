@@ -39,9 +39,6 @@ public class SmartPhone {
 		/*
 		 * Object 의 toString(); 메소드를 재정의해서 제조사와 운영체제가 결합된 문자열을 리턴함
 		 * 
-		 * 
 		 */
 	}
-	
-	
 }
