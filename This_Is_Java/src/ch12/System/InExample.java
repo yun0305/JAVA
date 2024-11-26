@@ -14,6 +14,7 @@ import java.io.IOException;
  * 
  * 다음은 숫자 키 1과 2를 입력함에 따라 speed 필드 값이 증감하는 예제이다 숫자 키인 3을 입력하면 while 문은 종료하도록 했다
  * 
+ * 
  */
 
 
@@ -23,9 +24,10 @@ public class InExample {
 	
 		
 		int speed = 0;
-		int keyCode = 0;
+		int keyCode = 0;//아스키코드로 받는거니까 타입은 정수이다
 		
-		while(true) {
+		while(true) {// 입력을 11111 하면 버퍼에 11111 이렇게 쌓이는데 반복문으로 하나씩 읽어와야 한다.
+					// 안 그러면 1 하나만 읽는다.  
 			
 			System.out.println("-------------------");
 			System.out.println("1.증속  2.감속  3.멈춤");

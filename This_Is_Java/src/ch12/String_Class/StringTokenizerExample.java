@@ -7,6 +7,8 @@ import java.util.StringTokenizer;
 	 * 문자열이 구분자로 연결되어 있을경우 구분자를 기준으로 문자열을 분리하려면 String의 split() 메소드를 이용하거나
 	 * java.util 패키지의 StringTokenizer 클래스를 이용할수 있다.
 	 * split() 은 정규표현식으로 구분하고 StringTokenizer는 문자로 구분한다는 차이점이 있다.
+	 * StringTokenizer는 정규표현식 구분 능력이 없다.
+	 * 하지만 split은 문자랑 정규표현식 둘다 처리가 가능하지만 좀 느릴수도 있다.
 	 * 
 	 * 다음과 같은 문자열에서 &,쉼표(,) 하이픈(-)으로 구분된 사람 이름을 뽑아낼 경우에는 정규 표현식으로 분리하는 split()
 	 * 메소드를 사용해야한다. 정규 표현식을 작성하는 방법은 12.10절에서 학습한다.
