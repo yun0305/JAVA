@@ -30,13 +30,17 @@ import java.time.format.DateTimeFormatter;
  * plusMinutes(long)	분 더하기
  * plusSeconds(long)	초 더하기
  * 
- * LocalDateTime 클래스를 이용해서 현재 컴퓨터의 날짜와 시간을 얻는 방법은 다은과 같다
+ * LocalDateTime 클래스를 이용해서 현재 컴퓨터의 날짜와 시간을 얻는 방법은 다음과 같다
  * 
  * LocalDateTime now = LocalDateTime.now();
  * 
  * DateTimeFormatter는 날짜와 시간을 주어진 문자열 패턴으로 변환할 때 사용한다.
  * LocalDateTime의 format() 메소드 호출 시 매개값으로 제공하면 문자열 패턴과 동일한 문자열을 얻을수 있다 
  * 문자열 패턴은 12.9절에서 자세히 설명한다.
+ * 
+ *  LocalDateTime 을 포맷 할때는 DateTimeFormatter를 사용한다. 
+ *	LocalDateTime 객체를 만들고 DateTimeFormatter 객체를 만든다음
+ *	LocalDateTime 메소드중 format() 메소드의 DateTimeFormatter 객체를 넣어준다.
  */
 
 
@@ -57,14 +61,7 @@ public class DateTimeOperationExample {
 		System.out.println("7일 더하기 "+ result3.format(dtf));
 		
 		
-		/*
-		 * LocalDateTime 을 포맷 할때는 DateTimeFormatter를 사용한다. 
-		 * LocalDateTime 객체를 만들고 DateTimeFormatter 객체를 만든다음
-		 * LocalDateTime 메소드중 format() 메소드의 DateTimeFormatter 객체를 넣어준다.
-		 * 
-		 * 
-		 * 
-		 */
+		
 
 	}
 
