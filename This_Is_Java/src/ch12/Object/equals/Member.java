@@ -4,7 +4,6 @@ package ch12.Object.equals;
  * <객체 동등 비교>
  * 
  * Object의 equals() 매소드는 객체의 번지를 비교하고 boolean 값을 리턴한다.
- * 
  * 	public boolean equals(Object obj)
  * 
  * 	equals() 메소드의 매개변수 타입이 Object이므로 자동 타입 변환에 의해
