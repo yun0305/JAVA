@@ -28,9 +28,15 @@ package ch13.Generic.bounded_type_parameter;
 	 * 타입 파라미터가 Number 타입으로 제한되면서 Object의 메소드 뿐만 아니라 Number가 가지고 있는 메소드도 사용할 수 있다.
 	 * 위 코드에서 doubleValue()메소드는 Number타입에 정의되어 있는 메소드로, double 타입 값을 리턴한다.
 	 * 
+	 * 정리하자면 제한된 타입 파라미터는 타입 파라미터에 들어갈수 있는 타입을 해당 클래스를 상속한 클래스나
+	 * 해당 인터페이스를 구현한 구현객체만 받을수 있다는거다
+	 * 
+	 * 제한된 타입 파라미터는 제네릭 메소드와 제네릭 타입 클래스 모두 적용 가능하다.
+	 * 
+	 * 
 	 */
 
-public class GenericExample {
+public class GenericExample<Z> {
 	
 	public static <T extends Number> boolean compare(T t1, T t2) {
 		

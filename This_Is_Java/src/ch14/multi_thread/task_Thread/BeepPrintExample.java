@@ -46,7 +46,7 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  *}
  *Runnable을 구현한 구현 클래스를 만든 다음에
  *
- *	Runnable task = new Task(); // Runnable 대신 Task가 와도 상관은 없다.
+ *	Runnable task = new Task(); // 참조변수가 Runnable 대신 Task가 와도 상관은 없다.
  *	
  *	Thread thread = new Thread(task);
  *	
@@ -77,7 +77,7 @@ import ch14.multi_thread.task_Thread.printTask.PrintTask;
  * 명시적인 Runnable 구현 클래스를 작성하지 않고 thread 생정자를 호출할 때 Runnable 익명 구현 객체를
  * 매개값으로 사용할 수 있다. 오히려 이 방법이 더 많이 사용된다.
  * 
- * Thread thread = new Thread(new Runnable{
+ * Thread thread = new Thread(new Runnable(){
  * 	
  * 	@Override
  * 	public void run(){
@@ -128,7 +128,11 @@ public class BeepPrintExample {
 		PrintTask task2 = new PrintTask();
 		
 		Thread thread2 = new Thread(new PrintTask());//객체를 바로 넣어줘도 되고 변수에 담아서 전달해줘도 된다
+		Thread thread3 = new Thread(task);
+		Thread thread4 = new Thread(task2);
 		thread2.start();
+		thread3.start();
+		thread4.start();
 		
 		
 		

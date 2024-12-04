@@ -24,7 +24,6 @@ public class GenericExample {
 		Box box3 = new Box();
 		box3.content = "100";
 		
-		
 		Box box4 = new Box();
 		box4.content = 100;
 		

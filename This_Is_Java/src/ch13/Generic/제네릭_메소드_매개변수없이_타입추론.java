@@ -4,58 +4,117 @@ public class 제네릭_메소드_매개변수없이_타입추론 {
 
 	
 	/* 
-	제네릭 메소드에서 매개변수가 없는 경우, 컴파일러는 타입 파라미터의 타입을 직접적으로 추론할 수 있는 정보가 없기 때문에
-	기본적으로 타입 추론이 어렵습니다. 그럼에도 불구하고,
-	메소드의 반환 타입이나 호출 시점에서 제공하는 추가적인 정보를 사용하여 타입을 추론할 수 있는 경우가 있습니다.
-	
-	여기에는 몇 가지 방법이 있습니다:
-    ////////////////////////////////////////////////////////////////////////////////////
-	반환 타입 사용:
-	메소드의 반환 타입이 제네릭이면, 메소드 호출 결과를 받는 변수의 타입을 통해 컴파일러가 타입을 추론할 수 있습니다.
+	예제 1: 단순 타입 추론
+public class GenericMethodExample {
+    	// 제네릭 메서드
+    public static <T> T echo(T value) {
+        return value;
+    }
 
-	public class Utility {
-    	public static <T> T getDefault() {
-        	return (T) null;
-    	}
-	}
+    public static void main(String[] args) {
+        // 타입 추론: 인수 "Hello"의 타입은 String
+        String result1 = echo("Hello");
+        System.out.println(result1); // 출력: Hello
 
-	// 사용 예
-	String result = Utility.<String>getDefault();
-	
-	이 경우, String result 선언을 통해 getDefault()의 T가 String임을 명시적으로 추론할 수 있습니다.
-	
-	메소드 호출 시 타입 인자 명시:
-	
-	호출 시점에 타입 인자를 명시적으로 제공하면, 제네릭 메소드의 타입 파라미터를 명확하게 지정할 수 있습니다.
-	
-	Integer value = Utility.<Integer>getDefault();
-	
-	여기서 <Integer>는 메소드의 T가 Integer 타입임을 직접 명시합니다.
-	////////////////////////////////////////////////////////////////////////////////////
-	  
-	컨텍스트 기반 추론:
-	때때로 메소드가 다른 제네릭 메소드의 일부로 사용되거나, 특정한 타입 컨텍스트 내에서 사용될 때, 컴파일러는 그 컨텍스트를 통해 타입을 추론할 수 있습니다.
-
-	public class Utility {
-    	public static <T> List<T> one(T item) {
-        	List<T> list = new ArrayList<>();
-        	list.add(item);
-        	return list;
-    	}
-
-    public static <T> T first(List<T> list) {
-        return list.get(0);
+        // 타입 추론: 인수 123의 타입은 Integer
+        Integer result2 = echo(123);
+        System.out.println(result2); // 출력: 123
     }
 }
-	////////////////////////////////////////////////////////////////////////////////////
+	컴파일러의 타입 추론 과정:
+	echo("Hello") 호출:
 
-// 메소드 체이닝을 통한 타입 추론
-	Integer num = Utility.first(Utility.one(123));
+	인수 "Hello"의 타입은 String.
+	따라서, 컴파일러는 <T>를 String으로 추론.
+	반환 타입은 String으로 결정.
+	echo(123) 호출:
+
+	인수 123의 타입은 Integer.
+	컴파일러는 <T>를 Integer로 추론.
+	반환 타입은 Integer로 결정.
+	예제 2: 복잡한 타입 추론
 	
-	여기서 Utility.one(123)는 List<Integer>를 반환하고,
-	 이를 통해 Utility.first의 T가 Integer임을 추론합니다.
-	이렇듯 제네릭 메소드에서 타입 추론은 다양한 컨텍스트나 명시적 지정을 통해 가능하지만,
-	 매개변수가 없는 경우에는 이런 방법들이 필요하게 됩니다.
-	////////////////////////////////////////////////////////////////////////////////////
-	 */
+	import java.util.List;
+
+	public class GenericMethodExample {
+    // 제네릭 메서드
+    	public static <T> void printList(List<T> list) {
+        	for (T item : list) {
+            	System.out.println(item);
+        	}
+    	}
+
+    	public static void main(String[] args) {
+        	List<String> stringList = List.of("Apple", "Banana", "Cherry");
+        	List<Integer> intList = List.of(1, 2, 3);
+
+        	// 타입 추론: stringList의 타입은 List<String>
+        	printList(stringList);
+
+        	// 타입 추론: intList의 타입은 List<Integer>
+        	printList(intList);
+    	}
+	}	
+	컴파일러의 타입 추론 과정:
+	printList(stringList) 호출:
+
+	stringList의 타입은 List<String>.
+	컴파일러는 <T>를 String으로 추론.
+	printList(intList) 호출:
+
+	intList의 타입은 List<Integer>.
+	컴파일러는 <T>를 Integer로 추론.
+	예제 3: 명시적 타입 지정
+	제네릭 메서드는 기본적으로 타입을 추론하지만, 명시적으로 타입을 지정할 수도 있습니다.
+
+
+	public class GenericMethodExample {
+    	public static <T> T identity(T value) {
+        	return value;
+    	}
+
+    	public static void main(String[] args) {
+        	// 컴파일러가 타입을 추론
+        	String result1 = identity("Hello");
+
+        	// 명시적으로 타입 지정
+        	Integer result2 = GenericMethodExample.<Integer>identity(123);
+
+        	System.out.println(result1); // 출력: Hello
+        	System.out.println(result2); // 출력: 123
+    	}
+	}
+	설명:
+	identity("Hello"):
+	타입 추론으로 <T>를 String으로 결정.
+	<Integer>identity(123):
+	명시적으로 <Integer>를 지정하여 호출.
+	타입 추론이 실패하는 경우
+	타입이 명확하지 않을 때:
+	
+	컴파일러가 타입을 추론할 수 없는 경우 명시적으로 타입을 지정해야 합니다.
+	java
+	코드 복사
+	public static <T> T genericMethod(T value1, T value2) {
+	    return value1;
+	}
+	
+	public static void main(String[] args) {
+	    // 컴파일러가 타입 추론 불가능
+	    // String인지 Integer인지 명확하지 않음
+	    // genericMethod("Hello", 123); // 컴파일 에러
+	
+	    // 해결: 명시적으로 타입 지정
+	    String result = GenericMethodExample.<String>genericMethod("Hello", "World");
+	    System.out.println(result);
+	}
+	원시 타입 사용:
+	
+	제네릭은 원시 타입(int, double 등)과 함께 사용할 수 없습니다.
+	대신 래퍼 클래스(Integer, Double 등)를 사용해야 합니다.
+	결론
+	타입 추론은 전달된 매개변수의 타입을 기반으로 이루어집니다.
+	static 제네릭 메서드는 메서드 호출 시점에 타입을 결정하며, 명시적으로 타입을 지정할 수도 있습니다.
+	타입 추론이 애매한 경우에는 명시적으로 타입을 지정해 컴파일러가 올바른 타입을 결정하도록 도와야 합니다. 
+		 */
 }

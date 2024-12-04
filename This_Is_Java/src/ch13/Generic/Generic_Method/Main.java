@@ -2,6 +2,28 @@ package ch13.Generic.Generic_Method;
 
 public class Main {
 
+	
+	/*
+  * public class GenericMethodExample {
+   
+    	public static <T> T identity(T value) {
+        	return value;
+    	}
+
+    	public static void main(String[] args) {
+        	// 컴파일러가 타입을 추론
+        	String result1 = identity("Hello");
+
+        	// 명시적으로 타입 지정
+        	Integer result2 = GenericMethodExample.<Integer>identity(123);
+
+        	System.out.println(result1); // 출력: Hello
+        	System.out.println(result2); // 출력: 123
+    }
+}
+
+	 */
+	
 	public static void main(String[] args) {
 		
 		Box<Integer> box1 = Util.<Integer>boxing(100);
