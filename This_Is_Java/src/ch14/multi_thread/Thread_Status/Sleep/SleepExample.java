@@ -31,8 +31,6 @@ public class SleepExample {
 				e.printStackTrace();
 			}
 			
-			
-			
 		}
 
 	}

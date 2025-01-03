@@ -3,7 +3,8 @@ package ch06.member;
 public class Calculator_Static {
 	//정적 멤버
 	/*
-	 * 정적멤버는 객체마다 생성할 필요가 없다 그말은 즉 객체가 없이도 클래스로 접근해서 바로 사용할수 있다		 
+	 * 정적멤버는 객체마다 생성할 필요가 없다 그말은 즉 객체가 없이도 클래스로 접근해서
+	 * 바로 사용할수 있다. 		 
 	 * 정적 필드나 메소드는 클래스 영역 메모리에 선언된다.(클래스 소속 멤버)
 	 * 정적 필드와 정적 메소드는 클래스에 고정된 멤버이므로 클래스 로더가 
 	 * 바이트 코드를 로딩해서 메소드 영역에 적재할때 클래스 별로 관리된다
@@ -35,7 +36,10 @@ public class Calculator_Static {
 			return x+y;
 			
 		}
-		static int minus(int x, int y) {
+		static int minus(int x, int y) {//정적 메소드에 인스턴스 메소드를 사용하려면 객체가 필요
 			return x-y;
+		}
+		void test() {//인스턴스 메소드에 정적메소드 바로 호출 가능
+			int a = plus(1,1);
 		}
 }

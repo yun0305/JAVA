@@ -20,6 +20,7 @@ import ch06.fqcn.kumho.AllSeasonTire;
  * 하지만 *를 사용할때 주의할점은 import문으로 지정된 하위 패키지는 import의 대상이 아니다 상위 패키지를
  * import하고 *를 한다하면 그 패키지의 클래스만 사용하는것이지 상위 패키지 안에 하위 패키지까지 사용할수 있는건 아니라는 것이다 
  * 그래서 따로 선언해줘야 한다
+ * 
  * import com.maycompay*;
  * import com.maycompay.porject*;
  * 

@@ -6,8 +6,6 @@ public class CarExample {
 		
 		Car car = new Car();
 		
-		
-		
 		car.tire = new Tire();
 		car.run();
 		

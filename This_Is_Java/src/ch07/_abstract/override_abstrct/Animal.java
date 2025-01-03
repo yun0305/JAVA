@@ -9,7 +9,7 @@ public abstract class Animal {
 	}
 	
 	abstract void sound();//추상 메소드
-	//당연하지만 추상메소드는 static으로 선언할수 없다. 추상클래스에 소속시키 봤자
+	//당연하지만 추상메소드는 static으로 선언할수 없다. 추상클래스에 소속시켜도
 	//추상메소드를 재정의도 하지 않은 상태에서 호출해봤자 의미가 없다.
 	
 	public static void test() {

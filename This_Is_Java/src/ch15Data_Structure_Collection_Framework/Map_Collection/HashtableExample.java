@@ -55,7 +55,8 @@ public class HashtableExample {
 		threadB.start();
 		
 		//작업 스레드들이 모두 종료될 때까지 메인 스레드를 기다리게 함
-		
+		//작업 스레드의 결과가 메인 스레드의 이후 작업에 영향을 미치기 떄문에 사용한다.
+		//int size = map.size();
 		try {
 			threadA.join();
 			threadB.join();

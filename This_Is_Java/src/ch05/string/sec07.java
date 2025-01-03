@@ -9,6 +9,10 @@ public class sec07 {
 		char sex = ssn.charAt(7);//인덱스 0 ~ 6
 		//charAt 메소드는 문자열을 추출할수 있다
 		
+		String a = String.valueOf(sex);
+		
+		System.out.println(a);
+		
 		switch(sex) { 
 		case '1': case '3':
 			System.out.println("남자입니다.");

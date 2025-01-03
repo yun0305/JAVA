@@ -24,6 +24,11 @@ package ch12.String_Class;
 	 * 
 	 * toString을 제외한 다른 메소드는 StringBuilder를 다시 리턴하기 때문에 연이어서 다른 메소드를
 	 * 호출할 수 있는 메소드 체이닝 패턴을 사용할 수 있다. 
+	 * 
+	 * 오버로딩된 append() 메서드:
+	 * StringBuilder 클래스는 다양한 타입을 처리할 수 있도록 메서드 오버로딩된 append() 메서드를 제공합니다.
+     * 지원되는 타입:
+     * String, char, int, long, float, double, boolean, Object, char[] 등
 	 */
 
 

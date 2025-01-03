@@ -2,7 +2,7 @@ package ch06.object;
 
 public class Korean {
 	//필드선언
-		String nation = "대한민국";
+		final String nation = "대한민국";
 		String name;
 		String ssn;
 	

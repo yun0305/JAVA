@@ -1,7 +1,12 @@
 package ch08._interface;
 
+import java.io.FileInputStream;
+import java.util.Scanner;
+
 public class Television implements RemoteControl {
 
+	
+	
 	@Override//어노테이션은 정확히 재정의 되었는지 확인 시켜준다 만약 철자가 틀리면 오류가 뜬다
 	public void turnOn() {// 기본 public, 재정의 할떈 접근 제한자를 더 강하게 할수 없다.
 		System.out.println("TV를 켭니다.");

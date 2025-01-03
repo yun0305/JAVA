@@ -67,7 +67,7 @@ public class VectorExample {
 
 	public static void main(String[] args) {
 		
-		//Vector 컬랫션 생성
+		//Vector 컬랙션 생성
 		List<Border> border = new Vector<Border>();
 		//ArrayList를 넣어서 실행해보면 값이 달라진다. 
 		//ArrayList를 사용하면 race condition 경쟁상태가 된다. 
@@ -78,7 +78,7 @@ public class VectorExample {
 			@Override
 			public void run() {
 				//객체 1000개 추가
-				for(int i=0;i<1001;i++) {
+				for(int i=0;i<1000;i++) {
 					border.add(new Border("제목"+i,"내용"+i,"글쓴이"+i));
 				}
 				
@@ -91,7 +91,7 @@ public class VectorExample {
 			 @Override
 			public void run() {
 				//객체 1000개 추가
-				 for(int i=1000;i<2001;i++) {
+				 for(int i=1000;i<2000;i++) {
 					 
 					 border.add(new Border("제목"+i,"내용"+i,"글쓴이"+i));
 					 

@@ -1,6 +1,8 @@
 package ch08._interface.constance_interface;
 
 public class RemoteControlExample {
+	
+	static int test = 0;
 
 	public static void main(String[] args) {
 		/*
@@ -11,8 +13,12 @@ public class RemoteControlExample {
 		 * 
 		 */
 		
+		
+		
 		System.out.println(Remotecontrol.MAX_VOLUM);
 		System.out.println(Remotecontrol.MIN_VOLUM);
+		System.out.println(test);
+		
 		/*
 		 * 이런 방식으로 사용할수 있지만 대부분 인터페이스 상수필드는 구현객체 안에서 사용 한다.
 		 */

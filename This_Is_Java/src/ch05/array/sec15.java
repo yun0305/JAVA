@@ -12,9 +12,9 @@ public class sec15 {
 			newArray[i] = oldArray[i];
 		}
 		
-		for(int i=0; i<newArray.length;i++) {
-			System.out.println(newArray[i]);
-		}
+//		for(int i=0; i<newArray.length;i++) {
+//			System.out.println(newArray[i]);
+//		}
 
 		//System.arraycopy 로 복사하기
 		//메소드설명
