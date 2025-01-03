@@ -24,11 +24,6 @@ public class ExtendsExample {
 		ic.methodB();
 		ic.methodC();
 		System.out.println();
-		
-		
-		
-		
-		
 	}	
 
 }

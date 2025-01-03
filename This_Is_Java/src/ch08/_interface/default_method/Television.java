@@ -32,7 +32,7 @@ private int volume;
 	}
 	
 	
-		@Override
+		@Override//추상 메소드
 		public int getVolume() {
 			return volume;
 		}
