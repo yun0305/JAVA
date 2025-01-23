@@ -45,7 +45,7 @@ import java.util.Set;
  * 그래서 iterator()를 호출하면 리턴타입이 Iterator<E>라는 타입으로 나온다. 
  * 
  *  Iterator<E>를 보면 인터페이스 타입이다. 그리고 제네릭 타입이다. 그래서 set 안에 String이 들어가 있다면
- *  Iterator는 자동으로 String이 되어있는거다. set안에 Member가 들어가 있다면 자동으로 멤버가 되는거다.
+ *  Iterator는 자동으로 String이 되어있는거다. set안에 Member가 들어가 있다면 자동으로 Member가 되는거다.
  *  
  *  아까도 말했지만 Iterator는 반복자이다 왜 반복자라고 부르냐면 반복해서 요소를 가져온다해서
  *  반복자라고 한다.

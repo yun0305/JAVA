@@ -9,6 +9,7 @@ public interface RemoteControl {
 	 * 완전히 동일하다 public 을 생략 하더라도 자동으로 컴파일 과정에서 붙는 것이 차이점이다.
 	 * [public|private] static 리턴타입 메소드명(매개변수,...){	}
 	 * 그리고 구현객체에서 재정의할 대상이 아니다.
+	 
 	 */
 	
 	//상수 필드

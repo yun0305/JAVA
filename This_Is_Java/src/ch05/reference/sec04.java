@@ -15,11 +15,10 @@ public class sec04 {
 		String str = null;
 		System.out.println("총 문자 수: "+str.length());
 		
-		
 		}catch(NullPointerException e) {
+			
 			System.out.println(e.getMessage());
 			e.printStackTrace();
-			
 			
 		}finally {
 			

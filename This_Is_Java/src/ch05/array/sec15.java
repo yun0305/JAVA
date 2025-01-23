@@ -4,7 +4,7 @@ public class sec15 {
 
 	public static void main(String[] args) {
 		//배열복사
-		//for문으로 배얄복사
+		//for문으로 배열복사
 		int[] oldArray = new int[] {1,2,3}; 
 		int[] newArray = new int[5];
 		

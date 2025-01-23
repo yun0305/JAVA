@@ -8,7 +8,7 @@ public class sec16 {
 		int sum = 0;
 		
 		for(int score : scores){//scores배열에서 하나씩 데이터를 꺼내와서 score변수에 넣어서 출력한다
-			sum += score;
+			sum += score;		//Iterable 인터페이스를 구현했다면 포이치 사용가능
 		}
 
 		System.out.println("총합 = "+sum);

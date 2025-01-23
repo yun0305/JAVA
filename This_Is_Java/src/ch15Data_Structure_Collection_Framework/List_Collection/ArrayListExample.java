@@ -1,13 +1,14 @@
 package ch15Data_Structure_Collection_Framework.List_Collection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListExample {
 	
 	public static void main(String[] args) {
 		
 		//ArrayList 컬랙션 생성
-		ArrayList<Border> list = new ArrayList<Border>();
+		List<Border> list = new ArrayList<Border>();
 		
 		
 		//ArrayList에 객체 추가
@@ -18,7 +19,7 @@ public class ArrayListExample {
 		
 		//저장된 총 객체 수 얻기
 		
-		System.out.println("저장된 객체의 수 " + list.size());
+		System.out.println("저장된 객체의 수" + list.size());
 		
 		//특정 인덱스 객체 가져오기
 		Border border = list.get(0);
