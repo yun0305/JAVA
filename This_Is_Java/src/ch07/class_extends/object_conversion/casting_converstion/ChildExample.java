@@ -9,6 +9,7 @@ public class ChildExample {
  * 자식타입으로 강제변환할수 있는것은 아니다
  * 자식 타입이 부모 타입으로 자동 변환한 후, 다시 자식 타입으로 변환할 때 강제 타입 변환을 사용할수 있다.
  * 불가능 예시)
+ * 
  * Parent pt = new Parent();
  *		
  *	Child ch = (Child)pt;
