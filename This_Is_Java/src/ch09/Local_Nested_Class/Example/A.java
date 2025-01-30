@@ -23,6 +23,9 @@ public class A {
 				System.out.println("arg : " + arg);//로컬 클래스에서 사용하는 순간 final 특성을 갖는다.
 				System.out.println("val : " + val);
 				
+				
+				
+				
 			//arg = 10; 한번이라도 로컬 변수가 로컬 클래스에서 사용이 된다면 final 특성을 가지게 된다  
 			//val = 10; 이유는 로컬 변수가 복사 되서 로컬 클래스로 들어오기 때문에 로컬 클래스의 값이 바뀌면 안되기 때문이다.
 			}	

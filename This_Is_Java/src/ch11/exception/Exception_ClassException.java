@@ -36,6 +36,10 @@ public class Exception_ClassException {
 	 *
 	 *
 	 *
+	 *try-catch는 런타임 예외만 처리가능 try-catch눈 실행 중 방생하는 예외만 잡는다
+	 *하지만 컴파일 오류는 예외처리가 안됨
+	 *
+	 *
 	 *
 	 */
 	

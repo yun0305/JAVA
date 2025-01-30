@@ -8,7 +8,7 @@ public class Car {
 		
 		@Override
 		public void roll() {
-			System.out.println("익명자식 객체1이 실행됩니다.");
+			System.out.println("익명자식 객체2가 실행됩니다.");
 		} 
 		public void test() {
 			 System.out.println("테스트 메소드가 실행되었습니다.");

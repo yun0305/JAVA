@@ -1,9 +1,15 @@
 package ch05.reference;
 
 public class sec03 {
-
+	
+	static int b;//필드는 초기값을 지정해주지 않아도 기본값이 있기때문에 기본값이 들어감
+	int c;
 	public static void main(String[] args) {
 		
+		int a;
+		//System.out.println(a); 지역변수는 초기값이 없기때문에 초기화가 필수다
+		System.out.println(b);
+		System.out.println(new sec03().c);
 		//주소
 		int[] arr1;//배열 변수 선언
 		int[] arr2;//배열 변수 선언
