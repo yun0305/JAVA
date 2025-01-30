@@ -13,6 +13,7 @@ public class A {
 	 */
 
 	String out_Class_member = "A의 필드";
+	static String static_out_Class_member ="A의 정적필드";
 	B b = new B();//B 참조변수 타입의 필드생성
 	
 	
@@ -49,6 +50,7 @@ public class A {
 				B(){
 					System.out.println("B-생성자 실행");
 					System.out.println(out_Class_member);// 외부 클래스 멤버 객체 생성없이 접근 가능
+					System.out.println(static_out_Class_member);
 				}
 				
 				//인스턴스 메소드

@@ -5,9 +5,6 @@ public class AExample {
 	
 	public static void main(String[] args) {
 	
-		
-		
-		
 		A a = new A();// 먼저 객체 생성
 		
 		A.B b = a.new B();//Nested 클래스를 선언할때는 A로 접근해야 한다. 그리고 B클래스는 A 클래스의 멤버이기 때문에 
