@@ -1,5 +1,7 @@
 package ch06.member;
 
+import ch06.member.메모리에서_메소드_실행과정.Car_Instance;
+
 public class Car_Instance_Example {
 	
 	public static void main(String[] args) {
