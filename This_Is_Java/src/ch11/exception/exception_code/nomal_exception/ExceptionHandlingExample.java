@@ -24,7 +24,7 @@ public class ExceptionHandlingExample {
 		
 		/*//ClassNotFoundException예외처리를 하지 않았다라는 오류가 뜬다
 		 * 코드를 작성했을때 컴파일러가 예외를 처리하지 않았다는 오류를 발생시킬때가 있다.
-		 * 이럴땐 이런 코드를 쓰면 오류가 발생할수 있구나 그럼 예외처리를 해야하는 구나 라고 생각하면 된다.
+		 * 이럴땐 이런 코드(Class.forName("class");)를 쓰면 오류가 발생할수 있구나 그럼 예외처리를 해야하는 구나 라고 생각하면 된다.
 		 * "java.lang.String" 이 경우에는 일반예외라서 컴파일러가 체크한다.
 		 * Class.forName(); 의 코드의 경우에는 Class 가 가지고 있는 forName 정적 메소드가 있는데
 		 * forName이 하는 역할은 java.lang.String 으로 되어있는 클래스가 있느냐를 확인하는 메소드이다.

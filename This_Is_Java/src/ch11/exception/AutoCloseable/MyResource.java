@@ -25,7 +25,7 @@ public class MyResource implements AutoCloseable {
 	 * 		fis.close(); 파일 닫기
 	 * }
 	 * 
-	 * 좀더 쉬운 방법이 있다. try-with-resiurces 블록을 사용하면 예외 발생 여부와 상관없이 리소스를 자동으로 닫아준다.
+	 * 좀더 쉬운 방법이 있다. try-with-resources 블록을 사용하면 예외 발생 여부와 상관없이 리소스를 자동으로 닫아준다.
 	 * try 괄호 안에 리소스를 여는 코드를 작성하면 try 블록이 정상적으로 실행을 완료했거나 도중에 예외가 발생하면 자동으로
 	 * 리소스의 close() 메소드가 호출된다.
 	 * 

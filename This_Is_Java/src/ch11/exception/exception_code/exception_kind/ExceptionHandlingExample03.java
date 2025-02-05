@@ -9,11 +9,8 @@ public class ExceptionHandlingExample03 {
 	 * 예외 클래스를 기호 | 로 연결하면된다
 	 */
 	 
-	
 	public static void main(String[] args) {
-		
-		
-		
+	
 		String[] array = new String[]{"10","1oo",null,"2000"};
 				
 		for(int i=0;i<=array.length;i++) {
@@ -31,14 +28,9 @@ public class ExceptionHandlingExample03 {
 				System.out.println("예상치 못한 예외가 발생했습니다");
 				
 			}catch(Throwable e){			
-			
-			
 			}
 		}
-		
 		System.out.println("시스템 종료");
-		
 	}
-
 }
 

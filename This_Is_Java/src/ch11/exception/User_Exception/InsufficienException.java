@@ -18,17 +18,31 @@ public class InsufficienException extends Exception {
 	 *	RuntimeException: 프로그래머 실수나 로직 문제를 표현하고, 
 	 * 	호출자가 예외 처리를 선택적으로 할 수 있게 하고 싶을 때 사용.
 	 * 
+	 * 	✅ 1️⃣ 일반 예외(Checked Exception)로 만들 때의 기준
+	 * 		✔ 예외를 반드시 처리해야 하는 상황
+			✔ 예외가 발생해도 프로그램이 계속 실행되어야 하는 경우
+			✔ 외부 시스템(파일, 데이터베이스, 네트워크)과 연관된 문제
+			✔ 예외 처리를 강제해서 개발자가 의도적으로 예외를 처리하도록 유도하고 싶을 때
+			
+		✅ 2️⃣ 실행 예외(Unchecked Exception)로 만들 때의 기준
+			✔ 예외 처리를 강제할 필요가 없는 경우
+			✔ 프로그래머의 실수(잘못된 연산, null 접근, 인덱스 초과 등)에 의해 발생하는 경우
+			✔ 예외가 발생하면 즉시 프로그램을 중단하고 싶을 때
+			✔ 일반적인 로직 문제(비즈니스 로직 오류)에서 발생하는 경우
+	 * 
+	 * 
+	 * 
+	 * 
 	 *  예)
 	 *  public class XXXException extends Exception | RunTimeException {
 	 *  
 	 *  	public XXXException(){ // 기본 생성자
 	 *  	
-	 *  
 	 *  	}
 	 *  
 	 *  	public XXXException(String massage){ // 예외 메세지를 입력받는 생성자
 	 *  	super(massage);	
-	 *  
+	 *  	
 	 *  	}
 	 *   }
 	 *   
