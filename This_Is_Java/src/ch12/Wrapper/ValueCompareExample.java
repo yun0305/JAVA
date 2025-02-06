@@ -23,7 +23,7 @@ package ch12.Wrapper;
  * byte,short,int	-128 ~ 127
  * 
  * 포장 객체에 정확히 어떤 값이 저장될 지 모르는 상황이라면 ==과 !=은 사용하지 않는 것이 좋다.
- * 대신 equals() 메소들 내부 값을 비교할 수 있다. 포장 클래스의 equals() 메소드는 내부의 값을 비교하도록 재정의
+ * 대신 equals() 메소드로 내부 값을 비교할 수 있다. 포장 클래스의 equals() 메소드는 내부의 값을 비교하도록 재정의
  * 되어 있다.
  * 
  * 값을 비교할떈 == 보단 Integer의 equals를 사용하자
@@ -33,6 +33,12 @@ public class ValueCompareExample {
 
 	public static void main(String[] args) {
 		
+		//-128 ~ 127 범위값일 경우
+		Integer obj3 = 100;
+		Integer obj4 = 100;
+		System.out.println(obj3 == obj4);
+		System.out.println(obj3.equals(obj4));
+		
 		//-128 ~ 127 초과값일 경우
 		Integer obj1 = 300;
 		Integer obj2 = 300;
@@ -40,11 +46,7 @@ public class ValueCompareExample {
 		System.out.println(obj1.equals(obj2));
 		 
 		
-		//-128 ~ 127 범위값일 경우
-		Integer obj3 = 100;
-		Integer obj4 = 100;
-		System.out.println(obj3 == obj4);
-		System.out.println(obj3.equals(obj4));
+		
 		
 
 	}

@@ -20,8 +20,8 @@ package ch12.Wrapper;
  * 대입될때 발생한다
  * 
  * <오토박싱>
- * Integer obj = 100; //박싱 (new Integer(100); 도 된다)
- * int value = obj;   // 언박싱 (obj.intValue(); 도 된다)
+ * Integer obj = 100; //박싱 (new Integer(100); 수동 박싱)
+ * int value = obj;   // 언박싱 (obj.intValue(); 도 된다 수동 언박싱)
  * 
  * 언박싱은 다음과 같이 연산 과정에서도 발생한다. obj는 100과 연산되기 전에 언박싱 된다.
  */
@@ -42,7 +42,7 @@ public class BoxingUnBixingExample {
 		System.out.println("vlaue " + value);
 		
 		//연산 시 Unboxing
-		int result = obj.intValue() + 100;
+		int result = obj.intValue() + 100;//100과 연산하기 전에 언박싱됨
 		System.out.println("result "+ result);
 		
 

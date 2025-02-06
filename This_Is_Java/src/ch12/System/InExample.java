@@ -27,7 +27,7 @@ public class InExample {
 		int keyCode = 0;//아스키코드로 받는거니까 타입은 정수이다
 		
 		while(true) {// 입력을 11111 하면 버퍼에 11111 이렇게 쌓이는데 반복문으로 하나씩 읽어와야 한다.
-					// 안 그러면 1 하나만 읽는다.  
+					 // 안 그러면 1 하나만 읽는다.  
 			
 			System.out.println("-------------------");
 			System.out.println("1.증속  2.감속  3.멈춤");
@@ -36,7 +36,7 @@ public class InExample {
 			System.out.println("선택");
 			keyCode = System.in.read();
 			
-			if(keyCode != 13&&keyCode != 10) {
+			if(keyCode != 13&&keyCode != 10) {//Enter 키(\r\n) 입력 무시 
 				
 				if(keyCode == 49) {
 					speed++;
