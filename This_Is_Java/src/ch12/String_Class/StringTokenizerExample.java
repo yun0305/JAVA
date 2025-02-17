@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 /*
 	 * StringTokenizer 클래스
+	 * 
 	 * 문자열이 구분자로 연결되어 있을경우 구분자를 기준으로 문자열을 분리하려면 String의 split() 메소드를 이용하거나
 	 * java.util 패키지의 StringTokenizer 클래스를 이용할수 있다.
 	 * split() 은 정규표현식으로 구분하고 StringTokenizer는 문자로 구분한다는 차이점이 있다.

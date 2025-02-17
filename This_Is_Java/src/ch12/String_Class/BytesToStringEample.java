@@ -39,9 +39,9 @@ public class BytesToStringEample {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		//인코딩 String -> byte[]
 		String data = "자바";
-	  //byte[] arr1 = data.getBytes("UTF-8"); 문자셋을 지정해줄수 있다. 아무것도 안쓰면 이클립스의 기본 문자셋을 따라간다.
+		//byte[] arr1 = data.getBytes("UTF-8"); 문자셋을 지정해줄수 있다. 아무것도 안쓰면 이클립스의 기본 문자셋을 따라간다.
 		byte[] arr1 = data.getBytes("EUC-KR");
-	  //byte[] arr1 = data.getBytes();//data의 리터럴 문자를 바이트당 배열 1개로 만들어줌
+		//byte[] arr1 = data.getBytes();//data의 리터럴 문자를 바이트당 배열 1개로 만들어줌
 		System.out.println(arr1.length);
 		System.out.println(Arrays.toString(arr1));//여기서 나오는 값들은 그 언어의 숫자코드이다.
 		

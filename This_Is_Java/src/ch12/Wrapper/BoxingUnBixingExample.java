@@ -33,7 +33,7 @@ public class BoxingUnBixingExample {
 		//Boxing
 		Integer obj = 100;
 		Double obj2 = 1.1;
-		System.out.println("vlaue2 "+obj2.doubleValue());
+		System.out.println("vlaue2 "+(obj2.doubleValue()+1));
 		System.out.println("value1 " + obj.intValue());
 		//intValue() 메소드는 Integer 객체 내부의 int 값을 리턴한다.
 		

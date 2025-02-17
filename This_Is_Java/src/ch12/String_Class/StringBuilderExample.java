@@ -4,6 +4,9 @@ package ch12.String_Class;
 	 * String은 내부 문자열을 수정할 수 없다. 다음 코드를 보면 다른 문자열을 결합해서 내부 문자열을 변경하는 것처럼 보이지만
 	 * 사실 "ABCDEF"라는 세로운 String 객체를 생성하는 것이다. 그리고 data 변수는 새로 생성된 String 객체를 참조하게 된다.
 	 * 
+	 * (new String으로 생성한 문자열 객체는 상수풀에 저장 안되고 상수풀에 저장하고 싶으면 
+	 * intern() 메소드로 상수풀에 저장할수 있다)
+	 * 
 	 * String data = "ABC";
 	 * data += "DEF";
 	 * 

@@ -25,7 +25,6 @@ import java.time.temporal.ChronoUnit;
 public class DateTimeCompareExamlple {
 
 	public static void main(String[] args) {
-		
 	
 		LocalDateTime startDateTime = LocalDateTime.of(2021, 1, 1, 0, 0, 0);
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd a hh:mm:ss");
