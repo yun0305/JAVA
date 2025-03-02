@@ -1,62 +1,82 @@
 package ch13.Generic.wildcard;
 
+	
+
 	/*
-	 * <와일드 카드 타입 파라미터>
+	 * <와일드 카드>
+	 * 와일드 카드는 제네릭 타입의 불특정 타입을 나타내는 기호다
+	 * 제네릭 타입을 가져야 와일드 카드 사용가능 아무대나 붙일수 없다는거다. 또한 제네릭 선언부에는 사용할수 없다.
+	 * 주로 제네릭 클래스나 메소드를 사용할 떄, 타입 파라미터를 유연하게 처리하기 위해 사용된다.
 	 * 
-	 * 와일드 카드는 필드와 메소드 뿐만 아니라 제네릭 타입이 사용될 수 있는 모든 곳에서 
-	 * 적용할 수 있다. 주로 제네릭 클래스 메소드 필드 지역변수 등에 사용할수 있다.
-	 * 	
-	 * <매개 값>: 메소드의 매개변수 타입으로 와일드카드를 사용해 특정 범위의 제네릭 타입을 허용할 수 있다.
+	 * 		<와일드카드의 종류>
+	 * 			와일드 카드는 크게 세 가지 종류가 있다.
+	 * 			
+	 * 			1. 제한 없는 와일드 카드(?)
+	 * 				?은 모든 타입을 받을수 있다.
 	 * 
-	 * public void processList(List<? extends Number> list) {
-		    for (Number num : list) {
-		        System.out.println(num);
-		    }
-		}
+	 * 				public static void printList(List<?> list) {
+					    for (Object obj : list) {
+					        System.out.println(obj);
+					    }
+					}
+					
+					List<String> strList = Arrays.asList("apple", "banana");
+					List<Integer> intList = Arrays.asList(1, 2, 3);
+					
+					printList(strList); // 가능
+					printList(intList); // 가능
+	 * 				
+	 * 				모든 제네릭 타입을 받을 수 있다.
+	 * 				List<?> 는 List<String>, List<Integer> 등 어떤 리스트든 허용
+	 * 				하지만 타입이 정해지지 않았기 떄문에 값을 추가하거나 수정할수 없다.
 	 * 
 	 * 
-	 * <리턴타입> : 메소드의 리턴 타입으로 와일드 카드를 사용해 다양한 타입을 반환할 수 있다.
-	 * 
-	 * public List<? extends Number> getNumbers() {
-		    return Arrays.asList(1, 2, 3);
-		}
-		
-		<필드> : 클래스의 필드에 와일드 카드를 사용할수 있다. 
-		
-		private List<? super Integer> numbers; // Integer 및 상위 타입 허용
+	 * 			2.상한 제한 와일드 카드(? extends T)
+	 * 				T 또는 T의 자식 클래스만 받을 수 있다 
+	 * 				
+	 * 				public static double sumNumbers(List<? extends Number> list) {
+					    double sum = 0;
+					    for (Number num : list) {
+					        sum += num.doubleValue(); // Number의 메서드만 사용 가능
+					    }
+					    return sum;
+					}
+					
+					List<Integer> intList = Arrays.asList(1, 2, 3);
+					List<Double> doubleList = Arrays.asList(1.5, 2.5, 3.5);
+					
+					System.out.println(sumNumbers(intList)); // 6.0
+					System.out.println(sumNumbers(doubleList)); // 7.5
 
-		    public void setNumbers(List<? super Integer> numbers) {
-		        this.numbers = numbers;
-		    }
-		
-		    public List<? super Integer> getNumbers() {
-		        return numbers;
-		    }
-		}
-		
-		<제네릭 클래스의 타입 파라미터> : 클래스 정의에 와일드 카드는 사용할 수 없지만 제네릭 클래스의 필드나
-		메소드에서 와일드 카드를 사용할 수 있다.
-		
-		class Box<T> {
-		    public void print(Box<? extends Number> box) {
-		        System.out.println("This is a box of numbers");
-		    }
-		}
+					✔️ List<? extends Number> → Integer, Double, Float 같은 숫자 타입 리스트만 가능
+					✔️ 읽기(Read) 가능, 값 추가(Write) 불가능
+					
+					list.add(10); // ❌ 컴파일 에러 (타입을 정확히 알 수 없음)
 
-		<와일드카드가 적용되지 않는 경우>
-			1. 제네릭 클래스의 타입 파라미터 정의 
-				제니릭 클래스 자체의 타입 파라미터에서는 와일드카드를 사용할 수 없다.
-				
-				class Box<?> { // 컴파일 에러
-				    private ? value; // 컴파일 에러
-				}
-				대신 구체적인 타입 파라미터 (A~Z) 를 정의해야한다.
-				
-			2. 제네릭 메소드의 타입 파라미터 선언:
-				와일드카드는 메소드의 타입 파라미터 선언부에 사용할 수 없다. 대신
-				A~Z와 같은 형식으로 사용해야한다.
+	 * 			3.하한 제한 와일드카드(? super T)
+	 * 				T또는 T의 부모 클래스만 박을 수 있음 
+	 * 				
+	 * 				public static void addNumbers(List<? super Integer> list) {
+					    list.add(10);
+					    list.add(20);
+					}
+					
+					List<Integer> intList = new ArrayList<>();
+					List<Number> numList = new ArrayList<>();
+					
+					addNumbers(intList); // 가능
+					addNumbers(numList); // 가능
+					
+					✔️ List<? super Integer> → Integer, Number, Object 타입의 리스트만 가능
+					✔️ 값 추가(Write) 가능, 하지만 정확한 타입을 모르므로 Read는 제한적
+					
+					Number n = list.get(0); // 가능 (최상위 타입 Number)
+					Integer i = list.get(0); // ❌ 컴파일 에러 (타입 보장 불가)
 
 	 * 
+	 */
+
+	 /* 
 	 * 
 	 * "제네릭 타입(클래스)을 매개값이나 리턴 타입으로 사용할 때" 타입 파라미터로 ?(와일드 카드)를 사용할 수 있다.
 	 * ?는 범위에 있는 타입으로 대체할 수 있다는 표시이다. 예를 들어 다음과 같은 상속 관계가 있다고 가정해보자

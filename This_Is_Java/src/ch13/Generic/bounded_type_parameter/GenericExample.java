@@ -5,12 +5,14 @@ package ch13.Generic.bounded_type_parameter;
 	 * *매우중요*
 	 * 타입 파라미터는 기본적으로 오브젝트 타입이다
 	 * 경우에 따라서는 타입 파라미터를 대체하는 구체적인 타입을 제한할 필요가 있다. 예를 들어 숫자를 연산하는 제네릭 메소드는
-	 * 대체 타입으로 Number 또는 자식 클래스(Byte, Short, Integer, Long, Double)로 제한할 필요가 있다.
+	 * 대체 타입으로 Number 또는 Number의 자식 클래스(Byte, Short, Integer, Long, Double)로 제한할 필요가 있다.
 	 * 
 	 * 이처럼 모든 타입으로 대체할 수 없고, 특정 타입과 자식 또는 구현 관계에 있는 타입만 대체할 수 있는
 	 * 타입 파라미터를 제한된 타입 파라미터 라고 한다. 정의는 다음과 같이 한다.
 	 * 
-	 * public <T extends 상위타입> 리턴타입 메소드(메개변수,...){
+	 * public <T extends Number> 리턴타입 메소드(메개변수,...){
+	 * 	
+	 * 		이럴경우 Number자신 또는 Number를 상속받은 자식 객체들만 T 타입 파라미터에 들어올수 있다. 
 	 * }
 	 * 
 	 * 상위 타입은 클래스 뿐만 아니라 인터페이스도 가능하다. 인터페이스라고 해서 implements를 사용하지는 않는다. 다음은
@@ -36,16 +38,16 @@ package ch13.Generic.bounded_type_parameter;
 	 * 
 	 */
 
-public class GenericExample<Z> {
+public class GenericExample {
 	
 	public static <T extends Number> boolean compare(T t1, T t2) {
 		
 		System.out.println("compare("+t1.getClass().getName()+","+t2.getClass().getName()+")");
 		
-		double v1 = t1.doubleValue();//사용할수 있는 메소드는 Number의 메소드 뿐 Number의 자식 메소드는 사용할수 없다
-		double v2 = t1.doubleValue();//단지 타입 파라미터로 Number이거나 Number의 자식 메소드만 받을수 있는것이다.
+		double v1 = t1.doubleValue();//사용할수 있는 메소드는 Number의 메소드 뿐 Number의 자식의 메소드는 사용할수 없다
+		double v2 = t1.doubleValue();//Number랑 Object 의 메소드는 사용할수 있다.
 		
-		return (v1==v2);
+		return v1==v2;
 		
 	}
 	

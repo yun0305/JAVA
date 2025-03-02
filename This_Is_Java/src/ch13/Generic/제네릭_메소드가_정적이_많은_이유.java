@@ -1,6 +1,6 @@
 package ch13.Generic;
 
-public class 제네릭_클래스가_정적이_많은_이유 {
+public class 제네릭_메소드가_정적이_많은_이유 {
 
 	
 	
