@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="This_Is_Java/src"/>
+	<classpathentry kind="lib" path="This_Is_Java/lib/lombok.jar"/>
+	<classpathentry kind="lib" path="This_Is_Java/lib/ojdbc6.jar"/>
+	<classpathentry kind="output" path="This_Is_Java/bin"/>
+</classpath>
